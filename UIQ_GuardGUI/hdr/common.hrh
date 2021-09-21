@@ -1,0 +1,42 @@
+#ifndef COMMON_HRH
+#define COMMON_HRH
+   
+enum TPages
+	{
+	EInfoView_Page,
+	ESettView_Page,
+	ESimView_Page,
+	EProtView_Page
+	};
+
+enum TCommands
+	{
+	EHelp,
+	EBuy,
+	EBuyGold,
+	EBuyPlatinum,
+	
+	ECheckUpdates,
+	ESendObex,
+	ESendIR,
+	ESendBT,
+	ERegister,
+	ERegisterNet,
+	ERegisterCode,
+	
+	ESettViewEnable,
+	ESettViewDisable,
+	ESettViewChange,
+	ESettViewChange_Pop,
+	ESimViewRen,
+	ESimViewRem,
+	ESimViewAdd,
+	ESimViewRen_Pop,
+	ESimViewRem_Pop,
+	EProtViewAdd,
+	EProtViewRem,
+	EProtViewSmallIco,
+	EProtViewBigIco
+	};
+	
+#endif

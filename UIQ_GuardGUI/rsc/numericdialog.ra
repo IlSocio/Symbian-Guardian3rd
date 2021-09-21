@@ -1,0 +1,38 @@
+
+RESOURCE DIALOG r_numeric_edwin_dialog
+	{
+	title = "Code:";
+	flags = EEikDialogFlagWait;
+	buttons = R_EIK_BUTTONS_CANCEL_OK;
+	items=
+		{
+		DLG_LINE
+			{
+			type=ECtNumericEdwin;
+			control=EDWIN
+				{
+				flags = EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+ 				};
+			}
+		};
+	}
+
+
+RESOURCE DIALOG r_numeric_secreted_dialog
+	{
+	title = "Code:";
+	flags = EEikDialogFlagWait;
+	buttons = R_EIK_BUTTONS_CANCEL_OK;
+	items=
+		{
+		DLG_LINE
+			{
+			type=ECtNumericSecreted;
+			control=SECRETED
+				{
+				num_letters=8;
+				};
+			}
+		};
+	}
+

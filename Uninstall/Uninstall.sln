@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Uninstall", "Uninstall.vcproj", "{4C55B0A3-F66A-4713-93D1-44F25F2BC6E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Deb_S60_30M_WINSCW|Win32 = Deb_S60_30M_WINSCW|Win32
+		Rel_S60_30M_GCCE|Win32 = Rel_S60_30M_GCCE|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C55B0A3-F66A-4713-93D1-44F25F2BC6E6}.Deb_S60_30M_WINSCW|Win32.ActiveCfg = Deb_S60_30M_WINSCW|Win32
+		{4C55B0A3-F66A-4713-93D1-44F25F2BC6E6}.Deb_S60_30M_WINSCW|Win32.Build.0 = Deb_S60_30M_WINSCW|Win32
+		{4C55B0A3-F66A-4713-93D1-44F25F2BC6E6}.Rel_S60_30M_GCCE|Win32.ActiveCfg = Rel_S60_30M_GCCE|Win32
+		{4C55B0A3-F66A-4713-93D1-44F25F2BC6E6}.Rel_S60_30M_GCCE|Win32.Build.0 = Rel_S60_30M_GCCE|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

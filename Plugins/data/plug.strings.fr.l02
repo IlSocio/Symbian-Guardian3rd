@@ -1,0 +1,79 @@
+﻿/*
+============================================================================
+ Name        : GuardGUI.rls
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : String localization file
+============================================================================
+*/
+
+//  LOCALISATION STRINGS
+
+
+rls_string txt_please_reboot		"Please reboot your Phone after the installation is completed"
+
+rls_string txt_lock_on 			"Commande Lock: Ok - Le téléphone est verrouillé!"
+rls_string txt_lock_off 		"Commande Lock: Ok - Le téléphone est déverrouillé!"
+
+rls_string txt_monitor_ok 		"Commande Monitor: Ok"
+rls_string txt_monitor_ko 		"Commande Monitor: Erreur - Rien à faire!"
+
+rls_string txt_fake_ok 			"Commande FakeSMS: Ok - Reçu!"
+rls_string txt_fake_ko 			"Commande FakeSMS: Erreur - Manque ';' le délimiteur"
+
+rls_string txt_null_delim 		"Guardian: Erreur - Manque '*' le délimiteur"
+rls_string txt_null_length 		"Guardian: Erreur - Commande inconnue"
+rls_string txt_null_notfound 		"Guardian: Erreur - Cette commande n'existe pas : "
+rls_string txt_null_unkn 		"Guardian: Erreur - Général"
+
+rls_string txt_alarm_ok 		"Commande Alarm: Ok - L'alarme fonctionne..."
+		
+rls_string txt_commands_ok 		"Commandes à distance:\n\n"
+rls_string txt_config_ok 		"Commande Config: Ok - "
+rls_string txt_config_ko 		"Commande Config: Erreur - Rien à faire!"
+rls_string txt_config_disabled 		"Guardian désactivé! "
+rls_string txt_config_lock_on_startup	"Verrouillage du téléphone au démarrage Activé! "
+rls_string txt_config_lock_on_sim_change "Verrouillage du téléphone sur le changement sim Activé! "
+rls_string txt_config_lock_off		"Verrouillage du téléphone Désactivé! "
+rls_string txt_config_numb_changed 	"Destinataire changé! "
+rls_string txt_config_numb_unchanged 	"Destinataire NON changé! "
+rls_string txt_config_code_changed 	"Code secret changé! "
+rls_string txt_config_code_unchanged 	"Code secret NON changé! "
+
+rls_string txt_delete_ok 		"Commande Delete: Ok - "
+rls_string txt_delete_ko 		"Commande Delete: Erreur - Syntaxe erronée!"
+rls_string txt_delete_deleted 		"Supprimé!"
+
+rls_string txt_forward_ko 		"Commande Retrieve: Erreur - Syntaxe erronée!"
+
+rls_string txt_localize_completed 	"Commande Localize: Terminé!\n"
+rls_string txt_localize_ok 		"Command Localize: Ok -\n"
+rls_string txt_localize_hei 		"Hauteur: "
+rls_string txt_localize_met 		" Metres\n"
+rls_string txt_localize_cell 		"Cell.: "
+rls_string txt_localize_area 		"\nRégion: "
+rls_string txt_localize_country 	"\nMCC: "
+rls_string txt_localize_operator 	"\nOpérateur: "
+rls_string txt_localize_network 	"\nMNC: "
+rls_string txt_wlan_notsupported 	"Commande WLANInfo: Erreur - WLAN non supporté par l'appareil!"
+rls_string txt_wlan_ok 			"Commande WLANInfo: Ok - "
+rls_string txt_wlan_notfound 		"Pas de réseau WLAN trouvé!"
+rls_string txt_wlan_found 		"Réseaux trouvés: "
+rls_string txt_wlan_bssid 		"BSSID: "
+rls_string txt_wlan_ssid 		"SSID: "
+rls_string txt_wlan_security		"Security: "
+rls_string txt_wlan_sec_open		"Open"
+rls_string txt_wlan_sec_wep		"WEP"
+rls_string txt_wlan_sec_wpa		"WPA"
+rls_string txt_wlan_sec_wpapsk		"WPA-PSK"
+rls_string txt_wlan_sec_802		"802.1X"
+rls_string txt_wlan_sec_unk		"Inconnu"
+rls_string txt_wlan_mode		"Mode: "
+rls_string txt_wlan_mode_bss		"BSS Infrastructure"
+rls_string txt_wlan_mode_ibss		"IBSS Ad-Hoc"
+rls_string txt_wlan_channel		"Channel: "
+rls_string txt_wlan_beacon		"Beacon Interval: "
+rls_string txt_wlan_rxlevel		"RXLevel: "
+
+

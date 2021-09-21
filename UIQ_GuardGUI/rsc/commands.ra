@@ -1,0 +1,71 @@
+
+#include <uikon.hrh>
+
+
+RESOURCE QIK_COMMAND_LIST r_yes_no_commands
+    {
+    items=
+        {
+        QIK_COMMAND
+        	{
+        	id = EEikBidYes;
+        	type = EQikCommandTypeYes;
+			text = "Yes";
+        	},
+        QIK_COMMAND
+			{
+			id = EEikBidNo;
+			type = EQikCommandTypeNo;
+			text = "No";
+			}
+		};
+    }
+
+
+RESOURCE QIK_COMMAND_LIST r_ok_cancel_commands
+    {
+    items=
+        {
+        QIK_COMMAND
+        	{
+        	id = EEikBidYes;
+        	type = EQikCommandTypeDone;
+			text = "Ok";
+        	},
+        QIK_COMMAND
+			{
+			id = EEikBidNo;
+			type = EQikCommandTypeCancel;
+			text = "Cancel";
+			}
+		};
+    }
+    
+
+RESOURCE QIK_COMMAND_LIST r_ok_commands
+    {
+    items=
+        {
+        QIK_COMMAND
+        	{
+        	id = EEikBidYes;
+        	type = EQikCommandTypeDone;
+			text = "Ok";
+        	}
+		};
+    }
+
+
+RESOURCE QIK_COMMAND_LIST r_cancel_commands
+    {
+    items=
+        {
+        QIK_COMMAND
+			{
+			id = EEikBidNo;
+			type = EQikCommandTypeCancel;
+			text = "Cancel";
+			}
+		};
+    }
+    

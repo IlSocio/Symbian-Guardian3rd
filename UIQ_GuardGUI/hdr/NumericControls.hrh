@@ -1,0 +1,14 @@
+#ifndef NUMERICCONTROLS_HRH
+#define NUMERICCONTROLS_HRH
+
+/**
+Unique controls in view.
+*/
+enum TNumericCtType
+	{
+	ECtNumericEdwin = 4554,
+	ECtNumericSecreted
+	};
+
+
+#endif

@@ -1,0 +1,33 @@
+// t-client.mmp
+target                                  GuardCli_200107AC.dll 
+targettype                              dll 
+capability                              ALL -DRM -TCB -AllFiles -CommDD -DiskAdmin -MultimediaDD -NetworkControl -SurroundingsDD -UserEnvironment
+
+APP_LAYER_SYSTEMINCLUDE  
+ 
+UID                                     0x1000008d 0x200107AC 
+vendorid                                0 
+USERINCLUDE                             ..\inc 
+USERINCLUDE                             . 
+systeminclude                           .  
+systeminclude                           \epoc32\include 
+SOURCEPATH                              ..\src  
+source                                  client.cpp 
+
+LIBRARY                                 flogger.lib 
+LIBRARY                                 estor.lib efsrv.lib
+LIBRARY                                 etel3rdparty.lib 
+LIBRARY                                 bafl.lib 
+LIBRARY                                 euser.lib  
+
+//#if defined(WINSCW)  
+//	deffile                                 .\Cli_WINSCW.def 
+//#endif  
+//#if defined(GCCE)
+//	deffile                                 .\Cli_GCCE.def 
+//#endif  
+ 
+nostrictdef                              
+secureid                                0x200107AC 
+//MACRO					_LOGGING 
+staticlibrary commonlib.lib 

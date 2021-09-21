@@ -1,0 +1,29 @@
+
+TARGET                                  PluginResolver0x200107B2.dll 
+TARGETPATH                              \sys\bin 
+TARGETTYPE                              PLUGIN
+UID                                     0x10009D8D 0x200107B2
+VENDORID                                0 
+CAPABILITY                              All -TCB 
+SOURCEPATH                              . 
+SOURCE                                  Proxy.cpp 
+SOURCE                                  PluginResolver.cpp 
+
+START RESOURCE 200107B2.rss
+  TARGET                                  PluginResolver0x200107B2
+  TARGETPATH                              \resource\plugins 
+END  
+
+
+USERINCLUDE                   		. 
+SYSTEMINCLUDE                           \epoc32\include 
+SYSTEMINCLUDE                           \epoc32\include\ecom 
+LIBRARY                                 euser.lib 
+
+#if defined(WINSCW)  
+  deffile                                 .\Res_WINSCW.def 
+  #else if defined(GCCE)  
+  deffile                                 .\Res_GCCE.def 
+#endif  
+
+nostrictdef                              

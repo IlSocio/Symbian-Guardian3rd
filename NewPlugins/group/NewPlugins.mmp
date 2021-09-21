@@ -1,0 +1,32 @@
+
+TARGET                                  NewPlugins_E0011111.dll 
+TARGETPATH                              \sys\bin 
+TARGETTYPE                              PLUGIN 
+UID                                     0x10009D8D 0xE0011111
+VENDORID                                0 
+capability                              ALL -DRM -TCB -AllFiles -CommDD -DiskAdmin -MultimediaDD -NetworkControl -SurroundingsDD -UserEnvironment
+
+SOURCEPATH                              ..\data 
+START RESOURCE E0011111.rss 
+  TARGET                                  NewPlugins_E0011111
+END
+
+
+SOURCEPATH                              ..\src 
+SOURCE                                  Empty1.cpp Empty2.cpp proxy.cpp
+
+USERINCLUDE                             ..\inc 
+USERINCLUDE                             . 
+
+SYSTEMINCLUDE                           \epoc32\include\mmf\plugin
+SYSTEMINCLUDE                           \epoc32\include 
+SYSTEMINCLUDE                           \epoc32\include\ecom 
+
+LIBRARY                                 calinterimapi.lib 
+LIBRARY                                 efsrv.lib 
+LIBRARY                                 bafl.lib 
+LIBRARY                                 euser.lib charconv.lib  featdiscovery.lib
+LIBRARY                                 ECom.lib
+
+
+APP_LAYER_SYSTEMINCLUDE

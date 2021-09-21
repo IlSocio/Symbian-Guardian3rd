@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DialogPIN", "DialogPIN.vcproj", "{F98CB431-BD7E-4650-989C-DE4CD43300C8}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Deb_S60_30M_WINSCW = Deb_S60_30M_WINSCW
+		Debug = Debug
+		Rel_S60_30M_GCCE = Rel_S60_30M_GCCE
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F98CB431-BD7E-4650-989C-DE4CD43300C8}.Deb_S60_30M_WINSCW.ActiveCfg = Deb_S60_30M_WINSCW|Win32
+		{F98CB431-BD7E-4650-989C-DE4CD43300C8}.Deb_S60_30M_WINSCW.Build.0 = Deb_S60_30M_WINSCW|Win32
+		{F98CB431-BD7E-4650-989C-DE4CD43300C8}.Debug.ActiveCfg = Debug|Win32
+		{F98CB431-BD7E-4650-989C-DE4CD43300C8}.Debug.Build.0 = Debug|Win32
+		{F98CB431-BD7E-4650-989C-DE4CD43300C8}.Rel_S60_30M_GCCE.ActiveCfg = Rel_S60_30M_GCCE|Win32
+		{F98CB431-BD7E-4650-989C-DE4CD43300C8}.Rel_S60_30M_GCCE.Build.0 = Rel_S60_30M_GCCE|Win32
+		{F98CB431-BD7E-4650-989C-DE4CD43300C8}.Release.ActiveCfg = Release|Win32
+		{F98CB431-BD7E-4650-989C-DE4CD43300C8}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

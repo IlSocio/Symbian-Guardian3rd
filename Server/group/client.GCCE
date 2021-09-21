@@ -1,0 +1,375 @@
+
+include \Symbian\9.1\S60_3rd_MR\epoc32\tools\compilation_config\\GCCE.mk
+
+
+# CWD \online\Guardian3rd\Server\group\
+# MMPFile \online\Guardian3rd\Server\group\client.MMP
+# Target GuardCli_200107AC.dll
+# TargetType DLL
+# BasicTargetType DLL
+# MakefileType GNU
+
+ERASE = @erase 2>>nul
+
+# EPOC DEFINITIONS
+
+EPOCBLD = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Server\group\client\GCCE
+EPOCTRG = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE
+EPOCLIB = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5
+EPOCLINK = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5
+EPOCSTATLINK = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5
+EPOCASSPLINK = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\MARM
+EPOCDATA = \Symbian\9.1\S60_3rd_MR\EPOC32\DATA
+EPOCINC = \Symbian\9.1\S60_3rd_MR\EPOC32\INCLUDE
+TRGDIR = 
+DATADIR = Z\System\Data
+
+EPOCBLDUREL = $(EPOCBLD)\UREL
+EPOCTRGUREL = $(EPOCTRG)\UREL
+EPOCLIBUREL = $(EPOCLIB)\UREL
+EPOCLINKUREL = $(EPOCLINK)\UREL
+EPOCSTATLINKUREL = $(EPOCSTATLINK)\UREL
+EPOCASSPLINKUREL = $(EPOCASSPLINK)\UREL
+
+EPOCBLDUDEB = $(EPOCBLD)\UDEB
+EPOCTRGUDEB = $(EPOCTRG)\UDEB
+EPOCLIBUDEB = $(EPOCLIB)\UREL
+EPOCLINKUDEB = $(EPOCLINK)\UREL
+EPOCSTATLINKUDEB = $(EPOCSTATLINK)\UDEB
+EPOCASSPLINKUDEB = $(EPOCASSPLINK)\UREL
+
+# EPOC PSEUDOTARGETS
+
+UREL : MAKEWORKUREL RESOURCEUREL
+
+UDEB : MAKEWORKUDEB RESOURCEUDEB
+
+ALL : UREL UDEB
+
+CLEAN CLEANALL : CLEANBUILD CLEANRELEASE CLEANLIBRARY
+
+
+
+WHAT WHATALL : WHATUREL WHATUDEB
+
+RESOURCE RESOURCEALL : RESOURCEUREL RESOURCEUDEB
+
+CLEANBUILD CLEANBUILDALL : CLEANBUILDUREL CLEANBUILDUDEB
+
+CLEANRELEASE CLEANRELEASEALL : CLEANRELEASEUREL CLEANRELEASEUDEB
+
+MAKEWORK MAKEWORKALL : MAKEWORKUREL MAKEWORKUDEB
+
+LISTING LISTINGALL : LISTINGUREL LISTINGUDEB
+
+MAKEWORK : MAKEWORKLIBRARY
+
+RESOURCEUREL RESOURCEUDEB : GENERIC_RESOURCE
+
+
+# must set both PATH and Path to make it work correctly
+Path:=C:\Symbian\9.1\S60_3rd_MR\EPOC32\gcc\bin;$(Path)
+PATH:=$(Path)
+
+ifndef CC_INSTALL_PATH
+	CC_INSTALL_PATH=C:\Programmi\CSL Arm Toolchain\bin\..
+	STATIC_LIBS = $(STATIC_LIBS_PATH)"$(CC_INSTALL_PATH)\arm-none-symbianelf\lib" $(STATIC_LIBS_PATH)"$(CC_INSTALL_PATH)\lib\gcc\arm-none-symbianelf\3.4.3"
+endif
+ifdef LINKER_SYMBOLS_MAP_OPTION
+	UREL_MAP_FILE="$(EPOCTRGUREL)\GuardCli_200107AC.dll.map"
+	UDEB_MAP_FILE="$(EPOCTRGUDEB)\GuardCli_200107AC.dll.map"
+else
+	UREL_MAP_FILE=
+	UDEB_MAP_FILE=
+endif
+
+
+ifdef CODE_SEGMENT_START
+	CODE_SEGMENT_START += 0x8000 
+endif
+ifdef START_GROUP_SYMBOL
+	EEXE_OBJECT=$(START_GROUP_SYMBOL)UC_EXE_.o$(END_GROUP_SYMBOL)
+	EDLL_OBJECT=$(START_GROUP_SYMBOL)UC_DLL_.o$(END_GROUP_SYMBOL)
+	DENTRY_OBJECT=$(START_GROUP_SYMBOL)D_ENTRY_.o$(END_GROUP_SYMBOL)
+	LENTRY_OBJECT=$(START_GROUP_SYMBOL)L_ENTRY_.o$(END_GROUP_SYMBOL)
+	XENTRY_OBJECT=$(START_GROUP_SYMBOL)X_ENTRY_.o$(END_GROUP_SYMBOL)
+	VENTRY_OBJECT=$(START_GROUP_SYMBOL)V_ENTRY_.o$(END_GROUP_SYMBOL)
+	KENTRY_OBJECT=$(START_GROUP_SYMBOL)K_ENTRY_.o$(END_GROUP_SYMBOL)
+endif
+
+INCDIR =  $(INCLUDE_OPTION) ..\inc  $(INCLUDE_OPTION) . $(INCLUDE_OPTION) . $(INCLUDE_OPTION) ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\include $(INCLUDE_OPTION) ..\..\..\..\Symbian\9.1\S60_3rd_MR\epoc32\include\variant $(INCLUDE_OPTION) "C:\Programmi\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include"
+
+OTHEROPTIONS= $(THUMB_INSTRUCTION_SET)  $(SOFTVFPMODE_OPTION)  $(COMPILER_THUMB_DEFINES)  $(COMPILER_INTERWORK_DEFINES) 
+CCFLAGS += $(OTHEROPTIONS)
+CCDEFS = $(COMPILER_DEFINES)  -D__SYMBIAN32__ -D__SERIES60_30__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D__DLL__ -D__SUPPORT_CPP_EXCEPTIONS__ $(PLATFORM_DEFINES)  -D__PRODUCT_INCLUDE__=\"/Symbian/9.1/S60_3rd_MR/epoc32/include/variant/Symbian_OS_v9.1.hrh\" $(USERDEFS)
+
+CCUREL = $(CC)  $(SYMBIAN_UREL_CCFLAGS) $(RUNTIME_SYMBOL_VISIBILITY_OPTION) $(CCFLAGS)  -DNDEBUG -D_UNICODE $(CCDEFS)
+CCUDEB = $(CC)  $(SYMBIAN_UDEB_CCFLAGS) $(RUNTIME_SYMBOL_VISIBILITY_OPTION) $(CCFLAGS)  -D_DEBUG -D_UNICODE $(CCDEFS)
+
+
+UREL : \
+	$(EPOCTRGUREL)\GuardCli_200107AC.dll \
+	LIBRARY
+
+
+UDEB : \
+	$(EPOCTRGUDEB)\GuardCli_200107AC.dll \
+	LIBRARY
+
+
+
+RESOURCEUREL : MAKEWORKUREL
+RESOURCEUDEB : MAKEWORKUDEB
+
+LIBRARY : MAKEWORKLIBRARY $(EPOCLIB)\LIB\GuardCli_200107AC.dso
+
+
+# REAL TARGET - LIBRARY
+
+$(EPOCLIB)\LIB\GuardCli_200107AC{000a0000}.dso : \online\Guardian3rd\Server\group\Cli_gcce.def
+	copy \online\Guardian3rd\Server\group\Cli_gcce.def "$(EPOCBLD)\GuardCli_200107AC{000a0000}.prep.def"
+	elf2e32 --definput="$(EPOCBLD)\GuardCli_200107AC{000a0000}.prep.def" --dso=$(EPOCLIB)\LIB\GuardCli_200107AC{000a0000}.dso --linkas=GuardCli_200107AC{000a0000}[200107ac].dll
+
+
+$(EPOCLIB)\LIB\GuardCli_200107AC.dso : $(EPOCLIB)\LIB\GuardCli_200107AC{000a0000}.dso
+	copy $< $@
+
+
+\online\Guardian3rd\Server\group\Cli_gcce.def : 
+	@rem Do nothing
+
+
+\online\Guardian3rd\Server\group : 
+	perl -S emkdir.pl $@
+
+
+FREEZE : \online\Guardian3rd\Server\group
+	perl -S efreeze.pl $(EFREEZE_ALLOW_REMOVE) "\online\Guardian3rd\Server\group\Cli_gcce.def" "$(EPOCBLD)\GuardCli_200107AC{000a0000}.def" 
+
+CLEANLIBRARY :
+	-$(ERASE) "$(EPOCLIB)\LIB\GuardCli_200107AC{000a0000}.dso"
+	-$(ERASE) "$(EPOCLIB)\LIB\GuardCli_200107AC.dso"
+
+
+GENERIC_RESOURCE : GENERIC_MAKEWORK
+
+# REAL TARGET - BUILD VARIANT UREL
+
+WHATUREL : WHATGENERIC
+
+CLEANUREL : CLEANBUILDUREL CLEANRELEASEUREL
+
+CLEANBUILDUREL : 
+	@perl -S ermdir.pl "$(EPOCBLDUREL)"
+
+CLEANRELEASEUREL : CLEANGENERIC
+
+
+UREL_RELEASEABLES1= \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB\GuardCli_200107AC.dso \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB\GuardCli_200107AC{000a0000}.dso \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL\GuardCli_200107AC.dll \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL\GuardCli_200107AC.dll.map
+
+WHATUREL:
+	@echo $(UREL_RELEASEABLES1)
+
+CLEANRELEASEUREL:
+	-$(ERASE) $(UREL_RELEASEABLES1)
+
+LISTINGUREL : MAKEWORKUREL \
+	LISTINGURELclient
+
+LIBSUREL= \
+	$(EPOCSTATLINKUREL)\EDLLSTUB.lib \
+	$(EPOCLIB)\LIB\estor.dso \
+	$(EPOCLIB)\LIB\etel3rdparty.dso \
+	$(EPOCLIB)\LIB\bafl.dso \
+	$(EPOCLIB)\LIB\euser.dso \
+	$(EPOCSTATLINKUREL)\usrt2_2.lib \
+	$(EPOCLIB)\LIB\dfpaeabi.dso \
+	$(EPOCLIB)\LIB\dfprvct2_2.dso \
+	$(EPOCLIB)\LIB\drtaeabi.dso \
+	$(EPOCLIB)\LIB\scppnwdl.dso \
+	$(EPOCLIB)\LIB\drtrvct2_2.dso \
+	$(STATIC_LIBS_LIST)
+
+VTBLEXPORTSUREL=
+
+OBJECTSUREL= \
+	$(EPOCBLDUREL)\client.o
+
+$(EPOCTRGUREL)\GuardCli_200107AC.dll : $(OBJECTSUREL) \online\Guardian3rd\Server\group\Cli_gcce.def
+	-$(ERASE) "$(EPOCTRGUREL)\GuardCli_200107AC.dll.map" 
+	$(LD) $(STATIC_LIBS) $(SYMBIAN_UREL_LINK_FLAGS) $(SHARED_OBJECT_OPTION) $(CODE_SEGMENT_START) $(DATA_SEGMENT_START) 0x400000 $(SYMVER_OPTION) $(SO_NAME_OPTION) GuardCli_200107AC{000a0000}[200107ac].dll $(LINKER_ENTRY_OPTION) _E32Dll  $(UNDEFINED_SYMBOL_REF_OPTION) _E32Dll  $(EPOCSTATLINKUREL)\EDLL.LIB$(EDLL_OBJECT) \
+		$(OUTPUT_OPTION) "$(EPOCBLDUREL)\GuardCli_200107AC.dll" \
+		$(LINKER_SYMBOLS_MAP_OPTION) $(UREL_MAP_FILE) \
+		$(OBJECTSUREL) \
+		$(LIBSUREL) \
+		$(VTBLEXPORTSUREL) $(USERLDFLAGS) 
+	copy \online\Guardian3rd\Server\group\Cli_gcce.def "$(EPOCBLD)\GuardCli_200107AC{000a0000}.prep.def"
+	elf2e32 --sid=0x200107ac \
+		 --uid1=0x10000079 --uid2=0x1000008d --uid3=0x200107ac --vid=0x00000000\
+		 --capability=ALL-DRM-TCB-AllFiles-CommDD-DiskAdmin-MultimediaDD-NetworkControl --fpu=softvfp --targettype=DLL --output="$@" --definput="$(EPOCBLD)\GuardCli_200107AC{000a0000}.prep.def" --dso=$(EPOCBLDUREL)\GuardCli_200107AC{000a0000}.dso --defoutput=$(EPOCBLDUREL)\GuardCli_200107AC{000a0000}.def --elfinput="$(EPOCBLDUREL)\GuardCli_200107AC.dll" --linkas=GuardCli_200107AC{000a0000}[200107ac].dll --libpath="$(EPOCLIB)\LIB"
+
+	copy  "$(EPOCBLDUREL)\GuardCli_200107AC{000a0000}.def" "$(EPOCBLD)\GuardCli_200107AC{000a0000}.def"
+
+# REAL TARGET - BUILD VARIANT UDEB
+
+WHATUDEB : WHATGENERIC
+
+CLEANUDEB : CLEANBUILDUDEB CLEANRELEASEUDEB
+
+CLEANBUILDUDEB : 
+	@perl -S ermdir.pl "$(EPOCBLDUDEB)"
+
+CLEANRELEASEUDEB : CLEANGENERIC
+
+
+UDEB_RELEASEABLES1= \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB\GuardCli_200107AC.dso \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB\GuardCli_200107AC{000a0000}.dso \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB\GuardCli_200107AC.dll \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB\GuardCli_200107AC.dll.map
+
+WHATUDEB:
+	@echo $(UDEB_RELEASEABLES1)
+
+CLEANRELEASEUDEB:
+	-$(ERASE) $(UDEB_RELEASEABLES1)
+
+LISTINGUDEB : MAKEWORKUDEB \
+	LISTINGUDEBclient
+
+LIBSUDEB= \
+	$(EPOCSTATLINKUDEB)\EDLLSTUB.lib \
+	$(EPOCLIB)\LIB\estor.dso \
+	$(EPOCLIB)\LIB\etel3rdparty.dso \
+	$(EPOCLIB)\LIB\bafl.dso \
+	$(EPOCLIB)\LIB\euser.dso \
+	$(EPOCSTATLINKUDEB)\usrt2_2.lib \
+	$(EPOCLIB)\LIB\dfpaeabi.dso \
+	$(EPOCLIB)\LIB\dfprvct2_2.dso \
+	$(EPOCLIB)\LIB\drtaeabi.dso \
+	$(EPOCLIB)\LIB\scppnwdl.dso \
+	$(EPOCLIB)\LIB\drtrvct2_2.dso \
+	$(STATIC_LIBS_LIST)
+
+VTBLEXPORTSUDEB=
+
+OBJECTSUDEB= \
+	$(EPOCBLDUDEB)\client.o
+
+$(EPOCTRGUDEB)\GuardCli_200107AC.dll : $(OBJECTSUDEB) \online\Guardian3rd\Server\group\Cli_gcce.def
+	-$(ERASE) "$(EPOCTRGUDEB)\GuardCli_200107AC.dll.map" 
+	$(LD) $(STATIC_LIBS) $(SYMBIAN_UDEB_LINK_FLAGS) $(SHARED_OBJECT_OPTION) $(CODE_SEGMENT_START) $(DATA_SEGMENT_START) 0x400000 $(SYMVER_OPTION) $(SO_NAME_OPTION) GuardCli_200107AC{000a0000}[200107ac].dll $(LINKER_ENTRY_OPTION) _E32Dll  $(UNDEFINED_SYMBOL_REF_OPTION) _E32Dll  $(EPOCSTATLINKUDEB)\EDLL.LIB$(EDLL_OBJECT) \
+		$(OUTPUT_OPTION) "$(EPOCBLDUDEB)\GuardCli_200107AC.dll" \
+		$(LINKER_SYMBOLS_MAP_OPTION) $(UDEB_MAP_FILE) \
+		$(OBJECTSUDEB) \
+		$(LIBSUDEB) \
+		$(VTBLEXPORTSUDEB) $(USERLDFLAGS) 
+	copy "$(EPOCBLDUDEB)\GuardCli_200107AC.dll" "$(EPOCTRGUDEB)\GuardCli_200107AC.sym"
+	copy \online\Guardian3rd\Server\group\Cli_gcce.def "$(EPOCBLD)\GuardCli_200107AC{000a0000}.prep.def"
+	elf2e32 --sid=0x200107ac \
+		 --uid1=0x10000079 --uid2=0x1000008d --uid3=0x200107ac --vid=0x00000000\
+		 --capability=ALL-DRM-TCB-AllFiles-CommDD-DiskAdmin-MultimediaDD-NetworkControl --fpu=softvfp --targettype=DLL --output="$@" --definput="$(EPOCBLD)\GuardCli_200107AC{000a0000}.prep.def" --dso=$(EPOCBLDUDEB)\GuardCli_200107AC{000a0000}.dso --defoutput=$(EPOCBLDUDEB)\GuardCli_200107AC{000a0000}.def --elfinput="$(EPOCBLDUDEB)\GuardCli_200107AC.dll" --linkas=GuardCli_200107AC{000a0000}[200107ac].dll --libpath="$(EPOCLIB)\LIB"
+
+	copy  "$(EPOCBLDUDEB)\GuardCli_200107AC{000a0000}.def" "$(EPOCBLD)\GuardCli_200107AC{000a0000}.def"
+
+# SOURCES
+
+# Source client.cpp
+
+$(EPOCBLDUREL)\client.lis $(EPOCBLDUREL)\client.o \
+$(EPOCBLDUDEB)\client.lis $(EPOCBLDUDEB)\client.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\BADESCA.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Etel3rdParty.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\S32MEM.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\badesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bamdesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32buf.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32buf.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32mem.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32page.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32page.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32share.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32share.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32stor.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32stor.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\telephony.inl \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Server\inc\client.h \
+	\online\Guardian3rd\Server\inc\clientserver.h \
+	\online\Guardian3rd\Server\inc\settings_consts.h \
+	\online\Guardian3rd\Server\inc\srverr.h
+
+$(EPOCBLDUREL)\client.o : \online\Guardian3rd\Server\src\Client.cpp
+	@echo Client.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Client.cpp
+
+LISTINGURELclient : $(EPOCBLDUREL)\client.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Server\src\client.ARMV5.lst
+
+$(EPOCBLDUREL)\client.lis : \online\Guardian3rd\Server\src\Client.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Client.cpp 
+
+$(EPOCBLDUDEB)\client.o : \online\Guardian3rd\Server\src\Client.cpp
+	@echo Client.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Client.cpp
+
+LISTINGUDEBclient : $(EPOCBLDUDEB)\client.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Server\src\client.ARMV5.lst
+
+$(EPOCBLDUDEB)\client.lis : \online\Guardian3rd\Server\src\Client.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Client.cpp 
+
+
+
+ROMFILE:
+	@echo file=\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\##MAIN##\##BUILD##\GuardCli_200107AC.dll sys\bin\GuardCli_200107AC.dll 
+
+
+WHATGENERIC CLEANGENERIC :
+	@rem none
+
+# Rules to create all necessary directories
+
+GENERIC_MAKEWORK : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Server\group\client\GCCE
+MAKEWORKLIBRARY : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB
+MAKEWORKUDEB : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Server\group\client\GCCE\UDEB \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB
+MAKEWORKUREL : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Server\group\client\GCCE\UREL \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL
+
+\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Server\group\client\GCCE \
+\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Server\group\client\GCCE\UDEB \
+\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Server\group\client\GCCE\UREL \
+\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB \
+\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB \
+\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL \
+:
+	perl -S emkdir.pl $@
+

@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE asptml SYSTEM "file:///C:/Symbian/9.1/S60_3rd_MR/epoc32/tools/cshlpcmp/dtd/asptml.dtd">
+<?xml:stylesheet href="file:///C:/Symbian/9.1/S60_3rd_MR/epoc32/tools/cshlpcmp/xsl/asptml.xsl" title="asptml" type="text/xsl"?>
+<asptml>
+
+
+
+
+<uid value="0x200112DD"/><topic><category>Guardian</category><topictitle>Introduction</topictitle>
+<context contextUID="HIntro"/>
+<p>Guardian est un logiciel antivol convivial et tr&#232;s efficace pour t&#233;l&#233;phone cellulaire.&break;Chaque fois que le t&#233;l&#233;phone est mis en marche, Guardian s&rquote;assure que la carte SIM utilis&#233;e est autoris&#233;e. Dans le cas contraire, Guardian envoie &#224; un num&#233;ro pr&#233;alablement choisi une notification SMS (<b>invisible</b>) contenant le num&#233;ro de la carte SIM non autoris&#233;e.</p>
+<p style="note"><b>Remarque</b><b>&nbspace;</b><b>:</b><b> </b>Aucun des messages SMS envoy&#233;s ou re&#231;us par Guardian n&rquote;est apparent, que ce soit sous forme d&rquote;ic&#244;ne, de signal sonore ou lumineux ou de vibration. De plus, Guardian ne laisse de trace ni dans le rapport d&rquote;activit&#233;, ni dans la bo&#238;te d&rquote;envoi ou dans les &#233;l&#233;ments envoy&#233;s de votre messagerie.</p>
+</topic><topic><category>Guardian</category><topictitle>Achat et enregistrement</topictitle>
+<context contextUID="HBuyAndReg"/>
+<p>Vous pouvez en tout temps passer de la version <b>gratuite</b> &#224; la version <b>Gold</b> ou <b>P</b><b>latin</b><b>um</b>.</p>
+<p>Cette option de commande comprend les fonctions suivantes&nbspace;:</p>
+<p><i>&#171;</i><i>&nbspace;</i><b><i>S</i></b><b><i>&rquote;</i></b><b><i>enregistre</i></b><b><i>r</i></b><i>&nbspace;</i><i>&#187;</i> permet de passer de la version <b>gratuite</b> &#224; la version <b>Gold </b>ou <b>Platinum</b>, apr&#232;s l&rquote;achat du logiciel;</p>
+<p><i>&#171;</i><i>&nbspace;</i><b><i>Acheter</i></b><i>&nbspace;</i><i>&#187;</i><i> </i>ouvre l&rquote;adresse URL pour l&rquote;achat de la version <b>Gold</b> ou <b>Platinum</b>;</p>
+<p><i>&#171;</i><i>&nbspace;</i><b><i>Envoyer</i></b><b><i> Guardian</i></b><i>&nbspace;</i><i>&#187;</i> permet d&rquote;envoyer le programme &#224; vos amis en utilisant la technologie Bluetooth ou infrarouge (cette fonction n&rquote;est pas syst&#233;matiquement offerte);</p>
+<p>&#171;&nbspace;<b>V&#233;rifier les mises &#224; jour</b>&nbspace;&#187;<i> </i>v&#233;rifie si de nouvelles mises &#224; jour du programme sont disponibles. Le cas &#233;ch&#233;ant, vous pourrez les t&#233;l&#233;charger et les installer sur le t&#233;l&#233;phone instantan&#233;ment. Nous vous sugg&#233;rons de v&#233;rifier r&#233;guli&#232;rement l&rquote;existence de nouvelles mises &#224; jour.</p>
+<p style="note"><b>Remarque</b><b>&nbspace;</b><b>:</b> Si vous utilisez la version <b>gratuite</b>, vous devrez v&#233;rifier la disponibilit&#233; des logiciels &#224; tous les 15&nbspace;jours. Sinon, vous n&rquote;aurez plus acc&#232;s aux fonctionnalit&#233;s du logiciel.</p>
+</topic><topic><category>Guardian</category><topictitle>Achat</topictitle>
+<context contextUID="HBuy"/>
+<p>Vous pouvez acheter la version <b>Gold</b> ou <b>Platinum</b> au site Web officiel <b>http:</b><b>//www</b><b>.</b><b> </b><b>G</b><b>uardian-Mobile</b><b>.</b><b> </b><b>c</b><b>om/</b></p>
+<p>ou choisir dans le menu</p>
+<p>&#171;&nbspace;<b><i>Options > </i></b><b><i>Achat</i></b>&nbspace;&#187;</p>
+<p>pour effectuer l&rquote;achat &#224; partir de votre t&#233;l&#233;phone.</p>
+<p>Si vous ne poss&#233;dez pas de compte PayPal, il vous est &#233;galement possible de payer par carte de cr&#233;dit (Visa, Mastercard, American Express, etc.).</p>
+<p>D&#232;s la conclusion de l&rquote;achat effectu&#233;, un code d&rquote;enregistrement personnalis&#233; s&rquote;affichera &#224; l&rquote;&#233;cran de votre t&#233;l&#233;phone et vous sera envoy&#233; par courriel. Vous n&rquote;aurez plus qu&rquote;&#224; entrer ce code dans le logiciel pour passer de la version <b>gratuite</b> &#224; la version <b>Gold</b> ou <b>Platinum</b>.</p>
+</topic><topic><category>Guardian</category><topictitle>Enregistrement</topictitle>
+<context contextUID="HRegister"/>
+<p>Apr&#232;s avoir re&#231;u votre <b>code d</b><b>&rquote;</b><b>enregistrement</b>, ouvrez Guardian et choisissez l&rquote;option suivante dans le menu&nbspace;:</p>
+<p>&#171;&nbspace;<b><i>Options > </i></b><b><i>S</i></b><b><i>&rquote;</i></b><b><i>enregistrer</i></b><b><i> > </i></b><b><i>Utiliser</i></b><b><i> code</i></b><b><i>&nbspace;</i></b><i>&#187;</i></p>
+<p>Ins&#233;rez le code de 8 caract&#232;res, qui est sensible &#224; la case.</p>
+<p>Si votre &#171;&nbspace;<b>C</b><b>ode d</b><b>&rquote;</b><b>enregistrement</b><b>&nbspace;</b>&#187; est valide, le logiciel se convertira automatiquement en version Gold ou&break;Platinum selon le cas.</p>
+</topic><topic><category>Guardian</category><topictitle>R&#233;glages</topictitle>
+<context contextUID="HSettings"/>
+<p>La configuration de tous les param&#232;tres de Guardian se fait tr&#232;s facilement et rapidement.</p>
+<p><i>&#171;</i><i>&nbspace;</i><b><i>&#201;tat</i></b><i>&nbspace;</i><i>&#187;</i> indique si le logiciel est activ&#233; ou d&#233;sactiv&#233;.</p>
+<p><i>&#171;</i><i>&nbspace;</i><b><i>Destinataire</i></b><i>&nbspace;</i><i>&#187;</i> est le num&#233;ro du destinataire du message SMS envoy&#233; lors de l&rquote;insertion d&rquote;une carte SIM non autoris&#233;e.</p>
+<p><i>&#171;</i><i>&nbspace;</i><b><i>Texte</i></b><i> </i><b><i>SMS</i></b><b><i>&nbspace;</i></b><i>&#187;</i> est le texte envoy&#233; lors de l&rquote;insertion d&rquote;une carte SIM non autoris&#233;e.</p>
+<p><i>&#171;</i><i>&nbspace;</i><b><i>Code secret</i></b><b><i>&nbspace;</i></b><i>&#187;</i><i> </i>est le code secret, qui est tr&#232;s important&nbspace;: il sert &#224; ouvrir Guardian ou les <b>logiciels prot&#233;g&#233;s</b> ou &#224; utiliser le <b>c</b><b>ontr&#244;le &#224; distance</b>.</p>
+<p>&#171;&nbspace;<b><i>Prot&#233;ger les logiciels</i></b><b>&nbspace;</b>&#187; indique la dur&#233;e de non-activit&#233; du t&#233;l&#233;phone qui doit s&rquote;&#233;couler avant le blocage automatique des logiciels figurant dans la liste des logiciels prot&#233;g&#233;s. Pour ouvrir un logiciel prot&#233;g&#233;, vous devez absolument entrer le code secret. Une fois le code entr&#233;, vous pourrez acc&#233;der &#224; TOUS les logiciels. Si le t&#233;l&#233;phone demeure non actif plus longtemps que la valeur de ce param&#232;tre, le logiciel sera de nouveau prot&#233;g&#233; et vous devrez r&#233;ins&#233;rer le code secret.</p>
+</topic><topic><category>Guardian</category><topictitle>Configuration rapide</topictitle>
+<context contextUID="HFastSettings"/>
+<p>Configurez rapidement votre logiciel antivol en suivant les &#233;tapes suivantes&nbspace;:</p>
+<p>1) Allez au param&#232;tre &#171;&nbspace;<b><i>Destinataire</i></b><b><i>&nbspace;</i></b><i>&#187;</i> et choisissez &#171;&nbspace;<b><i>Options->Chang</i></b><b><i>ement</i></b><b><i>&nbspace;</i></b><i>&#187;</i>, puis s&#233;lectionnez dans les contacts le num&#233;ro du destinataire de la notification SMS <i>&#171;</i><i>&nbspace;</i><i>Attention!</i><i> </i><i>SIM Chang&#233;</i><i>&nbspace;</i><i>&#187;</i>.</p>
+<p style="note"><b>Remarque</b><b>&nbspace;</b><b>:</b><b> </b>Si vous souhaitez changer un num&#233;ro qui ne figure pas dans vos contacts, vous pouvez cr&#233;er une entr&#233;e temporaire dans les contacts, l&rquote;utiliser dans Guardian, puis l&rquote;effacer. Cependant, Guardian conservera le num&#233;ro choisi.</p>
+<p>2) Entrez votre &#171;&nbspace;code secret&nbspace;&#187;.</p>
+<p style="note"><b>Remarque</b><b>&nbspace;</b><b>:</b><b> </b>Le code secret d&rquote;au moins 5&nbspace;chiffres sera requis &#224; l&rquote;ouverture de Guardian et de tous les &#171;&nbspace;<b>logiciels prot&#233;g&#233;s</b><b>&nbspace;</b>&#187;, ainsi que pour utiliser le &#171;&nbspace;<b>Contr&#244;le &#224; distance</b>&nbspace;&#187;.</p>
+<p>3) Changez l&rquote;&#171;&nbspace;<b>&#201;</b><b>tat</b>&nbspace;&#187; de Guardian<i> </i>&#224; &#171;&nbspace;<b><i>Acti</i></b><b><i>f</i></b><b><i>&nbspace;</i></b><i>&#187;</i></p>
+</topic><topic><category>Guardian</category><topictitle>List SIM autoris&#233;e</topictitle>
+<context contextUID="HSimList"/>
+<p>Guardian consid&#232;re que toutes les cartes SIM figurant dans la liste sont autoris&#233;es pour l&rquote;utilisation du t&#233;l&#233;phone.</p>
+<p>La liste vous permet d&rquote;utiliser votre t&#233;l&#233;phone avec diff&#233;rentes cartes SIM; en effet, Guardian ne vous enverra pas la notification &#171;&nbspace;Carte SIM chang&#233;e&nbspace;&#187; si vous ins&#233;rez une carte SIM autoris&#233;e.</p>
+<p style="note"><b>Remarque</b><b>&nbspace;</b><b>:</b><b> </b>La version <b>g</b><b>ratuite</b> ne vous permet d&rquote;utiliser que la carte SIM qui a servi &#224; l&rquote;installationdu programme dans la liste SIM autoris&#233;e, tandis que les versions <b>Gold</b> et <b>Platinum</b> vous permettent d&rquote;autoriser un nombre illimit&#233; de cartes SIM.</p>
+<p>Ce menu inclut les commandes suivantes&nbspace;:</p>
+<p>&#171;&nbspace;<b>Renommer</b>&nbspace;&#187; permet de modifier le nom de la carte SIM s&#233;lectionn&#233;e;</p>
+<p>&#171;&nbspace;<b>Supprimer</b>&nbspace;&#187; enl&#232;ve la carte SIM s&#233;lectionn&#233;e de la liste;</p>
+<p>&#171;&nbspace;<b>Ajouter</b>&nbspace;&#187; indique les instructions pour ajouter une nouvelle carte SIM dans la liste;</p>
+<p>Pour ajouter une nouvelle carte SIM &#224; la liste&nbspace;:&break;1) d&#233;sactivez Guardian temporairement;&break;2) ins&#233;rez la nouvelle carte SIM dans le t&#233;l&#233;phone et mettez-le en marche;</p>
+<p>3) lancez Guardian; la nouvelle carte sera ajout&#233;e &#224; la liste.</p>
+<p style="note"><b>Remarque</b><b>&nbspace;</b><b>:</b> Vous pouvez &#233;galement ajouter une nouvelle carte SIM sans d&#233;sactiver la fonctionnalit&#233; antivol, mais Guardian enverra une notification SMS apr&#232;s la mise en marche du t&#233;l&#233;phone et la d&#233;tection d&rquote;une carte SIM non autoris&#233;e.</p>
+<p style="note"><b>Suggestion</b><b>&nbspace;</b><b>:</b><b> </b>Utilisez l&rquote;option &#171;&nbspace;<i>Renommer</i>&nbspace;&#187; pour attribuer un nom appropri&#233; aux diverses cartes SIM, de mani&#232;re &#224; pouvoir les distinguer.</p>
+</topic><topic><category>Guardian</category><topictitle>Prot&#233;ger les logiciels</topictitle>
+<context contextUID="HProtList"/>
+<p>Cette fonction affiche la liste de tous les logiciels install&#233;s dans le t&#233;l&#233;phone et vous permet de s&#233;lectionner ceux que vous voulez prot&#233;ger. Les logiciels prot&#233;g&#233;s sont signal&#233;s par un crochet &#224; la fin de leur nom.</p>
+<p style="note"><b>Remarque</b>&nbspace;: Il peut vous sembler que certains logiciels apparaissent plus d&rquote;une fois dans la liste; cependant, m&#234;me si leur nom est identique, il s&rquote;agit de logiciels distincts qui ex&#233;cutent des fonctionnalit&#233;s diff&#233;rentes; dans le doute, prot&#233;gez tous les logiciels portant le m&#234;me nom que celui que vous voulez prot&#233;ger.</p>
+<p style="note"><b>Suggestion</b><b>&nbspace;</b><b>:</b><b> </b>Pour acc&#233;l&#233;rer la recherche d&rquote;un logiciel donn&#233;, ins&#233;rez un chiffre au d&#233;but de son nom; de cette mani&#232;re, en lan&#231;ant une recherche sur ce chiffre, le nom du logiciel recherch&#233; s&rquote;affichera.</p>
+<p>Le menu comprend les commandes suivantes&nbspace;:</p>
+<p><i>&#171;</i><i>&nbspace;</i><b><i>Ajouter</i></b><i> / </i><b><i>Supprimer</i></b><b><i>&nbspace;</i></b><i>&#187;</i> ins&#232;re ou enl&#232;ve le logiciel s&#233;lectionn&#233; de la liste des logiciels prot&#233;g&#233;s.</p>
+<p><i>&#171;</i><i>&nbspace;</i><b><i>Ic&#244;nes grandes / petites</i></b><b><i>&nbspace;</i></b><i>&#187;</i><b><i> </i></b>modifie la taille des ic&#244;nes dans la liste.</p>
+<p style="note"><b>Suggestion</b><b>&nbspace;</b><b>:</b> Pour emp&#234;cher une d&#233;sinstallation non autoris&#233;e, prot&#233;gez le logiciel<i> </i><i>&#171;</i><i>&nbspace;</i><b><i>Installer</i></b><i>&nbspace;</i><i>&#187;</i>. De cette mani&#232;re, toute d&#233;sinstallation n&#233;cessitera l&rquote;entr&#233;e du &#171;&nbspace;code secret&nbspace;&#187;.</p>
+<p style="note"><b>Suggestion</b><b>&nbspace;</b><b>:</b> Pour prot&#233;ger vos donn&#233;es confidentielles, nous vous sugg&#233;rons de prot&#233;ger les logiciels suivants&nbspace;:</p>
+<p style="note">&#171;&nbspace;<b>Message texte</b>&nbspace;&#187;</p>
+<p style="note">&#171;&nbspace;<b>Messagerie</b>&nbspace;&#187;</p>
+<p style="note">&#171;&nbspace;<b>Contacts</b>&nbspace;&#187;</p>
+<p style="note">&#171;&nbspace;<b>Calend</b><b>rier</b><b>&nbspace;</b>&#187;</p>
+<p style="note">&#171;&nbspace;<b>Galerie</b>&nbspace;&#187;</p>
+<p style="note">&#171;&nbspace;<b>Journal</b>&nbspace;&#187;</p>
+</topic></asptml>

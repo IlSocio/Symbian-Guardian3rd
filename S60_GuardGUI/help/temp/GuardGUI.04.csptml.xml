@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE csptml SYSTEM "file:///C:/Symbian/9.1/S60_3rd_MR/epoc32/tools/cshlpcmp/dtd/csptml.dtd">
+<?xml:stylesheet href="file:///C:/Symbian/9.1/S60_3rd_MR/epoc32/tools/cshlpcmp/xsl/csptml.xsl" title="csptml" type="text/xsl"?>
+<csptml><section level="0">
+<p style="comment">Data: 21-APR-08</p>
+<p style="comment">Versione: Draft 6</p>
+<section level="1"><heading>Guardian</heading>
+<p style="category uid">0x200112DD</p>
+<section level="2"><heading>Introducci&#243;n</heading>
+<p style="context">HIntro</p>
+<p>Guardian es un programa antirrobo para el tel&#233;fono m&#243;vil: f&#225;cil, eficiente y muy eficaz.  &break;Cada vez que se enciende el tel&#233;fono Guardian comprueba si la tarjeta SIM est&#225; autorizada y si no manda un SMS (<b>invisible</b>) a un n&#250;mero de tel&#233;fono especificado previamente, con el n&#250;mero de la nueva SIM insertada.</p>
+<p style="note"><b>Nota: </b>Todos los SMS mandados/recibidos por Guardian son invisibles, no hay ninguna notificaci&#243;n al usuario, ning&#250;n icono, ninguna luz, ninguna alerta, ninguna vibraci&#243;n, ni rastro de mensajer&#237;a en la bandeja de salida/enviados ni huellas en el registro de actividad. </p>
+</section><section level="2"><heading>Compra y Registro</heading>
+<p style="context">HBuyAndReg</p>
+<p>Siempre puede convertir su versi&#243;n <b>Free</b> (gratuita) en la versi&#243;n <b>Gold</b> o <b>Platinum</b>.</p>
+<p>En este men&#250; encontrar&#225; las siguientes opciones:</p>
+<p><i>&#8220;</i><b><i>Registrar</i></b><i>&#8221;</i>, este men&#250; permite convertir la versi&#243;n <b>Free</b> a la versi&#243;n <b>Gold</b> o <b>Platinum</b> despu&#233;s de comprar el producto.</p>
+<p><i>&#8220;</i><b><i>Comprar</i></b><i>&#8221;, </i>Abre la URL d&#243;nde podr&#225; comprar la versi&#243;n <b>Gold</b> o <b>Platinum</b>.</p>
+<p><i>&#8220;</i><b><i>Enviar Guardian</i></b><i>&#8221;,</i> permite enviar el programa a sus amigos v&#237;a Bluetooth o Infrarrojos (&#201;sta &#250;ltima opci&#243;n no siempre est&#225; disponible).</p>
+<p>&#8220;<b><i>Comprobar actualizaciones</i></b><i>&#8221;, </i>comprueba si est&#225;n disponibles nuevas actualizaciones del programa. Si est&#225;n disponibles las podr&#225; descargar e instalar inmediatamente en el tel&#233;fono. Nosotros sugerimos comprobar peri&#243;dicamente si hay actualizaciones.</p>
+<p style="note"><b>Nota:</b> Utilizando la versi&#243;n <b>Free</b> es obligatorio comprobar las actualizaciones cada 15 d&#237;as, de lo contrario no podr&#225; utilizar m&#225;s el software.</p>
+</section><section level="2"><heading>Compra</heading>
+<p style="context">HBuy</p>
+<p>Para comprar la versi&#243;n <b>Gold</b> o <b>Platinum</b>, visite el sitio web oficial <b>http://www.Guardian-Mobile.com/</b><b> </b></p>
+<p>o en el men&#250; seleccione</p>
+<p> &#8220;<b><i>Opciones > Comprar</i></b>&#8221; </p>
+<p>para hacerlo desde su propio tel&#233;fono.</p>
+<p>Si no dispone de una cuenta PayPal, puede pagar utilizando su tarjeta de cr&#233;dito (Visa, Mastercard, American Express, etc&#8230;) </p>
+<p>Una vez que complete el procedimiento de compra, recibir&#225; inmediatamente un C&#243;digo de Registro personal (en la pantalla del tel&#233;fono y por correo electr&#243;nico). S&#243;lo tendr&#225; que insertar el C&#243;digo de Registro en el programa para convertir inmediatamente la versi&#243;n <b>Free</b> a la versi&#243;n <b>Gold</b> o <b>Platinum</b><b><i>.</i></b></p>
+</section><section level="2"><heading>Registro</heading>
+<p style="context">HRegister</p>
+<p>Despu&#233;s de recibir el <b>C&#243;digo de Registro</b>, en el men&#250; seleccione el comando </p>
+<p>&#8220;<b><i>Opciones > Registrar > Utilizando C&#243;digo</i></b>&#8221; </p>
+<p>inserte el c&#243;digo de 8 caracteres, sensible a variaciones.</p>
+<p>Si introduce un <b>C&#243;digo de Registro</b> correcto el programa se convertir&#225; autom&#225;ticamente en la versi&#243;n comprada.</p>
+</section><section level="2"><heading>Configuraci&#243;n</heading>
+<p style="context">HSettings</p>
+<p>La configuraci&#243;n de Guardian es f&#225;cil e inmediata, s&#243;lo precisa de un corto periodo de tiempo para configurar los par&#225;metros necesarios para el programa.</p>
+<p><i>&#8220;</i><b><i>Estado</i></b><i>&#8221;</i>, indica si el programa est&#225; Habilitado o Deshabilitado. </p>
+<p><i>&#8220;</i><b><i>Destinatario</i></b><i>&#8221;, </i>es el n&#250;mero de tel&#233;fono al que se mandar&#225; el mensaje cuando se inserte una SIM no autorizada. </p>
+<p><i>&#8220;</i><b><i>Texto del SMS</i></b><i>&#8221;</i>, es el texto que se mandar&#225; cuando se inserte una SIM no autorizada. </p>
+<p><i>&#8220;</i><b><i>Clave</i></b><i>&#8221;</i>, esta clave es realmente IMPORTANTE. Es utilizada para acceder a Guardian o a una <b>Aplicaci&#243;n Protegida</b> y para utilizar los <b>Comandos de Control Remoto</b>. </p>
+<p>&#8220;<b><i>Proteger Aplicaciones</i></b><i>&#8221;, </i>muestra el tiempo de inactividad del tel&#233;fono necesario para que se bloqueen las aplicaciones a&#241;adidas a la lista de aplicaciones protegidas. Es obligatorio introducir la clave de acceso para acceder a una aplicaci&#243;n protegida, pero una vez introducida podr&#225; acceder a TODAS las aplicaciones. Si el tel&#233;fono permanece inactivo por m&#225;s tiempo del que ha especificado en este par&#225;metro, la aplicaci&#243;n se proteger&#225; nuevamente y deber&#225; introducir la clave otra vez. </p>
+</section><section level="2"><heading>Configuraci&#243;n R&#225;pida</heading>
+<p style="context">HFastSettings</p>
+<p>Para configurar r&#225;pidamente su antirrobo siga los siguientes pasos:</p>
+<p> </p>
+<p>1) Dir&#237;jase al par&#225;metro &#8220;<b><i>Destinatario</i></b>&#8221; y seleccione "<b><i>Opciones->Cambiar</i></b>&#8221;, entonces, en la lista de contactos seleccione el n&#250;mero del destinatario que quiere que reciba la notificaci&#243;n de &#8220;SIM Cambiada&#8221;.</p>
+<p style="note"><b>Nota: </b>Si quiere especificar un n&#250;mero no presente en los contactos, puede crear una entrada temporal, utilizarla y luego borrarla. Sin embargo, Guardian guardar&#225; el n&#250;mero seleccionado.</p>
+<p>2) Especifique su &#8220;Clave de acceso&#8221;.</p>
+<p style="note"><b>Nota: </b>la clave debe contener al menos 5 d&#237;gitos. &#201;sta ser&#225; requerida cuando accedas a Guardian, a alguna &#8220;<b><i>Aplicaci&#243;n Protegida</i></b>&#8221; y para utilizar &#8220;<b><i>Comandos de Control Remoto</i></b>&#8221;.</p>
+<p>3) Finalmente cambie el <i>&#8220;</i><b><i>Estado</i></b><i>&#8221; </i>de Guardian<i> </i>a<i> &#8220;</i><b><i>Habilitado</i></b><i>&#8221;</i>.</p>
+</section><section level="2"><heading>Lista de SIMs Autorizadas</heading>
+<p style="context">HSimList</p>
+<p>Todas las SIMs presentes en esta lista ser&#225;n consideradas por Guardian como SIMs autorizadas para utilizar el tel&#233;fono. </p>
+<p>Esta lista es &#250;til si quiere utilizar su tel&#233;fono con tarjetas SIM diferentes, en este caso, Guardian no mandar&#225; ning&#250;n SMS de notificaci&#243;n de &#8220;SIM cambiada&#8221; si introduce una SIM autorizada. </p>
+<p style="note"><b>Nota: </b>la versi&#243;n <b>Free</b> solo le permite tener la SIM utilizada para instalar el programa en la lista de SIMs autorizadas. En cambio, tanto la versi&#243;n <b>Gold</b> como la <b>Platinum </b>permiten tener un n&#250;mero infinito de SIMs autorizadas.  </p>
+<p>En este men&#250; est&#225;n presentes los comandos siguientes:</p>
+<p>&#8220;<b>Renombrar</b>&#8221;, permite modificar el nombre de la SIM seleccionada. </p>
+<p>&#8220;<b>Eliminar</b>&#8221;, elimina la SIM seleccionada de la lista.</p>
+<p>&#8220;<b>A&#241;adir</b>&#8221;, muestra las instrucciones para a&#241;adir una nueva SIM a la lista. </p>
+<p>Para a&#241;adir una nueva SIM a la lista:&break;1) Deshabilite Guardian temporalmente, cierre la aplicaci&#243;n y apague el tel&#233;fono.&break;2) Encienda el tel&#233;fono con la nueva SIM introducida.</p>
+<p>3) Ejecute  Guardian y la nueva SIM se a&#241;adir&#225; autom&#225;ticamente a la lista. </p>
+<p style="note"><b>Nota</b>: Tambi&#233;n puede a&#241;adir una nueva SIM sin deshabilitar el antirrobo, pero Guardian mandar&#225; un SMS de notificaci&#243;n despu&#233;s de encender el tel&#233;fono porque detectar&#225; una SIM no autorizada.</p>
+<p style="note"><b>Sugerencia: </b>Para distinguir m&#225;s r&#225;pidamente las SIMs utilice la opci&#243;n &#8220;<i>Renombrar</i>&#8221; y especifique un nombre m&#225;s significativo. </p>
+</section><section level="2"><heading>Aplicaciones Protegidas</heading>
+<p style="context">HProtList</p>
+<p>En esta vista se muestran todas las aplicaciones instaladas en el tel&#233;fono y puede seleccionar las que quiera proteger. Las aplicaciones protegidas son identificadas con una marca en la derecha de su nombre.</p>
+<p style="note"><b>Nota</b>: Puede parecer que algunas aplicaciones est&#233;n repetidas en la lista, pero aunque el nombre es el mismo las aplicaciones son diferentes y realizan funciones diferentes. As&#237; que si no sabe en qu&#233; se diferencian proteja ambas aplicaciones.</p>
+<p style="note"><b>Sugerencia: </b>Para acelerar la b&#250;squeda de una aplicaci&#243;n en particular puede escribir su nombre. El programa le mostrar&#225; las aplicaciones que tengan un nombre que empiece por los caracteres introducidos.</p>
+<p>En el men&#250; puede encontrar los siguientes comandos:</p>
+<p><i>&#8220;</i><b><i>A&#241;adir / Eliminar</i></b><i>&#8221;</i>: protege o desprotege la aplicaci&#243;n seleccionada. </p>
+<p><i>&#8220;</i><b><i>Iconos Grandes /  Peque&#241;os</i></b><i>&#8221;:</i> modifica el tama&#241;o de los iconos de la lista. </p>
+<p style="note"><b>Sugerencia</b>: Para prevenir una desinstalaci&#243;n no autorizada proteja las aplicaciones &#8220;<b><i>Instalador</i></b><b><i>&#8221;</i></b><i>. </i>Si alguien intenta desinstalar Guardian el tel&#233;fono preguntar&#225; por la &#8220;<i>clave</i>&#8221;.</p>
+<p style="note"><b>Sugerencia</b>: Para proteger sus datos personales puede proteger las siguientes aplicaciones:</p>
+<p style="note">&#8220;<b>Mensajes</b>&#8221;</p>
+<p style="note">&#8220;<b>Mens. texto</b>&#8221;</p>
+<p style="note">&#8220;<b>Gu&#237;a</b>&#8221;</p>
+<p style="note">&#8220;<b>Agenda</b>&#8221;</p>
+<p style="note">&#8220;<b>Galer&#237;a</b>&#8221;</p>
+<p style="note">&#8220;<b>Registro</b>&#8221;</p>
+</section></section></section></csptml>

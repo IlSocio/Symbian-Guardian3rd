@@ -1,0 +1,83 @@
+﻿/*
+============================================================================
+ Naziv          : GuardGUI.rls
+ Autor          : Marko Belino
+ Izdanje        :
+ Autorska prava : Sva prava zadžana
+ Opis           : Datoteka lokalizacije
+============================================================================
+*/
+
+//  LOCALISATION STRINGS
+
+
+rls_string txt_please_reboot		"Please reboot your Phone after the installation is completed!"
+
+rls_string txt_lock_on 			"Komanda Lock: U redu - Telefon je Zaključano!"
+rls_string txt_lock_off 		"Komanda Lock: U redu - Telefon je Otključana!"
+
+rls_string txt_monitor_ok 		"Komanda Monitor: U redu - "
+rls_string txt_monitor_ko 		"Komanda Monitor: Greška - Ništa za raditi!"
+
+rls_string txt_fake_ok 			"Komanda FakeSMS: U redu - Dostavljeno!"
+rls_string txt_fake_ko 			"Komanda FakeSMS: Greška - Nedostaje znak ';' za rastavljanje?!"
+
+rls_string txt_null_delim 		"Guardian: Greška - Nedostaje znak '*' za rastavljanje?"
+rls_string txt_null_length 		"Guardian: Greška - Nepoznata komanda"
+rls_string txt_null_notfound 		"Guardian: Greška - Komanda ne postoji: "
+rls_string txt_null_unkn 		"Guardian: Opšta greška"
+
+rls_string txt_alarm_ok 		"Komanda Alarm: U redu - Alarm je pokrenut..."
+		
+rls_string txt_commands_ok 		"Komande za udaljenu kontrolu:\n\n"
+
+rls_string txt_config_ok 		"Komanda Config: U redu - "
+rls_string txt_config_ko 		"Komanda Config: Greška - Ništa za raditi!"
+rls_string txt_config_disabled 		"Guardian je onemogućen! "
+rls_string txt_config_lock_on_startup	"zaključavanja telefona Prilikom pokretanja Omogućeno! "
+rls_string txt_config_lock_on_sim_change "zaključavanja telefona na Sim promjene Omogućeno! "
+rls_string txt_config_lock_off		"zaključavanja telefona Onemogućeno! "
+rls_string txt_config_numb_changed 	"Primalac je izmenjen! "
+rls_string txt_config_numb_unchanged 	"Primalac NIJE izmenjen! "
+rls_string txt_config_code_changed 	"Tajni kôd je izmenjen! "
+rls_string txt_config_code_unchanged 	"Tajni kôd NIJE izmenjen! "
+
+rls_string txt_delete_ok 		"Komanda Delete: U redu - "
+rls_string txt_delete_ko 		"Komanda Delete: Greška - Pogrešna sintaksa!"
+rls_string txt_delete_deleted 		"Izbrisano!"
+
+rls_string txt_forward_ko 		"Komanda Retrieve: Greška - Pogrešna sintaksa!"
+
+rls_string txt_localize_completed 	"Komanda Localize: Završno!\n"
+rls_string txt_localize_ok 		"Komanda Localize: U redu -\n"
+rls_string txt_localize_hei 		"Visina: "
+rls_string txt_localize_met 		" metera\n"
+rls_string txt_localize_cell 		"Repetitor: "
+rls_string txt_localize_area 		"\nPodručje: "
+rls_string txt_localize_country 	"\nMCC: "
+rls_string txt_localize_operator 	"\nMreža: "
+rls_string txt_localize_network 	"\nMNC: "
+
+
+rls_string txt_wlan_notsupported 	"Komanda WLANInfo: Greška - Uređaj ne podržava WLAN!"
+rls_string txt_wlan_ok 			"Komanda WLANInfo: U redu - "
+rls_string txt_wlan_notfound 		"WLAN mreže nisu pronađene!"
+rls_string txt_wlan_found 		"mreže su pronađene: "
+rls_string txt_wlan_bssid 		"BSSID: "
+rls_string txt_wlan_ssid 		"SSID: "
+
+rls_string txt_wlan_security		"Vrsta bezbednosti: "
+rls_string txt_wlan_sec_open		"Otvorena"
+rls_string txt_wlan_sec_wep		"WEP"
+rls_string txt_wlan_sec_wpa		"WPA"
+rls_string txt_wlan_sec_wpapsk		"WPA-PSK"
+rls_string txt_wlan_sec_802		"802.1X"
+rls_string txt_wlan_sec_unk		"Nepoznato"
+
+rls_string txt_wlan_mode		"Režim: "
+rls_string txt_wlan_mode_bss		"BSS pristupna tačka"
+rls_string txt_wlan_mode_ibss		"IBSS Ad-Hoc"
+
+rls_string txt_wlan_channel		"Kanal: "
+rls_string txt_wlan_beacon		"Interval prozivke: "
+rls_string txt_wlan_rxlevel		"Jačina signala: "

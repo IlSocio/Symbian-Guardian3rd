@@ -1,0 +1,16 @@
+#ifndef SETTVIEW_HRH
+#define SETTVIEW_HRH
+
+//    ESettViewScrollableContainer,
+
+enum TSettViewControls
+    {
+    ESettViewListBox,
+    ESettViewStato,
+    ESettViewDestin,
+    ESettViewMessage,
+    ESettViewPassword,
+    ESettViewNumberOfControls
+    };
+    	
+#endif

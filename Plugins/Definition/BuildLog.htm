@@ -1,0 +1,64 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=Windows-1252">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Log di generazione
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Generazione avviata. Progetto: InterfaceDefinition, configurazione: Rel_S60_30M_GCCE|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Righe di comando
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creazione file temporaneo "C:\DOCUME~1\Root\IMPOST~1\Temp\BAT00000D.bat" con contenuto
+[
+@echo off
+RCMake.exe "C:\online\Guardian3rd\Plugins\Definition\InterfaceDefinition.vcproj" S60_30M GCCE UREL rebuild
+if errorlevel 1 goto VCReportError
+goto VCEnd
+:VCReportError
+echo Project : error PRJ0019: Uno strumento ha restituito un codice di errore da "Esecuzione azioni progetto Makefile"
+exit 1
+:VCEnd
+]
+Creazione riga di comando "C:\DOCUME~1\Root\IMPOST~1\Temp\BAT00000D.bat"
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Finestra di output
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Esecuzione azioni progetto Makefile
+* Current build configuration: GCCE UREL
+Converting multi-icons...
+* Creating makefile for platform GCCE
+epocroot = 
+* C:\Nokia\Tools\Carbide_vs\makmake.bat \online\Guardian3rd\Plugins\Definition\InterfaceDefinition GCCE
+WARNING: Frozen .DEF file \online\Guardian3rd\Plugins\Definition\Res_GCCE.def not found - project not frozen
+* Running build action: rebuild
+epocroot = 
+* C:\Nokia\Tools\Carbide_vs\make.bat -f C:\online\Guardian3rd\Plugins\Definition\InterfaceDefinition.GCCE CLEANUREL UREL
+perl -S emkdir.pl \Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Plugins\Definition\InterfaceDefinition\GCCE\UREL
+Creating \Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Plugins\Definition\InterfaceDefinition\GCCE\UREL
+perl -S epocrc.pl -m045,046,047 -I "." -I "." -I- -I "..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\include" -I "..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\include\ecom" -I "..\..\..\..\Symbian\9.1\S60_3rd_MR\epoc32\include\variant" -DLANGUAGE_SC -u "\online\Guardian3rd\Plugins\Definition\200107B2.rss"   -o\Symbian\9.1\S60_3rd_MR\EPOC32\DATA\Z\resource\plugins\PluginResolver0x200107B2.RSC  -t"\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Plugins\Definition\InterfaceDefinition\GCCE"  -l"Z\resource\plugins:\online\Guardian3rd\Plugins\Definition"
+Proxy.cpp
+arm-none-symbianelf-g++    -Wall -Wno-ctor-dtor-privacy -Wno-unknown-pragmas  -fexceptions -march=armv5t      -mapcs -pipe -nostdinc -c    -msoft-float       -DNDEBUG -D_UNICODE -D__GCCE__  -D__SYMBIAN32__ -D__SERIES60_30__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D__DLL__ -D__SUPPORT_CPP_EXCEPTIONS__ -D__MARM_ARMV5__  -D__PRODUCT_INCLUDE__=\"/Symbian/9.1/S60_3rd_MR/epoc32/include/variant/Symbian_OS_v9.1.hrh\"    -x c++ -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  -I . -I . -I ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\include -I ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\include\ecom -I ..\..\..\..\Symbian\9.1\S60_3rd_MR\epoc32\include\variant -I "C:\Programmi\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include" -o ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Plugins\Definition\InterfaceDefinition\GCCE\UREL\Proxy.o .\Proxy.cpp
+Pluginresolver.cpp
+arm-none-symbianelf-g++    -Wall -Wno-ctor-dtor-privacy -Wno-unknown-pragmas  -fexceptions -march=armv5t      -mapcs -pipe -nostdinc -c    -msoft-float       -DNDEBUG -D_UNICODE -D__GCCE__  -D__SYMBIAN32__ -D__SERIES60_30__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D__DLL__ -D__SUPPORT_CPP_EXCEPTIONS__ -D__MARM_ARMV5__  -D__PRODUCT_INCLUDE__=\"/Symbian/9.1/S60_3rd_MR/epoc32/include/variant/Symbian_OS_v9.1.hrh\"    -x c++ -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  -I . -I . -I ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\include -I ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\include\ecom -I ..\..\..\..\Symbian\9.1\S60_3rd_MR\epoc32\include\variant -I "C:\Programmi\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include" -o ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Plugins\Definition\InterfaceDefinition\GCCE\UREL\PluginResolver.o .\Pluginresolver.cpp
+arm-none-symbianelf-ld -L"C:\Programmi\CSL Arm Toolchain\bin\..\arm-none-symbianelf\lib" -L"C:\Programmi\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3"     --target1-abs --no-undefined -nostdlib  -shared -Ttext 0x8000   -Tdata 0x400000 --default-symver -soname PluginResolver0x200107B2{000a0000}[200107b2].dll --entry _E32Dll  -u _E32Dll  ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\UREL\EDLL.LIB \ -o "..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Plugins\Definition\InterfaceDefinition\GCCE\UREL\PluginResolver0x200107B2.dll" \ -Map  "..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL\PluginResolver0x200107B2.dll.map" \ ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Plugins\Definition\InterfaceDefinition\GCCE\UREL\Proxy.o ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Plugins\Definition\InterfaceDefinition\GCCE\UREL\PluginResolver.o \ ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\UREL\EDLLSTUB.lib ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB\euser.dso ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\UREL\usrt2_2.lib ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB\dfpaeabi.dso ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB\dfprvct2_2.dso ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB\drtaeabi.dso ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB\scppnwdl.dso ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB\drtrvct2_2.dso -lsupc++ -lgcc \   
+elf2e32 --sid=0x200107b2 \  --uid1=0x10000079 --uid2=0x10009d8d --uid3=0x200107b2 --vid=0x00000000\  --capability=All-TCB --fpu=softvfp --targettype=PLUGIN --output="..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL\PluginResolver0x200107B2.dll" --dso=..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Plugins\Definition\InterfaceDefinition\GCCE\UREL\PluginResolver0x200107B2{000a0000}.dso --defoutput=..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Plugins\Definition\InterfaceDefinition\GCCE\UREL\PluginResolver0x200107B2{000a0000}.def --elfinput="..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Plugins\Definition\InterfaceDefinition\GCCE\UREL\PluginResolver0x200107B2.dll" --linkas=PluginResolver0x200107B2{000a0000}[200107b2].dll --libpath="..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB" --sysdef=_Z24ImplementationGroupProxyRi,1; 
+copy  "..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Plugins\Definition\InterfaceDefinition\GCCE\UREL\PluginResolver0x200107B2{000a0000}.def" "..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Plugins\Definition\InterfaceDefinition\GCCE\PluginResolver0x200107B2{000a0000}.def"
+        1 file copiati.
+WARNING: Not attempting to create any import libraries.
+When exports are frozen in "\online\Guardian3rd\Plugins\Definition\Res_GCCE.def", regenerate Makefile.
+* Creating C:\online\Guardian3rd\Plugins\Definition\sis\InterfaceDefinition.pkg
+* Creating install file at C:\online\Guardian3rd\Plugins\Definition\sis\InterfaceDefinition.sis
+epocroot = \Symbian\9.1\S60_3rd_MR\
+* C:\Symbian\9.1\S60_3rd_MR\\epoc32\tools\makesis.exe C:\online\Guardian3rd\Plugins\Definition\sis\InterfaceDefinition.pkg
+Processing C:\online\Guardian3rd\Plugins\Definition\sis\InterfaceDefinition.pkg...
+C:\online\Guardian3rd\Plugins\Definition\sis\InterfaceDefinition.pkg(18) : error: file I/O fault.
+ERROR: RCMake failed: (Makesis): makesis exited with result 1. (Reason: Incorrect function.)
+Project : error PRJ0019: Uno strumento ha restituito un codice di errore da "Esecuzione azioni progetto Makefile"
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Risultati
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Il log di generazione è stato salvato in "file://c:\online\Guardian3rd\Plugins\Definition\\BuildLog.htm"
+InterfaceDefinition - 2 errore/i, 0 avviso/i</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

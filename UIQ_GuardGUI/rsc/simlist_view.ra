@@ -1,0 +1,191 @@
+//view.ra
+
+#include "simview.hrh"
+
+
+RESOURCE QIK_VIEW_CONFIGURATIONS r_simlist_view_ui_configurations
+	{
+	configurations = 
+		{
+              QIK_VIEW_CONFIGURATION
+                     {
+                     ui_config_mode = KQikPenStyleTouchPortrait;
+					command_list = r_simlist_view_commands;
+					view = r_simlist_view;
+                     },
+              QIK_VIEW_CONFIGURATION
+                     {
+                     ui_config_mode = KQikPenStyleTouchLandscape;
+					command_list = r_simlist_view_commands;
+					view = r_simlist_view;
+                     },
+              QIK_VIEW_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStylePortrait;
+					command_list = r_simlist_view_commands;
+					view = r_simlist_view;
+                     },
+              QIK_VIEW_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStyleSmallPortrait;
+					command_list = r_simlist_view_commands;
+					view = r_simlist_view;
+                     },
+              QIK_VIEW_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStyleSmallLandscape;
+					command_list = r_simlist_view_commands;
+					view = r_simlist_view;
+                     },
+              QIK_VIEW_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStyleTouchPortrait;
+					command_list = r_simlist_view_commands;
+					view = r_simlist_view;
+                     }
+		};
+	}
+
+
+
+RESOURCE QIK_COMMAND_LIST r_simlist_view_commands
+	{
+	items =
+		{
+	 	 QIK_COMMAND
+         {
+         id = ESimViewRen;
+         type = EQikCommandTypeItem;
+         text = txt_rename_sim;
+         },
+	 	 QIK_COMMAND
+         {
+         id = ESimViewRem;
+         type = EQikCommandTypeItem;
+         text = txt_remove_sim;
+         },
+	 	 QIK_COMMAND
+         {
+         id = ESimViewAdd;
+         type = EQikCommandTypeItem;
+         text = txt_add_sim;
+         }
+		};
+	}
+
+	
+
+RESOURCE QIK_VIEW r_simlist_view
+	{
+	pages = r_simlist_view_layout_pages;
+	}
+
+RESOURCE QIK_VIEW_PAGES r_simlist_view_layout_pages
+	{
+	pages = 
+		{
+		QIK_VIEW_PAGE
+			{
+			page_id = ESimView_Page;
+			page_content = r_sim_listbox_page_controls;
+			}
+		};
+	}
+
+
+RESOURCE QIK_CONTAINER_SETTINGS r_sim_listbox_page_controls
+    {
+    layout_manager_type = EQikRowLayoutManager;
+    layout_manager = r_row_layout_default;
+    controls = 
+        {
+        QIK_CONTAINER_ITEM_CI_LI
+            { 
+            unique_handle = ESimViewListBox;
+            type = EQikCtListBox; 
+            control = r_sim_listbox;
+            layout_data = r_row_layout_data_fill;
+            }
+        };
+    }
+
+
+RESOURCE QIK_COMMAND_LIST r_popout_sim_commands
+	{
+	items =
+		{
+	 	 QIK_COMMAND
+         {
+         id = ESimViewRen_Pop;
+         text = txt_rename_sim;
+         },
+	 	 QIK_COMMAND
+         {
+         id = ESimViewRem_Pop;
+         text = txt_remove_sim;
+         }
+		};
+	}
+
+
+
+RESOURCE QIK_LISTBOX r_sim_listbox
+    {
+    type = EQikRowListBox;
+    layouts = {r_layout_italic_pair}; // at least one layout pair is needed
+    item_data =
+        {
+        };
+    }
+
+
+RESOURCE QIK_LISTBOX_LAYOUT_PAIR r_layout_italic_pair
+    {
+//    standard_normal_layout = EQikListBoxTwoLines;
+//    standard_highlight_layout = EQikListBoxTwoLines;
+    custom_normal_layout = r_layout_two_lines_italic;
+//    custom_highlight_layout = r_layout_two_lines_italic;
+    }
+    
+    
+RESOURCE QIK_LISTBOX_LAYOUT r_layout_two_lines_italic
+    {
+    columns=
+        {
+        QIK_LISTBOX_COLUMN
+            {
+            type=QIK_LISTBOX_PARENT_TYPE;
+            width_type=EQikListBoxColWidthGrab;
+            width_value=1;
+            slot_id=EQikListBoxSlotParent1;
+            rows=
+                {
+                QIK_LISTBOX_ROW
+                    {
+                    type=QIK_LISTBOX_TEXT_TYPE 
+						{
+						font_size  = EQikListBoxFontMedium;
+						font_style = EQikListBoxFontBold;
+						alignment  = EQikListBoxTextAlignLeft;
+						};
+                    height_type=EQikListBoxRowHeightFromContentType;
+                    slot_id=EQikListBoxSlotText1;
+                    },
+                QIK_LISTBOX_ROW
+                    {
+                    type=QIK_LISTBOX_TEXT_TYPE 
+						{
+						font_size = EQikListBoxFontSmall;
+						font_style = EQikListBoxFontItalic;
+						alignment = EQikListBoxTextAlignLeft;
+						};
+                    height_type=EQikListBoxRowHeightFromContentType;
+                    slot_id=EQikListBoxSlotText2;
+                    }
+                };
+            }
+        };
+    }
+    
+    
+    

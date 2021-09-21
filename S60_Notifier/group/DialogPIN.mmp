@@ -1,0 +1,70 @@
+ 
+target                                  DialogPIN_200107B0.DLL 
+targettype                              PLUGIN 
+// capability                           ProtServ TrustedUI 
+// SWEvent WriteDeviceData PowerMgmt servono solo per compatibilita' con il Samsung 450
+// SWEvent serve anche per touch S60, per gestire il flag di input
+
+// CommDD MultimediaDD PowerMgmt ProtServ ReadDeviceData ReadUserData SurroundingsDD SwEvent TrustedUI UserEnvironment WriteDeviceData WriteUserData
+capability  PowerMgmt ProtServ SwEvent TrustedUI WriteDeviceData
+
+UID                                     0x10009D8D 0x200107B0 
+
+EPOCSTACKSIZE	0x5000
+EPOCHEAPSIZE	0x1000 0x400000
+
+//USERINCLUDE                             ..\..\S60_GuardGUI\data 
+userinclude                             ..\inc 
+systeminclude                           \epoc32\include 
+systeminclude                           \epoc32\include\ecom 
+
+SOURCEPATH                              ..\data 
+START RESOURCE 200107B0.rss 
+  TARGET                                  DialogPIN_200107B0 
+END  
+
+START RESOURCE DialogPIN_200107B1.rss 
+  TARGETPATH                              \resource\apps 
+  HEADER                                   
+END  
+ 
+
+SOURCEPATH                              ..\src 
+source                                  notplugin.cpp AsyncQueryDialog.cpp pinview.cpp 
+
+LIBRARY                       aknswallpaperutils.lib 
+LIBRARY                       aknskinsrv.lib 
+LIBRARY                       aknskins.lib 
+LIBRARY                                 ws32.lib 
+LIBRARY                                 flogger.lib 
+LIBRARY                                 eikcdlg.lib 
+LIBRARY                                 avkon.lib 
+LIBRARY                                 uiklaf.lib 
+LIBRARY                                 form.lib   
+LIBRARY                                 eikctl.lib 
+LIBRARY                                 cone.lib 
+LIBRARY                                 eikdlg.lib 
+LIBRARY                                 eikcoctl.lib 
+LIBRARY                                 eikcore.lib 
+library                                 ECOM.LIB 
+library                                 euser.lib 
+library                                 eiksrv.lib 
+library                                 efsrv.lib
+//LIBRARY                                 apgrfx.lib 
+
+#if defined(WINSCW)  
+#else  
+#endif  
+
+nostrictdef                              
+LANG                                    01 02 03 04 05 79
+//MACRO                                   _LOGGING 
+
+
+//LIBRARY aknnotify.lib commonengine.lib
+STATICLIBRARY commonlib.lib
+
+//LIBRARY aknskins.lib aknskinsrv.lib aknswallpaperutils.lib eikcoctl.lib avkon.lib bitgdi.lib aknicon.lib fbscli.lib egul.lib commonengine.lib bafl.lib
+
+
+APP_LAYER_SYSTEMINCLUDE

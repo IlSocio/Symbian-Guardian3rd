@@ -1,0 +1,4 @@
+﻿Da dodate novu SIM karticu:
+-1 Privremeno onemogućite Guardian.
+-2 Zamenite SIM karticu.
+-3 Na kraju, ulaskom u Guardian, nova SIM kartica će samostalno biti dodata u spisak ovlašćenih SIM kartica.

@@ -1,0 +1,139 @@
+
+
+
+RESOURCE QIK_DIALOG r_info_dialog
+  {
+  title = "titolo:";
+       configurations =
+              {
+              QIK_DIALOG_CONFIGURATION
+                     {
+                     ui_config_mode = KQikPenStyleTouchPortrait;
+					 container = r_info_dialog_container;
+				     command_list = r_ok_commands;
+                     },
+              QIK_DIALOG_CONFIGURATION
+                     {
+                     ui_config_mode = KQikPenStyleTouchLandscape;
+					 container = r_info_dialog_container;
+				     command_list = r_ok_commands;
+                     },
+              QIK_DIALOG_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStylePortrait;
+					 container = r_info_dialog_container;
+				     command_list = r_ok_commands;
+                     },
+              QIK_DIALOG_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStyleSmallPortrait;
+					 container = r_info_dialog_container;
+				     command_list = r_ok_commands;
+                     },
+              QIK_DIALOG_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStyleSmallLandscape;
+					 container = r_info_dialog_container;
+				     command_list = r_ok_commands;
+                     },
+              QIK_DIALOG_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStyleTouchPortrait;
+					 container = r_info_dialog_container;
+				     command_list = r_ok_commands;
+                     }
+              };
+    controls = r_info_dialog_controls;
+  }
+
+
+//----------------------------------------------------
+//------------- SIMPLE DIALOG CONTROLS ---------------
+//----------------------------------------------------
+RESOURCE QIK_CONTROL_COLLECTION r_info_dialog_controls
+	{
+	items = 
+		{	
+			QIK_CONTROL 
+			{
+            unique_handle = 1;
+            itemflags = EQikCtrlFlagIsEditInPlace;
+//            type = EEikCtLabel;
+//            control = r_info_dialog_label;
+// 		  	  type = EEikCtRichTextEditor;
+//            control = r_info_dialog_text_editor;
+//			  type = EEikCtEdwin;
+//            control = r_info_dialog_edwin;
+			type = EEikCtGlobalTextEditor;
+			control = r_info_dialog_global_editor;
+
+			}			
+		};
+	}
+
+
+
+RESOURCE QIK_SCROLLABLE_CONTAINER_SETTINGS r_info_dialog_container
+    {
+    controls = 
+        {
+		QIK_CONTAINER_ITEM_CI_LI
+			{
+			type = EQikCtOnelineBuildingBlock;
+			control = r_info_dialog_label_building_block;
+			}
+        };
+    }
+
+   
+    
+//----------------------------------------------------
+//---------- SIMPLE DIALOG: BUILDING BLOCK -----------
+//----------------------------------------------------
+// Building block that contains the label.
+RESOURCE QIK_SYSTEM_BUILDING_BLOCK r_info_dialog_label_building_block
+    {
+    content =
+        {
+		QIK_SLOT_CONTENT
+			{
+			slot_id = EQikItemSlot1; 
+            unique_handle = 1;
+			}
+    	};
+    }
+
+
+RESOURCE GTXTED r_info_dialog_global_editor
+	{
+	flags=EEikEdwinNoAutoSelection|EEikEdwinDisableAutoCurEnd|EEikEdwinResizable|EEikEdwinReadOnly;
+//	numlines=30;
+	numlines=0;
+	}
+
+     
+RESOURCE RTXTED r_info_dialog_text_editor
+    {
+    flags = EEikEdwinNoAutoSelection | EEikEdwinReadOnly | EEikDlgItemTakesEnterKey;
+    //height = 200;
+    numlines = 0;
+    }
+    
+
+RESOURCE EDWIN r_info_dialog_edwin
+    {
+    flags = EEikEdwinResizable | EEikEdwinNoAutoSelection | EEikEdwinReadOnly;
+//	flags = EEikEdwinResizable;
+//    width = 10;
+    lines = 150;
+//    maxlength = 1500;
+    }
+
+    
+RESOURCE LABEL r_info_dialog_label
+	{
+    // flags = EEikEdwinResizable;
+	//standard_font = EEikLabelFontLegend;
+	txt = "text";
+	}
+	

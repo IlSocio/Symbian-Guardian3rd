@@ -1,0 +1,20 @@
+﻿/*
+============================================================================
+ Name        : GuardGUI.rls
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : String localization file
+============================================================================
+*/
+
+//  LOCALISATION STRINGS
+
+rls_string txt_localize_cell 		"Cell. : "
+rls_string txt_localize_area 		"\nRégion : "
+rls_string txt_localize_network 	"\nMNC: "
+rls_string txt_localize_country 	"\nMCC: "
+
+rls_string txt_localize_operator 	"\nOpérateur : "
+rls_string txt_localize_hei 		"Hauteur : "
+rls_string txt_localize_met 		" Metres\n"

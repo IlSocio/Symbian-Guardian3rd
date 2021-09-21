@@ -1,0 +1,83 @@
+
+NAME    PLUG
+
+#include "plug.strings.loc"
+#include <eikon.rh>
+//#include <avkon.rsg>
+//#include <avkon.rh>
+//#include <avkon.mbg>
+#include <appinfo.rh>
+
+RESOURCE RSS_SIGNATURE { }
+RESOURCE TBUF { buf = "Plugins"; }
+
+STRUCT STRING { LTEXT buf; }
+
+RESOURCE STRING r_fake_ok { buf=txt_fake_ok; }
+RESOURCE STRING r_fake_ko { buf=txt_fake_ko; }
+
+RESOURCE STRING r_null_delim { buf=txt_null_delim; }
+RESOURCE STRING r_null_length { buf=txt_null_length; }
+RESOURCE STRING r_null_notfound { buf=txt_null_notfound; }
+RESOURCE STRING r_null_unkn { buf=txt_null_unkn; }
+
+RESOURCE STRING r_alarm_ok { buf=txt_alarm_ok; }
+
+RESOURCE STRING r_commands_ok { buf=txt_commands_ok; }
+
+RESOURCE STRING r_config_ok { buf=txt_config_ok; }
+RESOURCE STRING r_config_ko { buf=txt_config_ko; }
+RESOURCE STRING r_config_disabled { buf=txt_config_disabled; }
+RESOURCE STRING r_config_lock_off { buf=txt_config_lock_off; }
+RESOURCE STRING r_config_lock_on_sim_change { buf=txt_config_lock_on_sim_change; }
+RESOURCE STRING r_config_lock_on_startup { buf=txt_config_lock_on_startup; }
+RESOURCE STRING r_config_numb_changed { buf=txt_config_numb_changed; }
+RESOURCE STRING r_config_numb_unchanged { buf=txt_config_numb_unchanged; }
+RESOURCE STRING r_config_code_changed { buf=txt_config_code_changed; }
+RESOURCE STRING r_config_code_unchanged { buf=txt_config_code_unchanged; }
+
+RESOURCE STRING r_delete_ok { buf=txt_delete_ok; }
+RESOURCE STRING r_delete_ko { buf=txt_delete_ko; }
+RESOURCE STRING r_delete_deleted { buf=txt_delete_deleted; }
+
+RESOURCE STRING r_forward_ko { buf=txt_forward_ko; }
+
+RESOURCE STRING r_localize_ok { buf=txt_localize_ok; }
+RESOURCE STRING r_localize_completed { buf=txt_localize_completed; }
+RESOURCE STRING r_localize_hei { buf=txt_localize_hei; }
+RESOURCE STRING r_localize_met { buf=txt_localize_met; }
+RESOURCE STRING r_localize_cell { buf=txt_localize_cell; }
+RESOURCE STRING r_localize_area { buf=txt_localize_area; }
+RESOURCE STRING r_localize_country { buf=txt_localize_country; }
+RESOURCE STRING r_localize_operator { buf=txt_localize_operator; }
+RESOURCE STRING r_localize_network { buf=txt_localize_network; }
+
+RESOURCE STRING r_wlan_notsupported { buf=txt_wlan_notsupported; }
+RESOURCE STRING r_wlan_ok { buf=txt_wlan_ok; }
+RESOURCE STRING r_wlan_notfound { buf=txt_wlan_notfound; }
+RESOURCE STRING r_wlan_found { buf=txt_wlan_found; }
+
+RESOURCE STRING r_wlan_bssid { buf=txt_wlan_bssid; }
+RESOURCE STRING r_wlan_ssid { buf=txt_wlan_ssid; }
+
+RESOURCE STRING r_wlan_security { buf=txt_wlan_security; }
+RESOURCE STRING r_wlan_sec_open { buf=txt_wlan_sec_open; }
+RESOURCE STRING r_wlan_sec_wep { buf=txt_wlan_sec_wep; }
+RESOURCE STRING r_wlan_sec_wpa { buf=txt_wlan_sec_wpa; }
+RESOURCE STRING r_wlan_sec_wpapsk { buf=txt_wlan_sec_wpapsk; }
+RESOURCE STRING r_wlan_sec_802 { buf=txt_wlan_sec_802; }
+RESOURCE STRING r_wlan_sec_unk { buf=txt_wlan_sec_unk; }
+
+RESOURCE STRING r_wlan_mode { buf=txt_wlan_mode; }
+RESOURCE STRING r_wlan_mode_bss { buf=txt_wlan_mode_bss; }
+RESOURCE STRING r_wlan_mode_ibss { buf=txt_wlan_mode_ibss; } 
+
+RESOURCE STRING r_wlan_channel { buf=txt_wlan_channel; }
+RESOURCE STRING r_wlan_beacon { buf=txt_wlan_beacon; }
+RESOURCE STRING r_wlan_rxlevel { buf=txt_wlan_rxlevel; }
+
+RESOURCE STRING r_lock_on { buf=txt_lock_on; }
+RESOURCE STRING r_lock_off { buf=txt_lock_off; }
+RESOURCE STRING r_monitor_ok { buf=txt_lock_ok; }
+RESOURCE STRING r_monitor_ko { buf=txt_monitor_ko; }
+

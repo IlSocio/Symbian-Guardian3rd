@@ -1,0 +1,65 @@
+
+LANG                                    01 02 03 04 05 79   
+TARGET                                  Guardian_200131CB.exe 
+TARGETTYPE                              exe 
+UID                                     0 0x200131CB 
+VENDORID                                0 
+ 
+EPOCSTACKSIZE	0x5000
+EPOCHEAPSIZE	0x1000 0x400000
+
+USERINCLUDE                             ..\inc 
+SYSTEMINCLUDE                           \epoc32\include 
+SYSTEMINCLUDE                           \epoc32\include\ecom 
+DOCUMENT                                bld.inf 
+
+
+SOURCEPATH                              ..\data 
+START RESOURCE Guardian_200131CB.rss 
+  TARGETPATH                              \resource\apps 
+  HEADER                                   
+END  
+
+
+
+SOURCEPATH                              ..\src 
+SOURCE                                  PluginAO.cpp 
+SOURCE                                  PluginManager.cpp 
+SOURCE                                  RecvSmsSocket.cpp 
+SOURCE                                  LogCleaner.cpp 
+SOURCE                                  ForegroundObserver.cpp 
+SOURCE                                  Guardian.cpp 
+SOURCE                                  SecurityCode.cpp 
+
+LIBRARY                       			bafl.lib  
+LIBRARY                                 ecom.lib 
+LIBRARY                                 inetprotutil.lib 
+LIBRARY                                 eikcore.lib 
+LIBRARY                                 etel3rdparty.lib 
+LIBRARY                                 estor.lib 
+LIBRARY                                 esock.lib    
+LIBRARY                                 gsmu.lib 
+LIBRARY                                 smsu.lib 
+LIBRARY                                 logcli.lib 
+LIBRARY                                 flogger.lib     
+LIBRARY                                 GuardCli_200107AC.lib 
+LIBRARY                                 efsrv.lib  
+LIBRARY                                 ws32.lib 
+LIBRARY                                 apgrfx.lib 
+LIBRARY                                 eiksrv.lib 
+LIBRARY                                 CONE.LIB 
+LIBRARY                                 apparc.lib
+LIBRARY                                 euser.lib smcm.lib msgs.lib etext.lib
+LIBRARY                                 cntmodel.lib 
+
+capability                              Location ReadDeviceData NetworkServices ReadUserData PowerMgmt WriteUserData WriteDeviceData
+ 
+MACRO	_LOGGING
+
+LIBRARY ezip.lib charconv.lib apmime.lib 
+//library aknnotify.lib eiksrv.lib commonengine.lib 
+
+STATICLIBRARY commonlib.lib
+
+APP_LAYER_SYSTEMINCLUDE
+

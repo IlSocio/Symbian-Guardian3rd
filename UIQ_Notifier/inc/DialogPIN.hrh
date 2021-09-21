@@ -1,0 +1,21 @@
+/*
+============================================================================
+ Name        : DialogPIN.h
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : DialogPIN.h - header file
+============================================================================
+*/
+
+#ifndef DIALOGPIN_H
+#define DIALOGPIN_H
+
+enum TDialog_IDsForForm 
+    {
+    EPinID = 6500
+	};
+
+#endif // DIALOGPIN_H
+
+// End of File

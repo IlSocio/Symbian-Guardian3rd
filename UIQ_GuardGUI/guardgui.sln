@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "guardgui", "guardgui.vcproj", "{E93ECFA7-8EBC-4EE2-94DF-CFC12CA21122}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Deb_UIQ_3_WINSCW = Deb_UIQ_3_WINSCW
+		Debug = Debug
+		Rel_UIQ_3_GCCE = Rel_UIQ_3_GCCE
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E93ECFA7-8EBC-4EE2-94DF-CFC12CA21122}.Deb_UIQ_3_WINSCW.ActiveCfg = Deb_UIQ_3_WINSCW|Win32
+		{E93ECFA7-8EBC-4EE2-94DF-CFC12CA21122}.Deb_UIQ_3_WINSCW.Build.0 = Debug|Win32
+		{E93ECFA7-8EBC-4EE2-94DF-CFC12CA21122}.Debug.ActiveCfg = Debug|Win32
+		{E93ECFA7-8EBC-4EE2-94DF-CFC12CA21122}.Debug.Build.0 = Debug|Win32
+		{E93ECFA7-8EBC-4EE2-94DF-CFC12CA21122}.Rel_UIQ_3_GCCE.ActiveCfg = Rel_UIQ_3_GCCE|Win32
+		{E93ECFA7-8EBC-4EE2-94DF-CFC12CA21122}.Rel_UIQ_3_GCCE.Build.0 = Release|Win32
+		{E93ECFA7-8EBC-4EE2-94DF-CFC12CA21122}.Release.ActiveCfg = Release|Win32
+		{E93ECFA7-8EBC-4EE2-94DF-CFC12CA21122}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

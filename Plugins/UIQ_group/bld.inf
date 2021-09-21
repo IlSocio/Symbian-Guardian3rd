@@ -1,0 +1,21 @@
+/*
+============================================================================
+ Name        : bld.inf
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : This file provides the information required for building the
+               whole of a Guardian.
+============================================================================
+*/
+
+PRJ_PLATFORMS
+WINSCW GCCE
+
+PRJ_MMPFILES
+defplugins.mmp
+
+PRJ_EXPORTS
+..\Definition\Interface.h
+..\Definition\Interface.inl
+

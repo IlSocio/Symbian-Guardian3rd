@@ -1,0 +1,95 @@
+
+TARGET                                  GuardGUI_200107AF.exe 
+TARGETTYPE                              EXE 
+UID                                     0x100039CE 0x200107AF 
+EPOCSTACKSIZE                           0x5000 
+SOURCEPATH                              ..\Reg 
+START RESOURCE GuardGUI_200107AF_reg.rss 
+  TARGETPATH                              \private\10003a3f\apps 
+END  
+
+START RESOURCE GuardGUI_200107AF_loc.rss 
+  TARGETPATH                              \Resource\Apps 
+END  
+
+
+SOURCEPATH                              ..\Rsc 
+START RESOURCE GuardGUI_200107AF.rss 
+  TARGETPATH                              \Resource\Apps 
+  HEADER                                   
+END  
+
+
+SOURCEPATH                              ..\Src 
+SOURCE                                  guardguidocument.cpp 
+SOURCE                                  guardguiappui.cpp 
+SOURCE                                  guardguiapplication.cpp 
+SOURCE                                  settingsview.cpp 
+SOURCE                                  aboutview.cpp 
+SOURCE                                  simlistview.cpp 
+
+SOURCEPATH                              ..\src 
+SOURCE                                  timeouttimer.cpp 
+SOURCE                                  SplashView.cpp 
+SOURCE                                  InfoDialog.cpp 
+SOURCE                                  TextDialog.cpp 
+SOURCE                                  NumericSecreted.cpp 
+SOURCE                                  NumericEdwin.cpp 
+SOURCE                                  NumericDialog.cpp 
+
+START BITMAP GuardGUI_200107AF.mbm 
+  TARGETPATH                              \Resource\Apps 
+  HEADER                                   
+  SOURCEPATH                              ..\Data\appicon 
+  SOURCE                                  c24 g_xlarge.bmp 
+  SOURCE                                  8 g_xlarge_mask.bmp 
+  SOURCE                                  c24 g_large.bmp 
+  SOURCE                                  8 g_large_mask.bmp 
+  SOURCE                                  c24 g_small.bmp 
+  SOURCE                                  8 g_small_mask.bmp 
+
+END  
+
+START BITMAP GuardBMP_200107AF.mbm 
+  TARGETPATH                              \Resource\Apps 
+  HEADER                                   
+  SOURCEPATH                              ..\Data\Image 
+  SOURCE                                  c24 About.bmp 
+  SOURCE                                  8 About_Mask.bmp 
+  SOURCE                                  c24 Settings.bmp 
+  SOURCE                                  8 Settings_Mask.bmp 
+  SOURCE                                  c24 Sim.bmp 
+  SOURCE                                  8 Sim_Mask.bmp 
+  SOURCE                                  c24 Background.bmp 
+  SOURCE                                  c24 Background2.bmp 
+  SOURCE                                  c24 Scritta.bmp 
+  SOURCE                                  8 Scritta_mask.bmp 
+
+END  
+
+USERINCLUDE                             ..\..\Server\inc 
+USERINCLUDE                             ..\hdr 
+SYSTEMINCLUDE                           \EPOC32\INCLUDE 
+/* [+] */ LIBRARY                       form.lib 
+LIBRARY                                 fbscli.lib 
+LIBRARY                                 efsrv.lib 
+LIBRARY                                 charconv.lib 
+LIBRARY                                 GuardCli_200107AC.lib 
+LIBRARY                                 qikutils.lib 
+LIBRARY                                 eikdlg.lib 
+LIBRARY                                 qcontacui.lib 
+LIBRARY                                 euser.lib 
+LIBRARY                                 apparc.lib 
+LIBRARY                                 cone.lib 
+LIBRARY                                 eikcore.lib 
+LIBRARY                                 eikcoctl.lib 
+LIBRARY                                 qikcore.lib 
+LIBRARY                                 qikdlg.lib 
+LIBRARY                                 eikctl.lib 
+LIBRARY                                 qikctl.lib 
+LIBRARY                                 qiklbx.lib 
+LIBRARY                                 bafl.lib 
+LIBRARY                                 egul.lib 
+STATICLIBRARY                           qikalloc.lib 
+LIBRARY                                 qikallocdll.lib 
+capability                              ReadUserData 

@@ -1,0 +1,76 @@
+
+#include <uikon.rh>
+#include <QikCommand.rh>
+#include <qikdlg.rsg>
+
+
+#include <eikon.rh>
+#include <eikcore.rsg>
+#include <qikon.rh>
+#include <QikListBox.rh>
+#include <QikListBoxStandardLayouts.hrh>
+
+//#include <eikedwin.h>
+
+#include "common.hrh"
+#include "numericControls.hrh"
+#include "prova10.rls"   // #include "strings.loc"
+
+NAME PRVA
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf = ""; }
+
+RESOURCE EIK_APP_INFO {	}
+
+#include "infodialog.ra"
+#include "textdialog.ra"
+#include "numericdialog.ra"
+#include "commands.ra"
+#include "info_view.ra"
+#include "settings_view.ra"
+#include "simlist_view.ra"
+#include "protection_view.ra"
+
+
+
+RESOURCE QIK_COMMAND_LIST r_common_commands
+	{
+	items =
+		{
+      	 QIK_COMMAND
+         {
+         id = EBuy;
+         type = EQikCommandTypeScreen;
+         text = "Buy";
+         namedGroupLinkId = EBuy;
+         },
+      	 QIK_COMMAND
+         {
+         id = EBuyGold;
+         type = EQikCommandTypeScreen;
+         text = "Gold Edition";
+         namedGroupId = EBuy;
+         },
+      	 QIK_COMMAND
+         {
+         id = EBuyPlatinum;
+         type = EQikCommandTypeScreen;
+         text = "Platinum Edition";
+         namedGroupId = EBuy;
+         },
+      	 QIK_COMMAND
+         {
+         id = EHelp;
+         type = EQikCommandTypeScreen;
+         text = "Help";
+         },
+	 	 QIK_COMMAND
+         {
+		 id = EEikCmdExit;
+		 type = EQikCommandTypeScreen;
+         text = "Exit";
+         }
+		};
+	}	

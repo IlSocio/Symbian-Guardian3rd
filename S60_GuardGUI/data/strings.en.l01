@@ -1,0 +1,149 @@
+/*
+============================================================================
+ Name        : GuardGUI.rls
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : String localization file
+============================================================================
+*/
+
+#define ELanguage               ELangEnglish
+
+//  LOCALISATION STRINGS
+
+//d:Caption string for app.
+rls_string qtn_app_caption_string 	"Guardian"
+rls_string qtn_app_short_caption_string "Guardian"
+
+
+rls_string txt_help "Help"
+
+rls_string txt_license_header 		"License Agreement"
+
+rls_string txt_register_op_net 		"Using License ID"
+rls_string txt_register_op_code 	"Using Code"
+rls_string txt_prod_1			"License ID Part 1"
+rls_string txt_prod_2			"License ID Part 2"
+
+
+rls_string txt_protect_app_ext 	   	"Protect Applications Period:"
+rls_string txt_protect_app 	   	"Protect Applic. Period:"
+rls_string txt_after 		   	"After"
+
+rls_string txt_immediately		"Immediately"
+rls_string txt_never			"Never"
+rls_string txt_second			"Second"
+rls_string txt_seconds			"Seconds"
+rls_string txt_minute			"Minute"
+rls_string txt_minutes			"Minutes"
+rls_string txt_hour			"Hour"
+rls_string txt_hours			"Hours"
+
+
+// Comuni
+rls_string txt_register 		"Register"
+rls_string txt_exit 			"Exit"
+
+// Vista About
+rls_string txt_check_for_updates       	"Check online for an updated version?"
+rls_string txt_check_updates 		"Check Updates"
+rls_string txt_send 			"Send Guardian"
+rls_string txt_send_ir 			"Using Infrared"
+rls_string txt_send_bt 			"Using Bluetooth"
+rls_string txt_about 			"About"
+rls_string txt_license 			"License"
+rls_string txt_imei_code 		"IMEI:"
+rls_string txt_reg_code 		"Registration Code:"
+
+// Vista Settings
+rls_string txt_settings 		"Settings"
+
+rls_string txt_phone  			"Recipient:"
+rls_string txt_sms_text			"SMS Text:"
+rls_string txt_pass   			"Secret Code:"
+rls_string txt_lock_phone		"Lock Phone:"
+rls_string txt_on_sim_change		"On SIM Change"
+rls_string txt_on_startup		"On Startup"
+
+rls_string txt_status 			"Status:"
+rls_string txt_active	   		"Enabled"
+rls_string txt_inactive	   		"Disabled"
+rls_string txt_yes			"Yes"
+rls_string txt_no			"No"
+rls_string txt_monitor			"Monitor Sms and Calls:"
+rls_string txt_sms			"Sms:"
+rls_string txt_calls			"Calls:"
+rls_string txt_sms_in			"Incoming Sms"
+rls_string txt_sms_out			"Outgoing Sms"
+rls_string txt_calls_in			"Incoming Calls"
+rls_string txt_calls_out		"Outgoing Calls"
+rls_string txt_all			"All"
+rls_string txt_incoming			"Incoming"
+rls_string txt_outgoing			"Outgoing"
+rls_string txt_monitor_ext		"Monitor Sms and Calls:"
+
+
+
+rls_string txt_please_wait		"Transfer in Progress..\nPlease Wait."
+rls_string txt_change 			"Change"
+
+// Vista SimList
+rls_string txt_sim_list 		"Authorized Sims"
+rls_string txt_sim 			"Sim Name:"
+rls_string txt_rename_sim 		"Rename"
+rls_string txt_remove_sim 		"Remove"
+rls_string txt_add_sim 			"Add"
+rls_string txt_addnewsim_header 	"Add New Sim"
+
+
+// Vista Protection
+rls_string txt_protected_system_apps	"Protect. System Apps"
+rls_string txt_protected_apps		"Protected Applications"
+rls_string txt_large_icons		"Large Icons"
+rls_string txt_small_icons		"Small Icons"
+rls_string txt_guardian_pass		"Secret Code:"
+
+rls_string txt_show_apps		"Show Apps"
+rls_string txt_all_apps			"All"
+rls_string txt_user_apps		"User Only"
+rls_string txt_rom_apps			"ROM Only"
+rls_string txt_system_apps		"System Only"
+
+
+rls_string txt_sim_added	   	"This SIM has been Registered using name: "
+rls_string txt_confirm_exit		"Exit Guardian?"
+
+rls_string txt_warning_sms		"Warning! Sim Changed."
+
+rls_string txt_buy			"Buy"
+rls_string txt_buy_gold			"Gold Edition"
+rls_string txt_buy_platinum		"Platinum Edition"
+rls_string txt_buy_iridium		"Iridium Edition"
+
+// ERRORI
+rls_string txt_down_completed		"The update has been saved in the inbox message folder."
+rls_string txt_no_update		"Guardian is already updated to the latest available version."
+rls_string txt_update			"A new version is available.\nDownload the update?"
+rls_string txt_ok_code			"Registration Completed!"
+rls_string txt_err_code			"Wrong Registration Code!\nInsert a correct Registration code."
+rls_string txt_err_bad_pass		"Secret Code Was Wrong!"
+rls_string txt_err_no_number		"Recipient not set.\nSelect a recipient to proceed."
+rls_string txt_err_no_pass		"Secret Code not set\nInsert a Secret Code to proceed."
+rls_string txt_err_short_pass		"Secret Code too much short"
+rls_string txt_err_sim0			"Can't remove, it's the only SIM available!"
+
+rls_string txt_err_licnotfound		"Invalid License ID.\nInsert a correct License ID."
+rls_string txt_err_licdifimei		"License ID already registered.\nPlease, buy a new License ID."
+rls_string txt_err_licbanned		"Too Much Requests.\nPlease, Try Again Later."
+rls_string txt_err_licunkdata		"Server Response Problem.\nPlease, Try Again Later."
+rls_string txt_err_lictransmis		"Transmission Problem.\nPlease, Try Again Later."
+rls_string txt_err_licgeneral		"General Problem.\nPlease, Try Again Later."
+
+rls_string txt_err_unavailinfree 	"This feature is not available in the Free Edition.\nBuy Gold, Platinum or Iridium."
+rls_string txt_err_buy_iridium		"This feature is not available.\nBuy Iridium Edition to use it."
+
+rls_string txt_force_update		"Free Edition must be updated every 15 days.\nUpdate or Buy Gold, Platinum or Iridium."
+rls_string txt_query_check_updates	"Check for updated version now?"
+
+rls_string txt_editions_header  	"Gold, Platinum, Iridium"

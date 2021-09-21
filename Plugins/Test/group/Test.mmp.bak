@@ -1,0 +1,29 @@
+/*
+============================================================================
+ Name        : Test.mmp
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : This is the project specification file for Test.
+============================================================================
+*/
+TARGET                                  Test.exe 
+TARGETTYPE                              exe 
+UID                                     0 0xe8c374d3 
+VENDORID                                0 
+USERINCLUDE                             ..\..\inc 
+SYSTEMINCLUDE                           \Epoc32\include\ecom 
+USERINCLUDE                             ..\..\..\Definition 
+USERINCLUDE                             ..\inc 
+SYSTEMINCLUDE                           \epoc32\include 
+DOCUMENT                                bld.inf 
+SOURCEPATH                              ..\src 
+SOURCE                                  PluginManager.cpp 
+SOURCE                                  PluginAO.cpp 
+SOURCE                                  Test.cpp 
+
+/* [+] */ LIBRARY                       GuardCli_200107AC.lib 
+/* [+] */ LIBRARY                       inetprotutil.lib 
+LIBRARY                                 ecom.lib 
+LIBRARY                                 euser.lib 
+CAPABILITY                              NONE 

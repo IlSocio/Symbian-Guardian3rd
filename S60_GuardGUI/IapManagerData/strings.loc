@@ -1,0 +1,27 @@
+CHARACTER_SET UTF8
+
+
+#ifdef OPER_222_01_tim
+#include "222_01_tim.rls"
+#endif
+
+#ifdef OPER_222_10_voda
+#include "222_10_voda.rls"
+#endif
+
+#ifdef OPER_222_10_poste
+#include "222_10_poste.rls"
+#endif
+
+#ifdef OPER_222_88_wind
+#include "222_88_wind.rls"
+#endif
+
+#ifdef OPER_222_98_blu
+#include "222_98_blu.rls"
+#endif
+
+#ifdef OPER_222_99_tre
+#include "222_99_tre.rls"
+#endif
+

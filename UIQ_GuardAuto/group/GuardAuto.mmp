@@ -1,0 +1,25 @@
+// EXAMPLERECOGNIZER.MMP
+target                                  GuardAuto_200107AD.dll 
+CAPABILITY                              Protserv 
+targettype                              plugin 
+uid                                     0x10009d8d 0x200107AD 
+VENDORID                                0 
+USERINCLUDE                             ..\..\server\inc 
+USERINCLUDE                             ..\inc 
+SOURCEPATH                              ..\data 
+
+START RESOURCE GuardAuto_200107AD.rss 
+  TARGET                                  GuardAuto_200107AD.rsc 
+END  
+
+
+SOURCEPATH                              ..\src 
+SOURCE                                  ProcMonitor.cpp 
+SOURCE                                  GuardAuto.cpp 
+
+systeminclude                           \EPOC32\INCLUDE 
+systeminclude                           \EPOC32\INCLUDE\ECOM 
+/* [+] */ LIBRARY                       GuardCli_200107AC.lib 
+library                                 EUSER.LIB 
+library                                 APMIME.LIB 
+library                                 EFSRV.LIB 

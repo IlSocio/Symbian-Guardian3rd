@@ -1,0 +1,16 @@
+﻿CHARACTER_SET UTF8
+
+/*
+============================================================================
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : String localization file
+============================================================================
+*/
+
+//  LOCALISATION STRINGS
+
+rls_string txt_apn "mobile.o2.co.uk"
+rls_string txt_user "web"
+rls_string txt_pass "password"

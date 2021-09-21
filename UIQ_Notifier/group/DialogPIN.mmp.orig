@@ -1,0 +1,46 @@
+
+target                                  DialogPIN0x200107B0.DLL 
+targettype                              PLUGIN 
+capability                              ProtServ TrustedUI 
+UID                                     0x10009D8D 0x200107B0 
+
+/* [+] */ USERINCLUDE                   ..\..\S60_GuardGUI\data 
+userinclude                             ..\inc 
+systeminclude                           \epoc32\include 
+systeminclude                           \epoc32\include\ecom 
+SOURCEPATH                              ..\data 
+START RESOURCE 200107B0.rss 
+  TARGET                                  DialogPIN0x200107B0 
+END  
+
+START RESOURCE DialogPIN_200107B1.rss 
+  HEADER                                   
+  TARGETPATH	\resource\apps
+END  
+
+
+SOURCEPATH                              ..\src 
+source                                  DialogPIN.cpp 
+
+LIBRARY                                 eikcdlg.lib 
+LIBRARY                                 avkon.lib 
+LIBRARY                                 uiklaf.lib 
+LIBRARY                                 form.lib 
+LIBRARY                                 eikctl.lib 
+LIBRARY                                 cone.lib 
+LIBRARY                                 eikdlg.lib 
+LIBRARY                                 eikcoctl.lib 
+LIBRARY                                 eikcore.lib 
+library                                 ECOM.LIB 
+library                                 euser.lib 
+library                                 eiksrv.lib 
+library                                 efsrv.lib 
+#if defined(WINSCW)  
+  deffile                                 .\WINSCW.def 
+  #else if defined(GCCE)  
+  deffile                                 .\GCCE.def 
+#endif  
+
+nostrictdef                              
+
+LANG                                    01 05 

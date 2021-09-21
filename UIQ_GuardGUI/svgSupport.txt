@@ -1,0 +1,26 @@
+
+Add SVG Icons http://developer.uiq.com/devlib/uiq_31/sdkdocumentation/doc_source/guide/uiqhowtos/UIQVarious/UIQ_SVG/Animated_SVG_icons.guide.html#Animated_SVG_icons.guide
+
+
+Detect SVG Support at runtime:
+            _LIT(KUIQSvgSupport, "UIQSvgSupport.sis");
+            _LIT(KPlatformDir, "z:\\system\\install\\");
+            
+            RFs fs;
+            TInt res;
+            fs.Connect();
+            
+            // Check if SVG is supported or not
+            TFindFile ff(fs);
+            res = ff.FindByDir(KUIQSvgSupport, KPlatformDir);
+            if (res == KErrNone)
+                {
+                // Running on a platform supporting SVG
+                }
+            else
+                {
+                // Doesn't support SVG
+                }
+            fs.Close();
+
+

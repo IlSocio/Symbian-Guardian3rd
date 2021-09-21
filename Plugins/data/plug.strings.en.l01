@@ -1,0 +1,80 @@
+﻿/*
+============================================================================
+ Name        : GuardGUI.rls
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : String localization file
+============================================================================
+*/
+
+//  LOCALISATION STRINGS
+
+rls_string txt_lock_on 			"Lock Command: Ok - Phone is Locked!"
+rls_string txt_lock_off 		"Lock Command: Ok - Phone is Unlocked!"
+
+rls_string txt_monitor_ok 		"Monitor Command: Ok - "
+rls_string txt_monitor_ko 		"Monitor Command: Error - Nothing to do!"
+
+rls_string txt_fake_ok 			"FakeSMS Command: Ok - Received!"
+rls_string txt_fake_ko 			"FakeSMS Command: Error - Missing ';' delimiter"
+
+rls_string txt_null_delim 		"Guardian: Error - Missing '*' delimiter"
+rls_string txt_null_length 		"Guardian: Error - Command Unknown"
+rls_string txt_null_notfound 		"Guardian: Error - Comando Does Not Exists: "
+rls_string txt_null_unkn 		"Guardian: Error - General"
+
+rls_string txt_alarm_ok 		"Alarm Command: Ok - Alarm is Playing..."
+		
+rls_string txt_commands_ok 		"Remote Control Commands:\n\n"
+
+rls_string txt_config_ok 		"Config Command: Ok - "
+rls_string txt_config_ko 		"Config Command: Error - Nothing to do!"
+rls_string txt_config_disabled 		"Guardian Disabled! "
+rls_string txt_config_lock_on_startup	"Lock Phone on Startup Enabled! "
+rls_string txt_config_lock_on_sim_change "Lock Phone on Sim Change Enabled! "
+rls_string txt_config_lock_off		"Lock Phone Disabled! "
+rls_string txt_config_numb_changed 	"Recipient Changed! "
+rls_string txt_config_numb_unchanged 	"Recipient NOT Changed! "
+rls_string txt_config_code_changed 	"Secret Code Changed! "
+rls_string txt_config_code_unchanged 	"Secret Code NOT Changed! "
+
+rls_string txt_delete_ok 		"Delete Command: Ok - "
+rls_string txt_delete_ko 		"Delete Command: Error - Wrong Syntax!"
+rls_string txt_delete_deleted 		"Deleted!"
+
+rls_string txt_forward_ko 		"Retrieve Command: Error - Wrong Syntax!"
+
+rls_string txt_localize_completed 	"Localize Command: Completed!\n"
+rls_string txt_localize_ok 		"Localize Command: Ok -\n"
+rls_string txt_localize_hei 		"Height: "
+rls_string txt_localize_met 		" Meters\n"
+rls_string txt_localize_cell 		"Cell: "
+rls_string txt_localize_area 		"\nArea: "
+rls_string txt_localize_country 	"\nMCC: "
+rls_string txt_localize_operator 	"\nOperator: "
+rls_string txt_localize_network 	"\nMNC: "
+
+
+rls_string txt_wlan_notsupported 	"WLANInfo Command: Error - WLAN Not Supported by Device!"
+rls_string txt_wlan_ok 			"WLANInfo Command: Ok - "
+rls_string txt_wlan_notfound 		"No WLAN Network Found!"
+rls_string txt_wlan_found 		"Networks Found: "
+rls_string txt_wlan_bssid 		"BSSID: "
+rls_string txt_wlan_ssid 		"SSID: "
+
+rls_string txt_wlan_security		"Security: "
+rls_string txt_wlan_sec_open		"Open"
+rls_string txt_wlan_sec_wep		"WEP"
+rls_string txt_wlan_sec_wpa		"WPA"
+rls_string txt_wlan_sec_wpapsk		"WPA-PSK"
+rls_string txt_wlan_sec_802		"802.1X"
+rls_string txt_wlan_sec_unk		"Unknown"
+
+rls_string txt_wlan_mode		"Mode: "
+rls_string txt_wlan_mode_bss		"BSS Infrastructure"
+rls_string txt_wlan_mode_ibss		"IBSS Ad-Hoc"
+
+rls_string txt_wlan_channel		"Channel: "
+rls_string txt_wlan_beacon		"Beacon Interval: "
+rls_string txt_wlan_rxlevel		"RXLevel: "

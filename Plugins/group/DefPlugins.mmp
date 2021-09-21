@@ -1,0 +1,78 @@
+// EComExample.mmp
+LANG                                    01 02 03 04 05 79
+TARGET                                  DefPlugins_200112DF.dll 
+TARGETPATH                              \sys\bin 
+TARGETTYPE                              PLUGIN 
+UID                                     0x10009D8D 0x200112DF 
+VENDORID                                0 
+capability                              ALL -DRM -TCB -AllFiles -CommDD -DiskAdmin -MultimediaDD -NetworkControl -SurroundingsDD -UserEnvironment
+// SOURCEPATH                              ..\..\Server\src 
+// SOURCE                                  Phone.cpp 
+
+SOURCEPATH                              ..\data 
+START RESOURCE 200112DF.rss 
+  TARGET                                  DefPlugins_200112DF 
+END  
+
+START RESOURCE Plugins_200112df.rss 
+  TARGETPATH                              \resource\apps 
+  HEADER                                   
+END  
+
+
+SOURCEPATH                              ..\src 
+// [-]    SOURCE                        Null.cpp 
+SOURCE                                  AbstractPlugin.cpp 
+SOURCE                                  SmsRemover.cpp 
+SOURCE                                  ContactsRemover.cpp 
+SOURCE                                  Config.cpp 
+SOURCE                                  LogEngine.cpp 
+SOURCE                                  Proxy.cpp 
+SOURCE                                  FakeSms.cpp  
+SOURCE                                  Forward.cpp 
+SOURCE                                  Monitor.cpp
+SOURCE                                  Alarm.cpp
+SOURCE                                  Localize.cpp 
+SOURCE                                  Lock.cpp 
+SOURCE                                  Delete.cpp 
+SOURCE                                  Commands.cpp LogsRemover.cpp WLanInfo.cpp 
+
+USERINCLUDE                             ..\inc 
+// USERINCLUDE                             ..\..\Server\inc 
+USERINCLUDE                             . 
+USERINCLUDE                             ..\Definition 
+
+SYSTEMINCLUDE                           \epoc32\include\mmf\plugin
+SYSTEMINCLUDE                           \epoc32\include 
+SYSTEMINCLUDE                           \epoc32\include\ecom 
+LIBRARY                                 mediaclientaudio.lib 
+LIBRARY                                 calinterimapi.lib 
+LIBRARY                                 flogger.lib 
+LIBRARY                                 etel3rdparty.lib 
+LIBRARY                                 lbs.lib  imcm.lib 
+LIBRARY                                 inetprotutil.lib 
+LIBRARY                                 logcli.lib 
+LIBRARY                                 efsrv.lib 
+LIBRARY                                 bafl.lib 
+LIBRARY                                 cntmodel.lib 
+LIBRARY                                 etext.lib 
+LIBRARY                                 smcm.lib 
+LIBRARY                                 gsmu.lib 
+LIBRARY                                 GuardCli_200107AC.lib 
+LIBRARY                                 msgs.lib 
+LIBRARY                                 euser.lib charconv.lib  featdiscovery.lib 
+LIBRARY                                 ECom.lib 
+LIBRARY ezip.lib ws32.lib charconv.lib euser.lib efsrv.lib bafl.lib apgrfx.lib msgs.lib  estor.lib
+
+#if defined(WINSCW)  
+  #else if defined(GCCE)  
+#endif  
+
+nostrictdef                              
+
+LIBRARY ezip.lib ws32.lib apgrfx.lib apmime.lib 
+STATICLIBRARY commonlib.lib
+
+MACRO        _LOGGING
+
+APP_LAYER_SYSTEMINCLUDE

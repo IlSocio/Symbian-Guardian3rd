@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<?xml:stylesheet href="file:///C:/Symbian/9.1/S60_3rd_MR/epoc32/tools/cshlpcmp/xsl/ptml.xsl" title="PTML" type="text/xsl"?>
+<!DOCTYPE ptml SYSTEM "file:///C:/Symbian/9.1/S60_3rd_MR/epoc32/tools/cshlpcmp/dtd/ptml.dtd">
+<ptml>
+<p style="comment">Data: 21-APR-08</p>
+<p style="comment">Versione: Draft 6</p>
+<p style="heading 1">Guardian</p>
+<p style="category uid">0x200112DD</p>
+<p style="heading 2">Introdution</p>
+<p style="context">HIntro</p>
+<p>Guardian is an anti-theft software for mobile phone: easy, efficient and very effective.  &break;Every time the phone is powered up, Guardian check if the SIM card is authorized, if not Guardian will send a notification sms (<b>invisible</b>) to the previously selected number, containing the number of the new inserted sim card.</p>
+<p style="note"><b>Note: </b>All the SMS sent/received by Guardian are invisible, there is no notification to the user, no icon, no light, no alert, no vibration, nor trace of messaging in outbox/sent folder neither trace in the activity log. </p>
+<p style="heading 2">Purchase and Registration</p>
+<p style="context">HBuyAndReg</p>
+<p>Whenever you can convert your <b>Free</b><b> </b>edition to the <b>Gold</b> or <b>Platinum</b><b> </b>edition.</p>
+<p>In this command menu the following options are present:</p>
+<p><i>&#8220;</i><b><i>Register</i></b><i>&#8221;</i>, this menu allows to convert the <b>Free</b> edition to <b>Gold</b> or <b>Platinum</b> after buying the product</p>
+<p><i>&#8220;</i><b><i>Buy</i></b><i>&#8221;, </i>open the URL where you can buy the <b>Gold</b> or <b>Platinum</b> edition</p>
+<p><i>&#8220;</i><b><i>Send Guardian</i></b><i>&#8221;,</i> allows to send the program to your friends via Bluetooth or Infrared (This option is not always available)</p>
+<p>&#8220;<b><i>Check updates</i></b><i>&#8221;, </i>check if new program updates are available. If updates are available you will be able to download and install it on the phone immediately. We suggest checking periodically if new updates are available.</p>
+<p style="note"><b>Not</b><b>e</b><b>:</b> Using the <b>Free</b> edition is mandatory to check the availability of new updates every 15 days, otherwise you won&rquote;t be able to use the software anymore.</p>
+<p style="heading 2">Purchase</p>
+<p style="context">HBuy</p>
+<p>To purchase the <b>Gold</b> or the <b>Platinum</b><b> </b>Edition, visit the official website <b>http://www.Guardian-Mobile</b><b>.com/</b><b> </b></p>
+<p>or select</p>
+<p> &#8220;<b><i>Options &gt;</i></b><b><i> B</i></b><b><i>uy</i></b>&#8221; </p>
+<p>in the program menu to do it from your phone itself.</p>
+<p>If you don&rquote;t have a PayPal account, you can pay using your credit card (Visa, Mastercard, American Express, etc&#8230;)</p>
+<p> </p>
+<p>Once you complete the purchase procedure, you will receive immediately a personal Registration Code (on display phone and by email). You will have only to insert the Registration Code in the program to convert immediately the <b>Free</b><b> </b>Edition<b> </b>to the <b>Gold</b> or <b>Platinum</b>.</p>
+<p style="heading 2">Registration</p>
+<p style="context">HRegister</p>
+<p>After receiving the <b>Registration Code</b>, enter in Guardian, select the command menu </p>
+<p>&#8220;<b><i>Options &gt; Register &gt; Using Code</i></b>&#8221; </p>
+<p>insert the 8 characters code, which is case sensitive.</p>
+<p>If you insert the correct <b>Registration Code</b> the software will be automatically converted to the purchased edition.</p>
+<p style="heading 2">Settings</p>
+<p style="context">HSettings</p>
+<p>The configuration of Guardian is easy and immediate, it is enough a short time to configure all the parameters needed by the software.</p>
+<p><i>&#8220;</i><b><i>Status</i></b><i>&#8221;</i> , shows if the software is enabled or disabled. </p>
+<p><i>&#8220;</i><b><i>Recipient</i></b><i>&#8221;, </i>is the recipient number of the sms sent when a unauthorized SIM is inserted </p>
+<p><i>&#8220;</i><b><i>SMS Text</i></b><i>&#8221;</i>, is the text sent when a non-authorized SIM is inserted </p>
+<p><i>&#8220;</i><b><i>Secret Code</i></b><i>&#8221;</i>, this secret code is really IMPORTANT. It used to enter in Guardian or into a <b>Protected A</b><b>pplication</b> and to use <b>Remote</b><b> Control</b><b> C</b><b>ommands</b>, </p>
+<p>&#8220;<b><i>Protect Applic. Period</i></b><i>&#8221;, </i>shows after how much time of phone inactivity the applications inserted in the protected application list will be blocked. It is mandatory to insert the secret code to enter in a protected application, but inserting the correct secret code you will have a free access to ALL the applications. If the phone remains inactive for more time than the value of this parameter, the application will be protected again and you will have to insert the secret code another time. </p>
+<p style="heading 2">Fast Configuration</p>
+<p style="context">HFastSettings</p>
+<p>To quickly configure your anti-theft follow below steps:</p>
+<p> </p>
+<p>1) Go to parameter &#8220;<b><i>Recipient</i></b>&#8221; and select  "<b><i>Options-&gt;Change</i></b>&#8221;, then select from the contacts the recipient number of the notification sms <i>&#8221;SIM Changed&#8221;</i>.</p>
+<p style="note"><b>Note: </b>If you want<b> </b>to insert a number not present in the contacts, you can create a temporary entry in the contacts, use it in Guardian and then delete the entry. However Guardian will keep the selected number.</p>
+<p>2) Insert your &#8220;Secret Code&#8221;.</p>
+<p style="note"><b>Note</b><b>: </b>the secret code must contain at least 5 digits. It will be required when you enter in Guardian, in any &#8220;<b>Protected Application</b>&#8221; and to use &#8220;<b>Remote Control Commands</b>&#8221;.</p>
+<p>3) Finally change the <i>&#8220;</i><b><i>Status</i></b><i>&#8221;</i><i> </i>of Guardian<i> </i>in<i> &#8220;</i><b><i>Active</i></b><i>&#8221;</i>.</p>
+<p style="heading 2">Authorized Sim List</p>
+<p style="context">HSimList</p>
+<p>All the sim present in this list are classified by Guardian as sim authorized to use the phone. </p>
+<p>The list is useful if you want to use your phone with different sim cards, in fact Gardiant won&rquote;t send any sms of notification &#8220;Sim Changed&#8221; if you insert an authorized sim. </p>
+<p style="note"><b>Note</b><b>: </b>the <b>Free</b> edition allow to have only the sim used to install the program in the authorized sim list. Instead both <b>Gold</b> and <b>Platinum</b><b> </b>edition permit to have an endless number of Authorized sim.  </p>
+<p>In this menu are present the following commands:</p>
+<p>&#8220;<b>Rename</b>&#8221;, allows to modify the name of the selected sim </p>
+<p>&#8220;<b>Remove</b>&#8221;, removes the selected sim from the list</p>
+<p>&#8220;<b>Add</b>&#8221;, shows the instructions to add a new sim in the list </p>
+<p>To add a new sim to the list:&break;1) Disable Guardian temporarily&break;2) Insert the new sim in the phone and power it up</p>
+<p>3) Start Guardian and the new sim will be added to the list. </p>
+<p style="note"><b>Not</b><b>e</b>: You can add also a new sim without disabling the anti-theft, but Guardian will send a notification  sms after the power up of the phone, because it will detect a unauthorized sim.</p>
+<p style="note"><b>Suggestion: </b>Use the option &#8220;<i>Rename</i>&#8221; to assign meaningful name to the various SIMs, so you can easier distinguish them. </p>
+<p style="heading 2">Protected Applications</p>
+<p style="context">HProtList</p>
+<p>This view shows the list of all the application installed on the phone and you can select those ones that you want to protect. The protected applications are identified by a tick on the right of their name.</p>
+<p style="note"><b>Not</b><b>e</b>: It may seem that some applications are present more times in the list, but although the name is the same these application are different and perform different functionalities, so if you don&rquote;t know which is difference between them just protect both ones.</p>
+<p style="note"><b>Suggestion</b><b>: </b>To<b> </b>speed up the<b> </b>search of a particular application, you can digit its name, the software will show the application having the name that starts this the characters inserted.</p>
+<p>In the menu you can find the following commands:</p>
+<p><i>&#8220;</i><b><i>Add / Remove</i></b><i>&#8221;</i>: inserts or removes the selected application from the protected application list </p>
+<p><i>&#8220;</i><b><i>Large /  Small icons</i></b><i>&#8221;: </i> modify the icons size in the list </p>
+<p style="note"><b>Suggestion</b>: To prevent unauthorized  uninstall process, just protect the application<i>: &#8221;</i><b><i>Installer</i></b><i>&#8221;</i>. If someone tries to uninstall Guardian, the phone will ask you to enter the <i>&#8220;</i><i>secret code</i><i>&#8221;</i></p>
+<p style="note"><b>Suggestion</b>: To protect your confidential data we suggest to protect the following applications</p>
+<p style="note">&#8220;<b>Text Message</b>&#8221;</p>
+<p style="note">&#8220;<b>Messag</b><b>ing</b>&#8221;</p>
+<p style="note">&#8220;<b>Contacts</b>&#8221;</p>
+<p style="note">&#8220;<b>Calendar</b>&#8221;</p>
+<p style="note">&#8220;<b>Gallery</b>&#8221;</p>
+<p style="note">&#8220;<b>Log</b>&#8221;</p>
+</ptml>

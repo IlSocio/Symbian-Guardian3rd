@@ -1,0 +1,15 @@
+﻿/*
+============================================================================
+ Name        : GuardGUI.rls
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : String localization file
+============================================================================
+*/
+
+//  LOCALISATION STRINGS
+
+rls_string txt_guardian_pass	"Codice Segreto:"
+rls_string txt_err_bad_pass		"Codice Segreto Errato"
+

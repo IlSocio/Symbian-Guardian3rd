@@ -1,0 +1,20 @@
+/*
+============================================================================
+ Name        : bld.inf
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : This file provides the information required for building the
+               whole of a SampleImpl.
+============================================================================
+*/
+
+PRJ_PLATFORMS
+winscw gcce
+
+PRJ_MMPFILES
+DialogPIN.mmp
+
+
+PRJ_EXPORTS
+..\inc\dialogpin.hrh

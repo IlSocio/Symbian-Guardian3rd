@@ -1,0 +1,79 @@
+/*
+============================================================================
+ Name        : GuardGUI resource header file GuardGUI.hrh
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : This file contains declarations for constants of GuardGUI.
+               The file can be included in C++ or resource file.
+============================================================================
+*/
+
+#ifndef GUARDGUI_HRH
+#define GUARDGUI_HRH
+
+
+enum TGuardGUICommandIds
+	{
+// Vista Splash
+	ESplashViewCmdBack = 1,
+			
+// Vista About 
+	ESettings,
+	ELicense,
+	ESendObex,
+	ESendIR,
+	ESendBT,
+	ECheckUpdates,
+
+// Vista Settings (Comando per cambio Number/Text/Password)
+    EChange,
+    EEnable, 
+    EDisable,		// ??? USATA ???
+	
+// Vista SIM
+    EAddSim,
+    ERemoveSim,
+    ERenameSim,
+
+// Vista Protection
+	EAddApp,
+	ERemoveApp,
+	ELargeIco,
+	ESmallIco,
+	EViewCascade,
+	EViewAllApps,
+	EViewUserOnlyApps,
+	EViewRomOnlyApps,
+	EViewSystemOnlyApps,
+
+// Comuni
+    ERegister,
+    ERegisterNet,
+    ERegisterCode,
+	EHelp,
+	EAbout,
+	EDBGSendSMS,
+	EDBGPlugDele,		
+	EDBGPlugFake,		
+	EDBGPlugForw,		
+	EDBGPlugAlar,		
+	EDBGPlugConf,		
+	EDBGPlugLoca,
+	EDBGPlugComm,
+
+	EBuy,	
+	EBuyCascade,
+	EBuyGold,
+	EBuyPlatinum,
+	EBuyIridium
+	};
+
+enum TGuardGUITabViewId
+	{
+	EGuardGUIView1Tab= 1,
+	EGuardGUIView2Tab,
+	EGuardGUIView3Tab,
+	EGuardGUIView4Tab
+	};
+#endif      // GUARDGUI_HRH

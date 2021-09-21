@@ -1,0 +1,41 @@
+/*
+============================================================================
+ Name        : Uninstall.mmp
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : Your copyright notice
+ Description : This is the project specification file for Uninstall.
+============================================================================
+*/  
+APP_LAYER_SYSTEMINCLUDE
+ 
+TARGET                                  GuardLock_200131C8.exe 
+TARGETTYPE                              exe 
+UID                                     0 0x200131C8 
+VENDORID                                0 
+ 
+EPOCSTACKSIZE	0x5000
+EPOCHEAPSIZE	0x1000 0x400000
+
+USERINCLUDE                             ..\inc 
+SYSTEMINCLUDE                           \epoc32\include 
+DOCUMENT                                bld.inf 
+SOURCEPATH                              ..\src 
+SOURCE                                  GuardLock.cpp StartupWaiter.cpp 
+
+LIBRARY                                 flogger.lib 
+LIBRARY                                 estor.lib 
+LIBRARY                                 bafl.lib 
+LIBRARY                                 efsrv.lib 
+LIBRARY                                 msgs.lib 
+LIBRARY                                 euser.lib 
+// capability                              ReadUserData 
+
+macro                         _LOGGING 
+
+LIBRARY ezip.lib ws32.lib charconv.lib apgrfx.lib apmime.lib 
+//library aknnotify.lib eiksrv.lib commonengine.lib 
+library GuardCli_200107AC.lib
+
+STATICLIBRARY commonlib.lib
+

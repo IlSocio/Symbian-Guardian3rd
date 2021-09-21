@@ -1,0 +1,30 @@
+ /*
+============================================================================
+ Name        : Uninstall.mmp
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : Your copyright notice
+ Description : This is the project specification file for Uninstall.
+============================================================================
+*/
+TARGET                                  Uninstall_200107b4.exe 
+TARGETTYPE                              exe 
+UID                                     0 0x200107b4 
+VENDORID                                0 
+//USERINCLUDE                             ..\..\Guardian\inc 
+//USERINCLUDE                             ..\..\Server\inc 
+USERINCLUDE                             ..\inc 
+SYSTEMINCLUDE                           \epoc32\include 
+DOCUMENT                                bld.inf 
+// SOURCEPATH                              ..\..\Guardian\src 
+// SOURCE                                  SecurityCode.cpp 
+
+SOURCEPATH                              ..\src 
+SOURCE                                  Uninstall.cpp 
+
+LIBRARY                       efsrv.lib 
+LIBRARY                                 GuardCli_200107AC.lib 
+LIBRARY                                 euser.lib 
+CAPABILITY                              NONE 
+
+APP_LAYER_SYSTEMINCLUDE

@@ -1,0 +1,20 @@
+﻿/*
+============================================================================
+ Naziv          : GuardGUI.rls
+ Autor          : Marko Belino
+ Izdanje        :
+ Autorska prava : Sva prava zadžana
+ Opis           : Datoteka lokalizacije
+============================================================================
+*/
+
+//  LOCALISATION STRINGS
+
+rls_string txt_localize_cell 		"Repetitor: "
+rls_string txt_localize_area 		"\nPodručje: "
+rls_string txt_localize_network 	"\nMNC: "
+rls_string txt_localize_country 	"\nMCC: "
+
+rls_string txt_localize_operator 	"\nMreža: "
+rls_string txt_localize_hei 		"Visina: "
+rls_string txt_localize_met 		" metera\n"

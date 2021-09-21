@@ -1,0 +1,16 @@
+/*
+============================================================================
+ Name        : bld.inf
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : This file provides the information required for building the
+               whole of a Test.
+============================================================================
+*/
+
+PRJ_PLATFORMS
+WINSCW GCCE
+
+PRJ_MMPFILES
+Test.mmp

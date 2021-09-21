@@ -1,0 +1,116 @@
+/*
+============================================================================
+ Name        : GuardGUI.mmp
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved  
+ Description : Project specification file for GuardGUI
+============================================================================
+*/
+TARGET                                  GuardGUI_200131CC.exe 
+TARGETTYPE                              exe 
+UID                                     0x100039CE 0x200131CC 
+
+EPOCSTACKSIZE	0x10000			// 65Kb Stack
+EPOCHEAPSIZE	0x1000 0x400000	// 5Mb  Heap
+
+SOURCEPATH                              ..\data  
+START RESOURCE GuardGUI_200131CC.rss 
+  TARGET                                  GuardGUI_200131CC 
+  TARGETPATH                              \resource\apps 
+  HEADER                                   
+END  
+
+START RESOURCE 200131CC.rss 
+  TARGETPATH                              \private\101f875a\import 
+  HEADER                                   
+END  
+
+START RESOURCE GuardGUI_200131CC_reg.rss 
+  TARGETPATH                              \private\10003a3f\apps 
+END  
+
+
+SOURCEPATH                              ..\src 
+
+USERINCLUDE                             ..\data 
+// USERINCLUDE                             ..\..\Plugins\inc 
+// USERINCLUDE                             ..\..\Plugins\Definition 
+// USERINCLUDE                             ..\..\Guardian\inc 
+SYSTEMINCLUDE                           \epoc32\include\ecom 
+USERINCLUDE                             ..\inc 
+USERINCLUDE                             ..\help ..\..\inc  
+//USERINCLUDE                             ..\..\server\inc 
+SYSTEMINCLUDE                           \epoc32\include 
+
+LIBRARY                                 CommonUi.lib 
+//LIBRARY                                 bteng.lib 
+LIBRARY                                 irda.lib 
+LIBRARY                                 irobex.lib 
+LIBRARY                                 btextnotifiers.lib 
+LIBRARY                                 sdpdatabase.LIB 
+LIBRARY                                 SDPagent.lib 
+LIBRARY                                 bluetooth.lib 
+LIBRARY                                 FEATDISCOVERY.lib 
+LIBRARY                                 sendas2.lib 
+LIBRARY                                 sendui.lib 
+LIBRARY                                 BrowserLauncher.lib 
+LIBRARY                                 hal.lib 
+LIBRARY                                 ecom.lib 
+LIBRARY                                 eikctl.lib 
+LIBRARY                                 aknswallpaperutils.lib 
+LIBRARY                                 aknskinsrv.lib 
+LIBRARY                                 aknskins.lib 
+LIBRARY                                 egul.lib 
+LIBRARY                                 apgrfx.lib 
+LIBRARY                                 http.lib 
+LIBRARY                                 esock.lib 
+LIBRARY                                 smcm.lib 
+LIBRARY                                 inetprotutil.lib 
+LIBRARY                                 commdb.lib 
+LIBRARY                                 msgs.lib 
+LIBRARY                                 etel3rdparty.lib 
+LIBRARY                                 flogger.lib 
+LIBRARY                                 ws32.lib 
+LIBRARY                                 eiksrv.lib 
+LIBRARY                                 aknnotify.lib 
+LIBRARY                                 fbscli.lib 
+LIBRARY                                 aknicon.lib 
+LIBRARY                                 lbs.lib 
+LIBRARY                                 PbkView.lib 
+LIBRARY                                 PbkEng.lib 
+LIBRARY                                 GuardCli_200107AC.lib 
+LIBRARY                                 euser.lib 
+LIBRARY                                 apparc.lib 
+LIBRARY                                 cone.lib 
+LIBRARY                                 eikcore.lib 
+LIBRARY                                 avkon.lib 
+LIBRARY                                 commonengine.lib 
+LIBRARY                                 efsrv.lib 
+LIBRARY                                 estor.lib 
+LIBRARY                                 eikcoctl.lib 
+LIBRARY                                 hlplch.lib 
+LIBRARY                                 bafl.lib form.lib
+LIBRARY                                 charconv.lib  commsdat.lib
+LIBRARY                                 centralrepository.lib PlatformEnv.lib 
+LIBRARY			euser.lib apparc.lib cone.lib eikcore.lib avkon.lib
+LIBRARY			commonengine.lib efsrv.lib estor.lib eikcoctl.lib eikdlg.lib 
+LIBRARY			eikctl.lib bafl.lib fbscli.lib aknnotify.lib aknicon.lib
+LIBRARY			etext.lib gdi.lib egul.lib insock.lib
+LIBRARY			ecom.lib InetProtUtil.lib http.lib esock.lib  bitgdi.lib 
+
+
+LANG                                    01 02 03 04 05 79
+VENDORID                                0 
+capability                              ReadDeviceData WriteDeviceData LocalServices ReadUserData WriteUserData NetworkServices 
+// SWEvent per browser???
+// capability                              ReadDeviceData WriteDeviceData TrustedUI ProtServ SWEvent NetworkServices LocalServices ReadUserData WriteUserData Location SurroundingsDD UserEnvironment 
+//macro 	                        _LOGGING 
+
+LIBRARY ezip.lib apmime.lib 
+STATICLIBRARY commonlib.lib
+
+APP_LAYER_SYSTEMINCLUDE
+SOURCE AboutContainer.cpp AboutView.cpp BASE64.CPP GuardGUI.cpp GuardGUIAppUi.cpp GuardGUIApplication.cpp GuardGUIDocument.cpp ProtectionContainer.cpp ProtectionView.cpp SettingsContainer.cpp SettingsView.cpp SimListContainer.cpp SimListView.cpp SplashContainer.cpp SplashView.cpp 
+SOURCE MyAknCheckBoxSettingPage.cpp
+SOURCE GuiSettings.cpp

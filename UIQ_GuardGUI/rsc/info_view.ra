@@ -1,0 +1,211 @@
+//view.ra
+
+#include "infoview.hrh"
+
+RESOURCE QIK_VIEW_CONFIGURATIONS r_info_view_ui_configurations
+	{
+	configurations = 
+		{
+		QIK_VIEW_CONFIGURATION
+			{
+			ui_config_mode = KQikPenStyleTouchPortrait;
+			command_list = r_info_commands;
+			view = r_info_view;
+			},
+		QIK_VIEW_CONFIGURATION
+			{
+			ui_config_mode = KQikSoftkeyStylePortrait;
+			command_list = r_info_commands;
+			view = r_info_view;
+			}
+		};
+	}
+
+RESOURCE QIK_COMMAND_LIST r_info_commands
+	{
+	items =
+		{
+	 	 QIK_COMMAND
+         {
+         id = ECheckUpdates;
+         type = EQikCommandTypeScreen;
+         text = "Check Updates";
+         },
+      	 QIK_COMMAND
+         {
+         id = ESendObex;
+         type = EQikCommandTypeScreen;	
+         text = "Invia Guardian";
+         namedGroupLinkId = ESendObex;
+         },
+          QIK_COMMAND
+         {
+         id = ESendIR;
+         type = EQikCommandTypeScreen;	
+         text = "Using IR";
+         namedGroupId = ESendObex;
+         },
+         QIK_COMMAND
+         {
+         id = ESendBT;
+         type = EQikCommandTypeScreen;	
+         text = "Using BT";
+         namedGroupId = ESendObex;
+         },
+      	 QIK_COMMAND
+         {
+         id = ERegister;
+         type = EQikCommandTypeScreen;	
+         text = "Register";
+         namedGroupLinkId = ERegister;
+         },
+         QIK_COMMAND
+        {
+        id = ERegisterCode;
+        type = EQikCommandTypeScreen;	
+        text = "Using Registration Code";
+        namedGroupId = ERegister;
+        },
+        QIK_COMMAND
+        {
+        id = ERegisterNet;
+        type = EQikCommandTypeScreen;	
+        text = "Using License ID";
+        namedGroupId = ERegister;
+        }
+		};
+	}
+	
+
+
+RESOURCE QIK_VIEW r_info_view
+	{
+	pages = r_info_view_layout_pages;
+	}
+
+RESOURCE QIK_VIEW_PAGES r_info_view_layout_pages
+	{
+	pages = 
+		{
+		QIK_VIEW_PAGE
+			{
+			page_id = EInfoView_Page;
+ 		    page_content = r_info_page_controls;
+			}
+		};
+	}
+
+//----------------------------------------------------
+//------------------ VIEW CONTROLS -------------------
+//----------------------------------------------------
+RESOURCE QIK_CONTAINER_SETTINGS r_info_page_controls
+{
+layout_manager_type = EQikRowLayoutManager;
+layout_manager = r_info_row_layout_manager;
+controls =
+	{
+	QIK_CONTAINER_ITEM_CI_LI
+		{
+		unique_handle = ELabelCtrl1;
+		type = EEikCtLabel;
+		control = r_label_fuzzy;
+		},
+    QIK_CONTAINER_ITEM_CI_LI
+		{
+		unique_handle = ELabelCtrl2;
+		type = EEikCtLabel;
+		control = r_label_email;
+		},
+	QIK_CONTAINER_ITEM_CI_LI
+		{
+		unique_handle = ELabelCtrl3;
+		type = EEikCtLabel;
+		control = r_label_web;
+		},
+	QIK_CONTAINER_ITEM_CI_LI
+		{
+		unique_handle = ELabelCtrl4;
+		type = EEikCtLabel;
+		control = r_empty;
+		},
+	QIK_CONTAINER_ITEM_CI_LI
+		{
+		unique_handle = ELabelCtrl5;
+		type = EEikCtLabel;
+		control = r_label_guardian;
+		},
+	QIK_CONTAINER_ITEM_CI_LI
+		{
+		unique_handle = ELabelCtrl6;
+		type = EEikCtLabel;
+		control = r_label_version;
+		},
+	QIK_CONTAINER_ITEM_CI_LI
+		{
+		unique_handle = ELabelCtrl7;
+		type = EEikCtLabel;
+		control = r_empty;
+		},
+	QIK_CONTAINER_ITEM_CI_LI
+		{
+		unique_handle = ELabelCtrl8;
+		type = EEikCtLabel;
+		control = r_label_reserved;
+		}
+	};
+}
+	
+
+//----------------------------------------------------
+//---------------------- LABEL -----------------------
+//----------------------------------------------------
+RESOURCE LABEL r_label_fuzzy
+	{
+	standard_font = EEikLabelFontLegend;
+	txt = txt_fuzzy;
+	}
+RESOURCE LABEL r_label_email
+	{
+	standard_font = EEikLabelFontNormal;
+	txt = txt_email;
+	}
+RESOURCE LABEL r_label_web
+	{
+	standard_font = EEikLabelFontNormal;
+	txt = txt_web;
+	}
+RESOURCE LABEL r_label_guardian
+	{
+	standard_font=EEikLabelFontLegend;
+	txt = txt_guardian;
+	}
+RESOURCE LABEL r_label_version
+	{
+	standard_font = EEikLabelFontLegend;
+	txt = txt_version;
+	}
+RESOURCE LABEL r_label_reserved
+	{
+	standard_font = EEikLabelFontNormal;
+	txt = txt_reserved;
+	}
+RESOURCE LABEL r_empty
+	{
+	standard_font = EEikLabelFontNormal;
+	txt = "";
+	}
+
+
+//----------------------------------------------------
+//-------------- GRID LAYOUT MANAGER -----------------
+//----------------------------------------------------
+RESOURCE QIK_ROW_LAYOUT_MANAGER r_info_row_layout_manager
+{
+	default_layout_data = QIK_ROW_LAYOUT_DATA 
+	{
+	top_margin = 5;
+	horizontal_alignment = EQikLayoutHAlignFill;//EQikLayoutHAlignCenter;
+	vertical_alignment = EQikLayoutVAlignCenter;//EQikLayoutVAlignTop;	
+	};
+}
+	

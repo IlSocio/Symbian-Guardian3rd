@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generator: Ikivo Animator 2.2 (build 2.2.0.10) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg baseProfile="tiny" display="inherit" height="35" id="Livello_1" version="1.1" viewBox="0 0 68 35" width="68" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<g display="inherit" id="Key" transform="matrix(3.385,0,0,3.385,0.7,1.177)">
+		<ellipse cx="16.4" cy="4.8" display="inherit" fill="none" rx="2.3" ry="3.8" stroke="#000000" stroke-width="2"/>
+		<line display="inherit" fill="none" stroke="#000000" stroke-width="2" x1="15" y1="4.8" y2="4.8"/>
+		<line display="inherit" fill="none" stroke="#000000" stroke-width="2" x1="1.8" x2="1.8" y1="4.8" y2="8.3"/>
+		<line display="inherit" fill="none" stroke="#000000" stroke-width="2" x1="4.8" x2="4.8" y1="4.8" y2="7.1"/>
+	</g>
+</svg>

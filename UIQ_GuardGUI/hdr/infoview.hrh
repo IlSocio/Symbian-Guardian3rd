@@ -1,0 +1,18 @@
+#ifndef INFOVIEW_HRH
+#define INFOVIEW_HRH
+
+
+enum TInfoViewControls
+    {
+    ELabelCtrl1,
+    ELabelCtrl2,
+    ELabelCtrl3,
+    ELabelCtrl4,
+    ELabelCtrl5,
+    ELabelCtrl6,
+    ELabelCtrl7,
+    ELabelCtrl8,
+    EInfoViewNumberOfControls
+    };
+    	
+#endif

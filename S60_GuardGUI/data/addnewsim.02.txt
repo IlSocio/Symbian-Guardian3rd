@@ -1,0 +1,4 @@
+Pour ajouter un nouveau module d’identité de l’abonné (SIM) :
+-1 désactiver temporairement « Guardian » et fermer le logiciel;
+-2 remplacer le SIM;
+-3 redémarrer Guardian : le nouveau « SIM » sera automatiquement inclus à la Liste des « SIM » autorisés (Authorized Sims List).

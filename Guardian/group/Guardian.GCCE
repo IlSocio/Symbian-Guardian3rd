@@ -1,0 +1,1422 @@
+
+include \Symbian\9.1\S60_3rd_MR\epoc32\tools\compilation_config\\GCCE.mk
+
+
+# CWD \online\Guardian3rd\Guardian\group\
+# MMPFile \online\Guardian3rd\Guardian\group\Guardian.MMP
+# Target Guardian_200131CB.exe
+# TargetType EXE
+# BasicTargetType EXE
+# MakefileType GNU
+
+ERASE = @erase 2>>nul
+
+# EPOC DEFINITIONS
+
+EPOCBLD = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Guardian\group\Guardian\GCCE
+EPOCTRG = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE
+EPOCLIB = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5
+EPOCLINK = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5
+EPOCSTATLINK = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5
+EPOCASSPLINK = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\MARM
+EPOCDATA = \Symbian\9.1\S60_3rd_MR\EPOC32\DATA
+EPOCINC = \Symbian\9.1\S60_3rd_MR\EPOC32\INCLUDE
+TRGDIR = 
+DATADIR = Z\System\Data
+
+EPOCBLDUREL = $(EPOCBLD)\UREL
+EPOCTRGUREL = $(EPOCTRG)\UREL
+EPOCLIBUREL = $(EPOCLIB)\UREL
+EPOCLINKUREL = $(EPOCLINK)\UREL
+EPOCSTATLINKUREL = $(EPOCSTATLINK)\UREL
+EPOCASSPLINKUREL = $(EPOCASSPLINK)\UREL
+
+EPOCBLDUDEB = $(EPOCBLD)\UDEB
+EPOCTRGUDEB = $(EPOCTRG)\UDEB
+EPOCLIBUDEB = $(EPOCLIB)\UREL
+EPOCLINKUDEB = $(EPOCLINK)\UREL
+EPOCSTATLINKUDEB = $(EPOCSTATLINK)\UDEB
+EPOCASSPLINKUDEB = $(EPOCASSPLINK)\UREL
+
+# EPOC PSEUDOTARGETS
+
+UREL : MAKEWORKUREL RESOURCEUREL
+
+UDEB : MAKEWORKUDEB RESOURCEUDEB
+
+ALL : UREL UDEB
+
+CLEAN CLEANALL : CLEANBUILD CLEANRELEASE CLEANLIBRARY
+
+
+
+WHAT WHATALL : WHATUREL WHATUDEB
+
+RESOURCE RESOURCEALL : RESOURCEUREL RESOURCEUDEB
+
+CLEANBUILD CLEANBUILDALL : CLEANBUILDUREL CLEANBUILDUDEB
+
+CLEANRELEASE CLEANRELEASEALL : CLEANRELEASEUREL CLEANRELEASEUDEB
+
+MAKEWORK MAKEWORKALL : MAKEWORKUREL MAKEWORKUDEB
+
+LISTING LISTINGALL : LISTINGUREL LISTINGUDEB
+
+MAKEWORK : MAKEWORKLIBRARY
+
+RESOURCEUREL RESOURCEUDEB : GENERIC_RESOURCE
+
+
+# must set both PATH and Path to make it work correctly
+Path:=C:\Symbian\9.1\S60_3rd_MR\EPOC32\gcc\bin;$(Path)
+PATH:=$(Path)
+
+ifndef CC_INSTALL_PATH
+	CC_INSTALL_PATH=C:\Programmi\CSL Arm Toolchain\bin\..
+	STATIC_LIBS = $(STATIC_LIBS_PATH)"$(CC_INSTALL_PATH)\arm-none-symbianelf\lib" $(STATIC_LIBS_PATH)"$(CC_INSTALL_PATH)\lib\gcc\arm-none-symbianelf\3.4.3"
+endif
+ifdef LINKER_SYMBOLS_MAP_OPTION
+	UREL_MAP_FILE="$(EPOCTRGUREL)\Guardian_200131CB.exe.map"
+	UDEB_MAP_FILE="$(EPOCTRGUDEB)\Guardian_200131CB.exe.map"
+else
+	UREL_MAP_FILE=
+	UDEB_MAP_FILE=
+endif
+
+
+ifdef CODE_SEGMENT_START
+	CODE_SEGMENT_START += 0x8000 
+endif
+ifdef START_GROUP_SYMBOL
+	EEXE_OBJECT=$(START_GROUP_SYMBOL)UC_EXE_.o$(END_GROUP_SYMBOL)
+	EDLL_OBJECT=$(START_GROUP_SYMBOL)UC_DLL_.o$(END_GROUP_SYMBOL)
+	DENTRY_OBJECT=$(START_GROUP_SYMBOL)D_ENTRY_.o$(END_GROUP_SYMBOL)
+	LENTRY_OBJECT=$(START_GROUP_SYMBOL)L_ENTRY_.o$(END_GROUP_SYMBOL)
+	XENTRY_OBJECT=$(START_GROUP_SYMBOL)X_ENTRY_.o$(END_GROUP_SYMBOL)
+	VENTRY_OBJECT=$(START_GROUP_SYMBOL)V_ENTRY_.o$(END_GROUP_SYMBOL)
+	KENTRY_OBJECT=$(START_GROUP_SYMBOL)K_ENTRY_.o$(END_GROUP_SYMBOL)
+endif
+
+INCDIR =  $(INCLUDE_OPTION) ..\..\Plugins\inc  $(INCLUDE_OPTION) ..\..\Plugins\Definition  $(INCLUDE_OPTION) ..\..\server\inc  $(INCLUDE_OPTION) ..\inc $(INCLUDE_OPTION) ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\include $(INCLUDE_OPTION) ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\include\ecom $(INCLUDE_OPTION) ..\..\..\..\Symbian\9.1\S60_3rd_MR\epoc32\include\variant $(INCLUDE_OPTION) "C:\Programmi\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include"
+
+OTHEROPTIONS= $(THUMB_INSTRUCTION_SET)  $(SOFTVFPMODE_OPTION)  $(COMPILER_THUMB_DEFINES)  $(COMPILER_INTERWORK_DEFINES) 
+CCFLAGS += $(OTHEROPTIONS)
+CCDEFS = $(COMPILER_DEFINES)  -D__SYMBIAN32__ -D__SERIES60_30__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D__EXE__ -D__SUPPORT_CPP_EXCEPTIONS__ $(PLATFORM_DEFINES)  -D__PRODUCT_INCLUDE__=\"/Symbian/9.1/S60_3rd_MR/epoc32/include/variant/Symbian_OS_v9.1.hrh\" $(USERDEFS)
+
+CCUREL = $(CC)  $(SYMBIAN_UREL_CCFLAGS) $(RUNTIME_SYMBOL_VISIBILITY_OPTION) $(CCFLAGS)  -DNDEBUG -D_UNICODE $(CCDEFS)
+CCUDEB = $(CC)  $(SYMBIAN_UDEB_CCFLAGS) $(RUNTIME_SYMBOL_VISIBILITY_OPTION) $(CCFLAGS)  -D_DEBUG -D_UNICODE $(CCDEFS)
+
+
+UREL : \
+	$(EPOCTRGUREL)\Guardian_200131CB.exe
+
+UDEB : \
+	$(EPOCTRGUDEB)\Guardian_200131CB.exe
+
+
+RESOURCEUREL : MAKEWORKUREL
+RESOURCEUDEB : MAKEWORKUDEB
+
+LIBRARY : MAKEWORKLIBRARY
+
+ : 
+	perl -S emkdir.pl $@
+
+
+FREEZE : 
+
+CLEANLIBRARY :
+
+
+GENERIC_RESOURCE : GENERIC_MAKEWORK
+
+# REAL TARGET - BUILD VARIANT UREL
+
+WHATUREL : WHATGENERIC
+
+CLEANUREL : CLEANBUILDUREL CLEANRELEASEUREL
+
+CLEANBUILDUREL : 
+	@perl -S ermdir.pl "$(EPOCBLDUREL)"
+
+CLEANRELEASEUREL : CLEANGENERIC
+
+
+UREL_RELEASEABLES1= \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL\Guardian_200131CB.exe \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL\Guardian_200131CB.exe.map
+
+WHATUREL:
+	@echo $(UREL_RELEASEABLES1)
+
+CLEANRELEASEUREL:
+	-$(ERASE) $(UREL_RELEASEABLES1)
+
+LISTINGUREL : MAKEWORKUREL \
+	LISTINGURELResReader \
+	LISTINGURELPhone \
+	LISTINGURELPluginAO \
+	LISTINGURELPluginManager \
+	LISTINGURELtimeouttimer \
+	LISTINGURELRecvSmsSocket \
+	LISTINGURELPubSubObserver \
+	LISTINGURELLogCleaner \
+	LISTINGURELForegroundObserver \
+	LISTINGURELGuardian \
+	LISTINGURELSecurityCode
+
+LIBSUREL= \
+	$(EPOCLIB)\LIB\bafl.dso \
+	$(EPOCLIB)\LIB\ecom.dso \
+	$(EPOCLIB)\LIB\inetprotutil.dso \
+	$(EPOCLIB)\LIB\eikcore.dso \
+	$(EPOCLIB)\LIB\etel3rdparty.dso \
+	$(EPOCLIB)\LIB\estor.dso \
+	$(EPOCLIB)\LIB\esock.dso \
+	$(EPOCLIB)\LIB\gsmu.dso \
+	$(EPOCLIB)\LIB\smsu.dso \
+	$(EPOCLIB)\LIB\logcli.dso \
+	$(EPOCLIB)\LIB\flogger.dso \
+	$(EPOCLIB)\LIB\GuardCli_200107AC.dso \
+	$(EPOCLIB)\LIB\efsrv.dso \
+	$(EPOCLIB)\LIB\ws32.dso \
+	$(EPOCLIB)\LIB\apgrfx.dso \
+	$(EPOCLIB)\LIB\eiksrv.dso \
+	$(EPOCLIB)\LIB\CONE.dso \
+	$(EPOCLIB)\LIB\apparc.dso \
+	$(EPOCLIB)\LIB\euser.dso \
+	$(EPOCSTATLINKUREL)\usrt2_2.lib \
+	$(EPOCLIB)\LIB\dfpaeabi.dso \
+	$(EPOCLIB)\LIB\dfprvct2_2.dso \
+	$(EPOCLIB)\LIB\drtaeabi.dso \
+	$(EPOCLIB)\LIB\scppnwdl.dso \
+	$(EPOCLIB)\LIB\drtrvct2_2.dso \
+	$(STATIC_LIBS_LIST)
+
+VTBLEXPORTSUREL=
+
+OBJECTSUREL= \
+	$(EPOCBLDUREL)\ResReader.o \
+	$(EPOCBLDUREL)\Phone.o \
+	$(EPOCBLDUREL)\PluginAO.o \
+	$(EPOCBLDUREL)\PluginManager.o \
+	$(EPOCBLDUREL)\timeouttimer.o \
+	$(EPOCBLDUREL)\RecvSmsSocket.o \
+	$(EPOCBLDUREL)\PubSubObserver.o \
+	$(EPOCBLDUREL)\LogCleaner.o \
+	$(EPOCBLDUREL)\ForegroundObserver.o \
+	$(EPOCBLDUREL)\Guardian.o \
+	$(EPOCBLDUREL)\SecurityCode.o
+
+$(EPOCTRGUREL)\Guardian_200131CB.exe : $(OBJECTSUREL)
+	-$(ERASE) "$(EPOCTRGUREL)\Guardian_200131CB.exe.map" 
+	$(LD) $(STATIC_LIBS) $(SYMBIAN_UREL_LINK_FLAGS) $(SHARED_OBJECT_OPTION) $(CODE_SEGMENT_START) $(DATA_SEGMENT_START) 0x400000 $(SYMVER_OPTION) $(SO_NAME_OPTION) Guardian_200131CB{000a0000}[200131cb].exe $(LINKER_ENTRY_OPTION) _E32Startup  $(UNDEFINED_SYMBOL_REF_OPTION) _E32Startup  $(EPOCSTATLINKUREL)\EEXE.LIB$(EEXE_OBJECT) \
+		$(OUTPUT_OPTION) "$(EPOCBLDUREL)\Guardian_200131CB.exe" \
+		$(LINKER_SYMBOLS_MAP_OPTION) $(UREL_MAP_FILE) \
+		$(OBJECTSUREL) \
+		$(LIBSUREL) \
+		$(VTBLEXPORTSUREL) $(USERLDFLAGS) 
+	elf2e32 --sid=0x200131cb \
+		 --uid1=0x1000007a --uid2=0x00000000 --uid3=0x200131cb --vid=0x00000000\
+		 --capability=Location+ReadDeviceData+SWEvent+NetworkServices+ReadUserData+WriteUserData --fpu=softvfp --targettype=EXE --output="$@" --elfinput="$(EPOCBLDUREL)\Guardian_200131CB.exe" --linkas=Guardian_200131CB{000a0000}[200131cb].exe --libpath="$(EPOCLIB)\LIB"
+
+
+# REAL TARGET - BUILD VARIANT UDEB
+
+WHATUDEB : WHATGENERIC
+
+CLEANUDEB : CLEANBUILDUDEB CLEANRELEASEUDEB
+
+CLEANBUILDUDEB : 
+	@perl -S ermdir.pl "$(EPOCBLDUDEB)"
+
+CLEANRELEASEUDEB : CLEANGENERIC
+
+
+UDEB_RELEASEABLES1= \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB\Guardian_200131CB.exe \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB\Guardian_200131CB.exe.map
+
+WHATUDEB:
+	@echo $(UDEB_RELEASEABLES1)
+
+CLEANRELEASEUDEB:
+	-$(ERASE) $(UDEB_RELEASEABLES1)
+
+LISTINGUDEB : MAKEWORKUDEB \
+	LISTINGUDEBResReader \
+	LISTINGUDEBPhone \
+	LISTINGUDEBPluginAO \
+	LISTINGUDEBPluginManager \
+	LISTINGUDEBtimeouttimer \
+	LISTINGUDEBRecvSmsSocket \
+	LISTINGUDEBPubSubObserver \
+	LISTINGUDEBLogCleaner \
+	LISTINGUDEBForegroundObserver \
+	LISTINGUDEBGuardian \
+	LISTINGUDEBSecurityCode
+
+LIBSUDEB= \
+	$(EPOCLIB)\LIB\bafl.dso \
+	$(EPOCLIB)\LIB\ecom.dso \
+	$(EPOCLIB)\LIB\inetprotutil.dso \
+	$(EPOCLIB)\LIB\eikcore.dso \
+	$(EPOCLIB)\LIB\etel3rdparty.dso \
+	$(EPOCLIB)\LIB\estor.dso \
+	$(EPOCLIB)\LIB\esock.dso \
+	$(EPOCLIB)\LIB\gsmu.dso \
+	$(EPOCLIB)\LIB\smsu.dso \
+	$(EPOCLIB)\LIB\logcli.dso \
+	$(EPOCLIB)\LIB\flogger.dso \
+	$(EPOCLIB)\LIB\GuardCli_200107AC.dso \
+	$(EPOCLIB)\LIB\efsrv.dso \
+	$(EPOCLIB)\LIB\ws32.dso \
+	$(EPOCLIB)\LIB\apgrfx.dso \
+	$(EPOCLIB)\LIB\eiksrv.dso \
+	$(EPOCLIB)\LIB\CONE.dso \
+	$(EPOCLIB)\LIB\apparc.dso \
+	$(EPOCLIB)\LIB\euser.dso \
+	$(EPOCSTATLINKUDEB)\usrt2_2.lib \
+	$(EPOCLIB)\LIB\dfpaeabi.dso \
+	$(EPOCLIB)\LIB\dfprvct2_2.dso \
+	$(EPOCLIB)\LIB\drtaeabi.dso \
+	$(EPOCLIB)\LIB\scppnwdl.dso \
+	$(EPOCLIB)\LIB\drtrvct2_2.dso \
+	$(STATIC_LIBS_LIST)
+
+VTBLEXPORTSUDEB=
+
+OBJECTSUDEB= \
+	$(EPOCBLDUDEB)\ResReader.o \
+	$(EPOCBLDUDEB)\Phone.o \
+	$(EPOCBLDUDEB)\PluginAO.o \
+	$(EPOCBLDUDEB)\PluginManager.o \
+	$(EPOCBLDUDEB)\timeouttimer.o \
+	$(EPOCBLDUDEB)\RecvSmsSocket.o \
+	$(EPOCBLDUDEB)\PubSubObserver.o \
+	$(EPOCBLDUDEB)\LogCleaner.o \
+	$(EPOCBLDUDEB)\ForegroundObserver.o \
+	$(EPOCBLDUDEB)\Guardian.o \
+	$(EPOCBLDUDEB)\SecurityCode.o
+
+$(EPOCTRGUDEB)\Guardian_200131CB.exe : $(OBJECTSUDEB)
+	-$(ERASE) "$(EPOCTRGUDEB)\Guardian_200131CB.exe.map" 
+	$(LD) $(STATIC_LIBS) $(SYMBIAN_UDEB_LINK_FLAGS) $(SHARED_OBJECT_OPTION) $(CODE_SEGMENT_START) $(DATA_SEGMENT_START) 0x400000 $(SYMVER_OPTION) $(SO_NAME_OPTION) Guardian_200131CB{000a0000}[200131cb].exe $(LINKER_ENTRY_OPTION) _E32Startup  $(UNDEFINED_SYMBOL_REF_OPTION) _E32Startup  $(EPOCSTATLINKUDEB)\EEXE.LIB$(EEXE_OBJECT) \
+		$(OUTPUT_OPTION) "$(EPOCBLDUDEB)\Guardian_200131CB.exe" \
+		$(LINKER_SYMBOLS_MAP_OPTION) $(UDEB_MAP_FILE) \
+		$(OBJECTSUDEB) \
+		$(LIBSUDEB) \
+		$(VTBLEXPORTSUDEB) $(USERLDFLAGS) 
+	copy "$(EPOCBLDUDEB)\Guardian_200131CB.exe" "$(EPOCTRGUDEB)\Guardian_200131CB.sym"
+	elf2e32 --sid=0x200131cb \
+		 --uid1=0x1000007a --uid2=0x00000000 --uid3=0x200131cb --vid=0x00000000\
+		 --capability=Location+ReadDeviceData+SWEvent+NetworkServices+ReadUserData+WriteUserData --fpu=softvfp --targettype=EXE --output="$@" --elfinput="$(EPOCBLDUDEB)\Guardian_200131CB.exe" --linkas=Guardian_200131CB{000a0000}[200131cb].exe --libpath="$(EPOCLIB)\LIB"
+
+
+# SOURCES
+
+# Source ResReader.cpp
+
+$(EPOCBLDUREL)\ResReader.lis $(EPOCBLDUREL)\ResReader.o \
+$(EPOCBLDUDEB)\ResReader.lis $(EPOCBLDUDEB)\ResReader.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\BARSC.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\BAUTILS.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\badesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bamdesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\barsread.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32debug.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32event.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32hal.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32keys.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ktran.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ldr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32lmsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32notif.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32svr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\partitions.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Plugins\inc\Plugins_200112df.rsg \
+	\online\Guardian3rd\Plugins\inc\ResReader.h
+
+$(EPOCBLDUREL)\ResReader.o : \online\Guardian3rd\Plugins\src\Resreader.cpp
+	@echo Resreader.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\..\Plugins\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\..\Plugins\src\Resreader.cpp
+
+LISTINGURELResReader : $(EPOCBLDUREL)\ResReader.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Plugins\src\ResReader.ARMV5.lst
+
+$(EPOCBLDUREL)\ResReader.lis : \online\Guardian3rd\Plugins\src\Resreader.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\..\Plugins\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\..\Plugins\src\Resreader.cpp 
+
+$(EPOCBLDUDEB)\ResReader.o : \online\Guardian3rd\Plugins\src\Resreader.cpp
+	@echo Resreader.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\..\Plugins\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\..\Plugins\src\Resreader.cpp
+
+LISTINGUDEBResReader : $(EPOCBLDUDEB)\ResReader.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Plugins\src\ResReader.ARMV5.lst
+
+$(EPOCBLDUDEB)\ResReader.lis : \online\Guardian3rd\Plugins\src\Resreader.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\..\Plugins\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\..\Plugins\src\Resreader.cpp 
+
+
+
+# Source Phone.cpp
+
+$(EPOCBLDUREL)\Phone.lis $(EPOCBLDUREL)\Phone.o \
+$(EPOCBLDUDEB)\Phone.lis $(EPOCBLDUDEB)\Phone.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\EMSInformationElement.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\MSVAPI.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\MTCLREG.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\badesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bamdesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\barsc.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\barsc2.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\charconv.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cmsvattachment.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cmsvrecipientlist.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cntdef.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cntdef.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32dbms.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32dbms.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32debug.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32event.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32hal.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32keys.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ktran.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ldr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32lmsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32math.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32math.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32notif.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32svr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\emsinformationelement.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\etel3rdparty.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuNmspaceMobStore.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuelem.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuelem.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuetel.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuetel.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmumsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmumsg.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmunmspaceMobMsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmunmspaceMobPh.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmupdu.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmupdu.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logeng.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logging.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.rsg \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\mclient.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\mmsvstoremanager.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvapi.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvapi.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvarray.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvids.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvipc.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvipc.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvrcpt.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvrcpt.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvreg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvreg.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstore.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvuids.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\mtclbase.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\partitions.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32buf.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32buf.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32page.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32page.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32share.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32share.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32stor.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32stor.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smcmmain.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smsclnt.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smsclnt.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smut.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smutset.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smutset.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smutsimparam.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\telephony.inl \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\server\inc\Phone.h
+
+$(EPOCBLDUREL)\Phone.o : \online\Guardian3rd\Server\src\Phone.cpp
+	@echo Phone.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\..\Server\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\..\Server\src\Phone.cpp
+
+LISTINGURELPhone : $(EPOCBLDUREL)\Phone.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Server\src\Phone.ARMV5.lst
+
+$(EPOCBLDUREL)\Phone.lis : \online\Guardian3rd\Server\src\Phone.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\..\Server\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\..\Server\src\Phone.cpp 
+
+$(EPOCBLDUDEB)\Phone.o : \online\Guardian3rd\Server\src\Phone.cpp
+	@echo Phone.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\..\Server\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\..\Server\src\Phone.cpp
+
+LISTINGUDEBPhone : $(EPOCBLDUDEB)\Phone.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Server\src\Phone.ARMV5.lst
+
+$(EPOCBLDUDEB)\Phone.lis : \online\Guardian3rd\Server\src\Phone.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\..\Server\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\..\Server\src\Phone.cpp 
+
+
+
+# Source PluginAO.cpp
+
+$(EPOCBLDUREL)\PluginAO.lis $(EPOCBLDUREL)\PluginAO.o \
+$(EPOCBLDUDEB)\PluginAO.lis $(EPOCBLDUDEB)\PluginAO.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\ECom.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\EComErrorCodes.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\EComResolverParams.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\EComResolverParams.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\ImplementationInformation.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\ImplementationInformation.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\badesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bamdesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32debug.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32event.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32hal.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32keys.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ktran.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ldr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32lmsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32notif.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32svr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logging.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\partitions.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Guardian\inc\PluginAO.h \
+	\online\Guardian3rd\Plugins\Definition\Interface.h \
+	\online\Guardian3rd\Plugins\Definition\Interface.inl
+
+$(EPOCBLDUREL)\PluginAO.o : \online\Guardian3rd\Guardian\src\Pluginao.cpp
+	@echo Pluginao.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Pluginao.cpp
+
+LISTINGURELPluginAO : $(EPOCBLDUREL)\PluginAO.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\PluginAO.ARMV5.lst
+
+$(EPOCBLDUREL)\PluginAO.lis : \online\Guardian3rd\Guardian\src\Pluginao.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Pluginao.cpp 
+
+$(EPOCBLDUDEB)\PluginAO.o : \online\Guardian3rd\Guardian\src\Pluginao.cpp
+	@echo Pluginao.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Pluginao.cpp
+
+LISTINGUDEBPluginAO : $(EPOCBLDUDEB)\PluginAO.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\PluginAO.ARMV5.lst
+
+$(EPOCBLDUDEB)\PluginAO.lis : \online\Guardian3rd\Guardian\src\Pluginao.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Pluginao.cpp 
+
+
+
+# Source PluginManager.cpp
+
+$(EPOCBLDUREL)\PluginManager.lis $(EPOCBLDUREL)\PluginManager.o \
+$(EPOCBLDUDEB)\PluginManager.lis $(EPOCBLDUDEB)\PluginManager.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\BADESCA.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\BARSC.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\DelimitedPath16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\ECom.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\EComErrorCodes.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\EComResolverParams.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\EComResolverParams.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\ImplementationInformation.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\ImplementationInformation.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Etel3rdParty.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\badesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bamdesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\delimitedparser16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\delimitedparsercommon.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32debug.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32event.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32hal.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32keys.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ktran.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ldr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32lmsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32notif.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32svr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logging.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\partitions.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\telephony.inl \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Guardian\inc\PluginManager.h \
+	\online\Guardian3rd\Guardian\inc\pluginao.h \
+	\online\Guardian3rd\Plugins\Definition\Interface.h \
+	\online\Guardian3rd\Plugins\Definition\Interface.inl \
+	\online\Guardian3rd\Plugins\inc\Plugins_200112df.rsg \
+	\online\Guardian3rd\Plugins\inc\resreader.h \
+	\online\Guardian3rd\server\inc\client.h \
+	\online\Guardian3rd\server\inc\settings_consts.h
+
+$(EPOCBLDUREL)\PluginManager.o : \online\Guardian3rd\Guardian\src\Pluginmanager.cpp
+	@echo Pluginmanager.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Pluginmanager.cpp
+
+LISTINGURELPluginManager : $(EPOCBLDUREL)\PluginManager.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\PluginManager.ARMV5.lst
+
+$(EPOCBLDUREL)\PluginManager.lis : \online\Guardian3rd\Guardian\src\Pluginmanager.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Pluginmanager.cpp 
+
+$(EPOCBLDUDEB)\PluginManager.o : \online\Guardian3rd\Guardian\src\Pluginmanager.cpp
+	@echo Pluginmanager.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Pluginmanager.cpp
+
+LISTINGUDEBPluginManager : $(EPOCBLDUDEB)\PluginManager.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\PluginManager.ARMV5.lst
+
+$(EPOCBLDUDEB)\PluginManager.lis : \online\Guardian3rd\Guardian\src\Pluginmanager.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Pluginmanager.cpp 
+
+
+
+# Source timeouttimer.cpp
+
+$(EPOCBLDUREL)\timeouttimer.lis $(EPOCBLDUREL)\timeouttimer.o \
+$(EPOCBLDUDEB)\timeouttimer.lis $(EPOCBLDUDEB)\timeouttimer.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Plugins\inc\TimeOutNotifier.h \
+	\online\Guardian3rd\Plugins\inc\TimeOutTimer.h
+
+$(EPOCBLDUREL)\timeouttimer.o : \online\Guardian3rd\Guardian\src\Timeouttimer.cpp
+	@echo Timeouttimer.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Timeouttimer.cpp
+
+LISTINGURELtimeouttimer : $(EPOCBLDUREL)\timeouttimer.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\timeouttimer.ARMV5.lst
+
+$(EPOCBLDUREL)\timeouttimer.lis : \online\Guardian3rd\Guardian\src\Timeouttimer.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Timeouttimer.cpp 
+
+$(EPOCBLDUDEB)\timeouttimer.o : \online\Guardian3rd\Guardian\src\Timeouttimer.cpp
+	@echo Timeouttimer.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Timeouttimer.cpp
+
+LISTINGUDEBtimeouttimer : $(EPOCBLDUDEB)\timeouttimer.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\timeouttimer.ARMV5.lst
+
+$(EPOCBLDUDEB)\timeouttimer.lis : \online\Guardian3rd\Guardian\src\Timeouttimer.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Timeouttimer.cpp 
+
+
+
+# Source RecvSmsSocket.cpp
+
+$(EPOCBLDUREL)\RecvSmsSocket.lis $(EPOCBLDUREL)\RecvSmsSocket.o \
+$(EPOCBLDUDEB)\RecvSmsSocket.lis $(EPOCBLDUDEB)\RecvSmsSocket.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\C32COMM.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\C32COMM.INL \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\E32Std.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\EMSInformationElement.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\ETEL.INL \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\FAXDEFN.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\MetaContainer.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\MetaContainer.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\MetaData.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Metadata.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\badesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bamdesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\barsc.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\barsc2.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\charconv.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cntdef.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cntdef.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32comm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32comm.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32dbms.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32dbms.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32debug.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32event.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32hal.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32keys.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ktran.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ldr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32lmsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32notif.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32svr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ver.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\emsinformationelement.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\es_sock.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\es_sock.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\etel.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\etelmm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuNmspaceMobStore.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmubuf.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuelem.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuelem.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuetel.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuetel.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmumsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmumsg.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmunmspaceMobMsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmunmspaceMobPh.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmupdu.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmupdu.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logeng.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logging.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.rsg \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvids.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvrcpt.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvrcpt.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstore.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\nifvar.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\partitions.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32buf.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32buf.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32mem.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32mem.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32page.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32page.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32share.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32share.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32stor.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32stor.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smcmmain.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smsuaddr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smsustrm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smsustrm.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smut.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smutset.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smutset.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Guardian\inc\RecvSmsSocket.h
+
+$(EPOCBLDUREL)\RecvSmsSocket.o : \online\Guardian3rd\Guardian\src\Recvsmssocket.cpp
+	@echo Recvsmssocket.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Recvsmssocket.cpp
+
+LISTINGURELRecvSmsSocket : $(EPOCBLDUREL)\RecvSmsSocket.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\RecvSmsSocket.ARMV5.lst
+
+$(EPOCBLDUREL)\RecvSmsSocket.lis : \online\Guardian3rd\Guardian\src\Recvsmssocket.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Recvsmssocket.cpp 
+
+$(EPOCBLDUDEB)\RecvSmsSocket.o : \online\Guardian3rd\Guardian\src\Recvsmssocket.cpp
+	@echo Recvsmssocket.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Recvsmssocket.cpp
+
+LISTINGUDEBRecvSmsSocket : $(EPOCBLDUDEB)\RecvSmsSocket.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\RecvSmsSocket.ARMV5.lst
+
+$(EPOCBLDUDEB)\RecvSmsSocket.lis : \online\Guardian3rd\Guardian\src\Recvsmssocket.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Recvsmssocket.cpp 
+
+
+
+# Source PubSubObserver.cpp
+
+$(EPOCBLDUREL)\PubSubObserver.lis $(EPOCBLDUREL)\PubSubObserver.o \
+$(EPOCBLDUDEB)\PubSubObserver.lis $(EPOCBLDUDEB)\PubSubObserver.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32property.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Guardian\inc\PubSubObserver.h
+
+$(EPOCBLDUREL)\PubSubObserver.o : \online\Guardian3rd\Guardian\src\Pubsubobserver.cpp
+	@echo Pubsubobserver.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Pubsubobserver.cpp
+
+LISTINGURELPubSubObserver : $(EPOCBLDUREL)\PubSubObserver.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\PubSubObserver.ARMV5.lst
+
+$(EPOCBLDUREL)\PubSubObserver.lis : \online\Guardian3rd\Guardian\src\Pubsubobserver.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Pubsubobserver.cpp 
+
+$(EPOCBLDUDEB)\PubSubObserver.o : \online\Guardian3rd\Guardian\src\Pubsubobserver.cpp
+	@echo Pubsubobserver.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Pubsubobserver.cpp
+
+LISTINGUDEBPubSubObserver : $(EPOCBLDUDEB)\PubSubObserver.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\PubSubObserver.ARMV5.lst
+
+$(EPOCBLDUDEB)\PubSubObserver.lis : \online\Guardian3rd\Guardian\src\Pubsubobserver.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Pubsubobserver.cpp 
+
+
+
+# Source LogCleaner.cpp
+
+$(EPOCBLDUREL)\LogCleaner.lis $(EPOCBLDUREL)\LogCleaner.o \
+$(EPOCBLDUDEB)\LogCleaner.lis $(EPOCBLDUDEB)\LogCleaner.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\barsc2.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cntdef.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cntdef.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32dbms.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32dbms.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32debug.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32event.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32hal.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32keys.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ktran.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ldr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32lmsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32notif.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32svr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logcli.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logcli.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logeng.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logging.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logview.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logview.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.rsg \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\partitions.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Guardian\inc\LogCleaner.h
+
+$(EPOCBLDUREL)\LogCleaner.o : \online\Guardian3rd\Guardian\src\Logcleaner.cpp
+	@echo Logcleaner.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Logcleaner.cpp
+
+LISTINGURELLogCleaner : $(EPOCBLDUREL)\LogCleaner.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\LogCleaner.ARMV5.lst
+
+$(EPOCBLDUREL)\LogCleaner.lis : \online\Guardian3rd\Guardian\src\Logcleaner.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Logcleaner.cpp 
+
+$(EPOCBLDUDEB)\LogCleaner.o : \online\Guardian3rd\Guardian\src\Logcleaner.cpp
+	@echo Logcleaner.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Logcleaner.cpp
+
+LISTINGUDEBLogCleaner : $(EPOCBLDUDEB)\LogCleaner.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\LogCleaner.ARMV5.lst
+
+$(EPOCBLDUDEB)\LogCleaner.lis : \online\Guardian3rd\Guardian\src\Logcleaner.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Logcleaner.cpp 
+
+
+
+# Source ForegroundObserver.cpp
+
+$(EPOCBLDUREL)\ForegroundObserver.lis $(EPOCBLDUREL)\ForegroundObserver.o \
+$(EPOCBLDUDEB)\ForegroundObserver.lis $(EPOCBLDUDEB)\ForegroundObserver.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\APGTASK.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\APGWGNAM.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\EComErrorCodes.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\EComResolverParams.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\EComResolverParams.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\Ecom.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\ImplementationInformation.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\ImplementationInformation.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\W32STD.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bitbase.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bitdev.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bitdev.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bitmap.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bitstd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32debug.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32event.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32hal.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32keys.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ktran.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ldr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32lmsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32notif.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32svr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\fbs.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\fntstore.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gdi.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gdi.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\graphicsaccelerator.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logging.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\openfont.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\partitions.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Guardian\inc\ForegroundObserver.h
+
+$(EPOCBLDUREL)\ForegroundObserver.o : \online\Guardian3rd\Guardian\src\Foregroundobserver.cpp
+	@echo Foregroundobserver.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Foregroundobserver.cpp
+
+LISTINGURELForegroundObserver : $(EPOCBLDUREL)\ForegroundObserver.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\ForegroundObserver.ARMV5.lst
+
+$(EPOCBLDUREL)\ForegroundObserver.lis : \online\Guardian3rd\Guardian\src\Foregroundobserver.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Foregroundobserver.cpp 
+
+$(EPOCBLDUDEB)\ForegroundObserver.o : \online\Guardian3rd\Guardian\src\Foregroundobserver.cpp
+	@echo Foregroundobserver.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Foregroundobserver.cpp
+
+LISTINGUDEBForegroundObserver : $(EPOCBLDUDEB)\ForegroundObserver.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\ForegroundObserver.ARMV5.lst
+
+$(EPOCBLDUDEB)\ForegroundObserver.lis : \online\Guardian3rd\Guardian\src\Foregroundobserver.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Foregroundobserver.cpp 
+
+
+
+# Source Guardian.cpp
+
+$(EPOCBLDUREL)\Guardian.lis $(EPOCBLDUREL)\Guardian.o \
+$(EPOCBLDUDEB)\Guardian.lis $(EPOCBLDUDEB)\Guardian.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\APGTASK.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\BADESCA.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\BARSC.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\C32COMM.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\C32COMM.INL \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\COEMAIN.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\DelimitedPath16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\E32Std.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\EMSInformationElement.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\ETEL.INL \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\ECom.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\EComErrorCodes.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\EComResolverParams.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\EComResolverParams.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\Ecom.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\ImplementationInformation.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Ecom\ImplementationInformation.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Etel3rdParty.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\FAXDEFN.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\LineBreak.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\MSVAPI.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\MTCLREG.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\MetaContainer.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\MetaContainer.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\MetaData.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Metadata.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\W32STD.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\apacmdln.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\apadef.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\apaflrec.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\apaid.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\apmstd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\babitflags.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\badesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\baerrhan.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bamdesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\barsc.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\barsc2.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\basched.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bidi.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\biditext.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bitbase.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bitdev.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bitdev.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bitmap.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bitstd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\charconv.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cmsvattachment.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cmsvrecipientlist.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cntdef.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cntdef.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\coecntrl.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\coecobs.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\coecontrolarray.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\coedef.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\coehelp.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\coeinput.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\coemain.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\coemop.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\coetextdrawer.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32comm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32comm.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32dbms.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32dbms.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\delimitedparser16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\delimitedparsercommon.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cons.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32debug.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32event.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32hal.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32keys.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ktran.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ldr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32lmsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32notif.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32property.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32svr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ver.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\eikENV.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\eikamnt.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\eikaufty.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\eikdef.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\eikdgfty.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\eikfctry.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\eiklibry.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\eikvcurs.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\emsinformationelement.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\es_sock.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\es_sock.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\etel.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\etel3rdparty.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\etelmm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\fbs.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\fldbase.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\fldbltin.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\fldinfo.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\fldset.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\fntstore.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\frmlaydt.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\frmparam.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\frmtlay.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\frmvis.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gdi.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gdi.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\graphicsaccelerator.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuNmspaceMobStore.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuelem.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuelem.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuetel.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmuetel.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmumsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmumsg.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmunmspaceMobMsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmunmspaceMobPh.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmupdu.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gsmupdu.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gulalign.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gulbordr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gulcolor.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\guldef.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gulftflg.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gulutil.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\lafmain.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logcli.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logcli.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logeng.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logging.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logview.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logview.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logwrap.rsg \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\mclient.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\mmsvstoremanager.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvapi.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvapi.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvarray.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvids.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvipc.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvipc.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvrcpt.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvrcpt.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvreg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvreg.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstore.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvuids.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\mtclbase.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\nifvar.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\openfont.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\partitions.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32buf.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32buf.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32mem.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32mem.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32page.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32page.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32share.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32share.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32stor.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32stor.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\sacls.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smcmmain.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smsclnt.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smsclnt.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smsuaddr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smut.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smutset.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smutset.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\smutsimparam.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\tagma.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\telephony.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtetext.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtetext.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtfmlyr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtfmlyr.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtfmstm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtfrmat.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtfrmat.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtstyle.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtstyle.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\uikon.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\w32std.h \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Guardian\inc\Guardian.h \
+	\online\Guardian3rd\Guardian\inc\SecurityCode.h \
+	\online\Guardian3rd\Guardian\inc\activitymanager.h \
+	\online\Guardian3rd\Guardian\inc\foregroundobserver.h \
+	\online\Guardian3rd\Guardian\inc\logcleaner.h \
+	\online\Guardian3rd\Guardian\inc\pinview.h \
+	\online\Guardian3rd\Guardian\inc\pluginao.h \
+	\online\Guardian3rd\Guardian\inc\pluginmanager.h \
+	\online\Guardian3rd\Guardian\inc\pubsubobserver.h \
+	\online\Guardian3rd\Guardian\inc\recvsmssocket.h \
+	\online\Guardian3rd\Plugins\Definition\Interface.h \
+	\online\Guardian3rd\Plugins\Definition\Interface.inl \
+	\online\Guardian3rd\Plugins\inc\Plugins_200112df.rsg \
+	\online\Guardian3rd\Plugins\inc\resreader.h \
+	\online\Guardian3rd\Plugins\inc\timeoutnotifier.h \
+	\online\Guardian3rd\Plugins\inc\timeouttimer.h \
+	\online\Guardian3rd\server\inc\client.h \
+	\online\Guardian3rd\server\inc\phone.h \
+	\online\Guardian3rd\server\inc\settings_consts.h
+
+$(EPOCBLDUREL)\Guardian.o : \online\Guardian3rd\Guardian\src\Guardian.cpp
+	@echo Guardian.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Guardian.cpp
+
+LISTINGURELGuardian : $(EPOCBLDUREL)\Guardian.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\Guardian.ARMV5.lst
+
+$(EPOCBLDUREL)\Guardian.lis : \online\Guardian3rd\Guardian\src\Guardian.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Guardian.cpp 
+
+$(EPOCBLDUDEB)\Guardian.o : \online\Guardian3rd\Guardian\src\Guardian.cpp
+	@echo Guardian.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Guardian.cpp
+
+LISTINGUDEBGuardian : $(EPOCBLDUDEB)\Guardian.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\Guardian.ARMV5.lst
+
+$(EPOCBLDUDEB)\Guardian.lis : \online\Guardian3rd\Guardian\src\Guardian.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Guardian.cpp 
+
+
+
+# Source SecurityCode.cpp
+
+$(EPOCBLDUREL)\SecurityCode.lis $(EPOCBLDUREL)\SecurityCode.o \
+$(EPOCBLDUDEB)\SecurityCode.lis $(EPOCBLDUDEB)\SecurityCode.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32debug.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32event.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32hal.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32keys.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ktran.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ldr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32lmsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32math.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32math.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32notif.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32svr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\etel3rdparty.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logging.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\partitions.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\telephony.inl \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Guardian\inc\SecurityCode.h
+
+$(EPOCBLDUREL)\SecurityCode.o : \online\Guardian3rd\Guardian\src\Securitycode.cpp
+	@echo Securitycode.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Securitycode.cpp
+
+LISTINGURELSecurityCode : $(EPOCBLDUREL)\SecurityCode.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\SecurityCode.ARMV5.lst
+
+$(EPOCBLDUREL)\SecurityCode.lis : \online\Guardian3rd\Guardian\src\Securitycode.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Securitycode.cpp 
+
+$(EPOCBLDUDEB)\SecurityCode.o : \online\Guardian3rd\Guardian\src\Securitycode.cpp
+	@echo Securitycode.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Securitycode.cpp
+
+LISTINGUDEBSecurityCode : $(EPOCBLDUDEB)\SecurityCode.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\SecurityCode.ARMV5.lst
+
+$(EPOCBLDUDEB)\SecurityCode.lis : \online\Guardian3rd\Guardian\src\Securitycode.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Securitycode.cpp 
+
+
+
+ROMFILE:
+	@echo file=\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\##MAIN##\##BUILD##\Guardian_200131CB.exe sys\bin\Guardian_200131CB.exe 
+
+
+WHATGENERIC CLEANGENERIC :
+	@rem none
+
+# Rules to create all necessary directories
+
+GENERIC_MAKEWORK : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Guardian\group\Guardian\GCCE
+MAKEWORKLIBRARY : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB
+MAKEWORKUDEB : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Guardian\group\Guardian\GCCE\UDEB \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB
+MAKEWORKUREL : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Guardian\group\Guardian\GCCE\UREL \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL
+
+\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Guardian\group\Guardian\GCCE \
+\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Guardian\group\Guardian\GCCE\UDEB \
+\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Guardian\group\Guardian\GCCE\UREL \
+\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB \
+\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB \
+\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL \
+:
+	perl -S emkdir.pl $@
+

@@ -1,0 +1,103 @@
+#include "protview.hrh"
+
+
+RESOURCE QIK_VIEW_CONFIGURATIONS r_protection_view_ui_configurations
+	{
+	configurations = 
+		{
+		QIK_VIEW_CONFIGURATION
+			{
+			ui_config_mode = KQikPenStyleTouchPortrait;
+			command_list = r_protection_commands;
+			view = r_protection_view;
+			},
+		QIK_VIEW_CONFIGURATION
+			{
+			ui_config_mode = KQikSoftkeyStylePortrait;
+			command_list = r_protection_commands;
+			view = r_protection_view;
+			}
+		};
+	}
+
+RESOURCE QIK_COMMAND_LIST r_protection_commands
+	{
+	items =
+		{
+	 	 QIK_COMMAND
+         {
+         id = EProtViewAdd;
+         type = EQikCommandTypeItem;
+         text = "Add";
+         },
+	 	 QIK_COMMAND
+         {
+         id = EProtViewRem;
+         type = EQikCommandTypeItem;
+         text = "Remove";
+         },
+	 	 QIK_COMMAND
+         {
+         id = EProtViewSmallIco;
+         type = EQikCommandTypeItem;
+         text = "Icone Piccole";
+         },
+	 	 QIK_COMMAND
+         {
+         id = EProtViewBigIco;
+         type = EQikCommandTypeItem;
+         text = "Icone Grandi";
+         }
+		};
+	}
+	
+	
+
+RESOURCE QIK_VIEW r_protection_view
+	{
+	pages = r_protection_view_layout_pages;
+	}
+
+RESOURCE QIK_VIEW_PAGES r_protection_view_layout_pages
+	{
+	pages = 
+		{
+		QIK_VIEW_PAGE
+			{
+			page_id = EProtView_Page;
+			page_content = r_prot_listbox_page_controls;
+			}
+		};
+	}
+
+	
+
+
+RESOURCE QIK_CONTAINER_SETTINGS r_prot_listbox_page_controls
+    {
+    layout_manager_type = EQikRowLayoutManager;
+    layout_manager = r_row_layout_default;
+    controls = 
+        {
+        QIK_CONTAINER_ITEM_CI_LI
+            { 
+            unique_handle = EProtViewListBox;
+            type = EQikCtListBox; 
+            control = r_prot_listbox;
+            layout_data = r_row_layout_data_fill;
+            }
+        };
+    }
+
+
+
+
+RESOURCE QIK_LISTBOX r_prot_listbox
+    {
+    type = EQikRowListBox;
+    layouts = {r_layout_italic_pair}; // at least one layout pair is needed
+    item_data =
+        {
+        };
+    }
+

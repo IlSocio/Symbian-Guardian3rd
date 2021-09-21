@@ -1,0 +1,73 @@
+
+NAME    PIND
+
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.mbg>
+#include <appinfo.rh>
+#include "DialogPIN.hrh"
+#include "not.strings.loc"
+
+RESOURCE RSS_SIGNATURE { }
+RESOURCE TBUF { buf = "DialogPIN"; }
+
+
+
+
+RESOURCE DIALOG r_pin_query_no_cancel
+{
+	flags = (EEikDialogFlagNotifyEsc | EEikDialogFlagNoDrag | EEikDialogFlagNoTitleBar| EEikDialogFlagCbaButtons);
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+	items =
+	{
+	DLG_LINE
+		{
+		type = EAknCtQuery;
+		id = EPinID;				// Ho dovuto tenerlo perche' durante l'installaz. dell'aggiornam. RSC veniva sostituito ma il vecchio binario restava ancora in esecuzione
+		control = AVKON_DATA_QUERY
+			{
+            layout = EPinLayout;
+			label = txt_guardian_pass;
+			control = NUMSECRETED
+				{
+				num_code_chars = 8;
+				};
+			};
+		}
+	}; 
+}
+
+
+RESOURCE DIALOG r_pin_query
+{
+// #define EAknDialogGenericQueryFlags   (EEikDialogFlagWait|EEikDialogFlagNoDrag | EEikDialogFlagNoTitleBar | EEikDialogFlagCbaButtons)  
+
+//	flags = EGeneralQueryFlags;
+//	flags = EGeneralQueryFlags | EEikDialogFlagNotifyEsc | 0x800000;
+//flags = (EEikDialogFlagNotifyEsc | EEikDialogFlagNoDrag | EEikDialogFlagNoTitleBar | EEikDialogFlagCbaButtons | 0x800000/*| EEikDialogFlagVirtualInput*/);
+	flags = (EEikDialogFlagNotifyEsc | EEikDialogFlagNoDrag | EEikDialogFlagNoTitleBar| EEikDialogFlagCbaButtons);
+	buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+//	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+	items =
+	{
+	DLG_LINE
+		{
+		type = EAknCtQuery;
+		id = EPinID;				// Ho dovuto tenerlo perche' durante l'installaz. dell'aggiornam. RSC veniva sostituito ma il vecchio binario restava ancora in esecuzione
+		control = AVKON_DATA_QUERY
+			{
+            layout = EPinLayout;
+			label = txt_guardian_pass;
+			control = NUMSECRETED
+				{
+				num_code_chars = 8;
+				};
+			};
+		}
+	}; 
+}
+
+
+
+RESOURCE TBUF64 r_wrong_pass { buf=txt_err_bad_pass; }

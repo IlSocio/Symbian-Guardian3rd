@@ -1,0 +1,8 @@
+ 
+/* This file has been generated, DO NOT MODIFY. */
+enum TMifGuardgui_200131cc
+	{
+	EMbmGuardgui_200131ccMenu = 16384,
+	EMbmGuardgui_200131ccMenu_mask = 16385,
+	EMbmGuardgui_200131ccLastElement
+	};

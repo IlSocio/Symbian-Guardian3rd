@@ -1,0 +1,9 @@
+#include <startupitem.rh>
+
+RESOURCE STARTUP_ITEM_INFO dispatcher
+	{
+	executable_name = "!:\\sys\\bin\\GuardAuto_200107AD.exe";
+	recovery = EStartupItemExPolicyNone;
+	}
+ 
+ 

@@ -1,0 +1,51 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test3rd", "test3rd.vcproj", "{7E31F4D9-830D-431F-B701-8107310CCE5C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "client", "client.vcproj", "{2CB49335-E313-45F6-96C5-16A31917CE9E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "server", "server.vcproj", "{FC09C703-A826-4502-8989-08E6C6983B8B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Deb_S60_30M_WINSCW = Deb_S60_30M_WINSCW
+		Debug = Debug
+		Rel_S60_30M_GCCE = Rel_S60_30M_GCCE
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7E31F4D9-830D-431F-B701-8107310CCE5C}.Deb_S60_30M_WINSCW.ActiveCfg = Deb_S60_30M_WINSCW|Win32
+		{7E31F4D9-830D-431F-B701-8107310CCE5C}.Deb_S60_30M_WINSCW.Build.0 = Deb_S60_30M_WINSCW|Win32
+		{7E31F4D9-830D-431F-B701-8107310CCE5C}.Debug.ActiveCfg = Debug|Win32
+		{7E31F4D9-830D-431F-B701-8107310CCE5C}.Debug.Build.0 = Debug|Win32
+		{7E31F4D9-830D-431F-B701-8107310CCE5C}.Rel_S60_30M_GCCE.ActiveCfg = Rel_S60_30M_GCCE|Win32
+		{7E31F4D9-830D-431F-B701-8107310CCE5C}.Rel_S60_30M_GCCE.Build.0 = Rel_S60_30M_GCCE|Win32
+		{7E31F4D9-830D-431F-B701-8107310CCE5C}.Release.ActiveCfg = Release|Win32
+		{7E31F4D9-830D-431F-B701-8107310CCE5C}.Release.Build.0 = Release|Win32
+		{2CB49335-E313-45F6-96C5-16A31917CE9E}.Deb_S60_30M_WINSCW.ActiveCfg = Deb_S60_30M_WINSCW|Win32
+		{2CB49335-E313-45F6-96C5-16A31917CE9E}.Deb_S60_30M_WINSCW.Build.0 = Debug|Win32
+		{2CB49335-E313-45F6-96C5-16A31917CE9E}.Debug.ActiveCfg = Debug|Win32
+		{2CB49335-E313-45F6-96C5-16A31917CE9E}.Debug.Build.0 = Debug|Win32
+		{2CB49335-E313-45F6-96C5-16A31917CE9E}.Rel_S60_30M_GCCE.ActiveCfg = Rel_S60_30M_GCCE|Win32
+		{2CB49335-E313-45F6-96C5-16A31917CE9E}.Rel_S60_30M_GCCE.Build.0 = Release|Win32
+		{2CB49335-E313-45F6-96C5-16A31917CE9E}.Release.ActiveCfg = Release|Win32
+		{2CB49335-E313-45F6-96C5-16A31917CE9E}.Release.Build.0 = Release|Win32
+		{FC09C703-A826-4502-8989-08E6C6983B8B}.Deb_S60_30M_WINSCW.ActiveCfg = Deb_S60_30M_WINSCW|Win32
+		{FC09C703-A826-4502-8989-08E6C6983B8B}.Deb_S60_30M_WINSCW.Build.0 = Debug|Win32
+		{FC09C703-A826-4502-8989-08E6C6983B8B}.Debug.ActiveCfg = Debug|Win32
+		{FC09C703-A826-4502-8989-08E6C6983B8B}.Debug.Build.0 = Debug|Win32
+		{FC09C703-A826-4502-8989-08E6C6983B8B}.Rel_S60_30M_GCCE.ActiveCfg = Rel_S60_30M_GCCE|Win32
+		{FC09C703-A826-4502-8989-08E6C6983B8B}.Rel_S60_30M_GCCE.Build.0 = Release|Win32
+		{FC09C703-A826-4502-8989-08E6C6983B8B}.Release.ActiveCfg = Release|Win32
+		{FC09C703-A826-4502-8989-08E6C6983B8B}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

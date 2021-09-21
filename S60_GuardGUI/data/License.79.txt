@@ -1,0 +1,16 @@
+﻿UGOVOR O KORIŠĆENJU I OGRANIČENA GARANCIJA
+
+Preuzimanjem ili instaliranjem ovog softvera slažete se sa sledećim odredbama i uslovima ovog Ugovora o korišćenju i ograničenom garancijom.
+
+Softverski proizvod je „takav kakav jeste“ bez ikakve garancije bilo koje vrste.
+
+Ni u kakvom slučaju FuzzyByte ili njegovi zastupnici ne mogu da budu odgovorni za oštećenja bilo koje vrste (uključujući, bez izuzetaka, oštećenja i gubitak poslovne zarade, prekida posla, gubitka poslovnih informacija ili ostalih gubitaka) zbog korišćenja ovog FuzzyByte proizvoda.
+
+Ovaj Ugovor dozvoljava vam da korisitite ovaj proizvod isključivo na uređaju za koji je i napravljena licenca (određeno jedinstvenim brojem).
+
+Sva prava bilo koje vrste, čak i ona koja nisu striktno navedena u ovom Ugovoru, u vlasništvu su FuzzyByte-a. Ne smete da menjate, prevodite, vršite obrnuti inženjering, rastavljate, rasturate ili pravite izmene na osnovnom proizvodu.
+
+Ovaj Ugovor ne garantuje vam nikakva prava koja imaju veze sa intelektualnom svojinom ili zaštitnim znacima koji pripadaju FuzzyByte-u.
+
+Ako imate bilo kakvo pitanje ili konstataciju, molimo vas da nas kontaktirate na
+support@Guardian-Mobile.com

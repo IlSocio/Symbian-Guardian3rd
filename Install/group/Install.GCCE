@@ -1,0 +1,508 @@
+
+include \Symbian\9.1\S60_3rd_MR\epoc32\tools\compilation_config\\GCCE.mk
+
+
+# CWD \online\Guardian3rd\Install\group\
+# MMPFile \online\Guardian3rd\Install\group\Install.MMP
+# Target Install_200107b2.exe
+# TargetType EXE
+# BasicTargetType EXE
+# MakefileType GNU
+
+ERASE = @erase 2>>nul
+
+# EPOC DEFINITIONS
+
+EPOCBLD = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Install\group\Install\GCCE
+EPOCTRG = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE
+EPOCLIB = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5
+EPOCLINK = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5
+EPOCSTATLINK = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5
+EPOCASSPLINK = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\MARM
+EPOCDATA = \Symbian\9.1\S60_3rd_MR\EPOC32\DATA
+EPOCINC = \Symbian\9.1\S60_3rd_MR\EPOC32\INCLUDE
+TRGDIR = 
+DATADIR = Z\System\Data
+
+EPOCBLDUREL = $(EPOCBLD)\UREL
+EPOCTRGUREL = $(EPOCTRG)\UREL
+EPOCLIBUREL = $(EPOCLIB)\UREL
+EPOCLINKUREL = $(EPOCLINK)\UREL
+EPOCSTATLINKUREL = $(EPOCSTATLINK)\UREL
+EPOCASSPLINKUREL = $(EPOCASSPLINK)\UREL
+
+EPOCBLDUDEB = $(EPOCBLD)\UDEB
+EPOCTRGUDEB = $(EPOCTRG)\UDEB
+EPOCLIBUDEB = $(EPOCLIB)\UREL
+EPOCLINKUDEB = $(EPOCLINK)\UREL
+EPOCSTATLINKUDEB = $(EPOCSTATLINK)\UDEB
+EPOCASSPLINKUDEB = $(EPOCASSPLINK)\UREL
+
+# EPOC PSEUDOTARGETS
+
+UREL : MAKEWORKUREL RESOURCEUREL
+
+UDEB : MAKEWORKUDEB RESOURCEUDEB
+
+ALL : UREL UDEB
+
+CLEAN CLEANALL : CLEANBUILD CLEANRELEASE CLEANLIBRARY
+
+
+
+WHAT WHATALL : WHATUREL WHATUDEB
+
+RESOURCE RESOURCEALL : RESOURCEUREL RESOURCEUDEB
+
+CLEANBUILD CLEANBUILDALL : CLEANBUILDUREL CLEANBUILDUDEB
+
+CLEANRELEASE CLEANRELEASEALL : CLEANRELEASEUREL CLEANRELEASEUDEB
+
+MAKEWORK MAKEWORKALL : MAKEWORKUREL MAKEWORKUDEB
+
+LISTING LISTINGALL : LISTINGUREL LISTINGUDEB
+
+MAKEWORK : MAKEWORKLIBRARY
+
+RESOURCEUREL RESOURCEUDEB : GENERIC_RESOURCE
+
+
+# must set both PATH and Path to make it work correctly
+Path:=C:\Symbian\9.1\S60_3rd_MR\EPOC32\gcc\bin;$(Path)
+PATH:=$(Path)
+
+ifndef CC_INSTALL_PATH
+	CC_INSTALL_PATH=C:\Programmi\CSL Arm Toolchain\bin\..
+	STATIC_LIBS = $(STATIC_LIBS_PATH)"$(CC_INSTALL_PATH)\arm-none-symbianelf\lib" $(STATIC_LIBS_PATH)"$(CC_INSTALL_PATH)\lib\gcc\arm-none-symbianelf\3.4.3"
+endif
+ifdef LINKER_SYMBOLS_MAP_OPTION
+	UREL_MAP_FILE="$(EPOCTRGUREL)\Install_200107b2.exe.map"
+	UDEB_MAP_FILE="$(EPOCTRGUDEB)\Install_200107b2.exe.map"
+else
+	UREL_MAP_FILE=
+	UDEB_MAP_FILE=
+endif
+
+
+ifdef CODE_SEGMENT_START
+	CODE_SEGMENT_START += 0x8000 
+endif
+ifdef START_GROUP_SYMBOL
+	EEXE_OBJECT=$(START_GROUP_SYMBOL)UC_EXE_.o$(END_GROUP_SYMBOL)
+	EDLL_OBJECT=$(START_GROUP_SYMBOL)UC_DLL_.o$(END_GROUP_SYMBOL)
+	DENTRY_OBJECT=$(START_GROUP_SYMBOL)D_ENTRY_.o$(END_GROUP_SYMBOL)
+	LENTRY_OBJECT=$(START_GROUP_SYMBOL)L_ENTRY_.o$(END_GROUP_SYMBOL)
+	XENTRY_OBJECT=$(START_GROUP_SYMBOL)X_ENTRY_.o$(END_GROUP_SYMBOL)
+	VENTRY_OBJECT=$(START_GROUP_SYMBOL)V_ENTRY_.o$(END_GROUP_SYMBOL)
+	KENTRY_OBJECT=$(START_GROUP_SYMBOL)K_ENTRY_.o$(END_GROUP_SYMBOL)
+endif
+
+INCDIR =  $(INCLUDE_OPTION) ..\inc $(INCLUDE_OPTION) ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\include $(INCLUDE_OPTION) ..\..\..\..\Symbian\9.1\S60_3rd_MR\epoc32\include\variant $(INCLUDE_OPTION) "C:\Programmi\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include"
+
+OTHEROPTIONS= $(THUMB_INSTRUCTION_SET)  $(SOFTVFPMODE_OPTION)  $(COMPILER_THUMB_DEFINES)  $(COMPILER_INTERWORK_DEFINES) 
+CCFLAGS += $(OTHEROPTIONS)
+CCDEFS = $(COMPILER_DEFINES)  -D__SYMBIAN32__ -D__SERIES60_30__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D__EXE__ -D_LOGGING -D__SUPPORT_CPP_EXCEPTIONS__ $(PLATFORM_DEFINES)  -D__PRODUCT_INCLUDE__=\"/Symbian/9.1/S60_3rd_MR/epoc32/include/variant/Symbian_OS_v9.1.hrh\" $(USERDEFS)
+
+CCUREL = $(CC)  $(SYMBIAN_UREL_CCFLAGS) $(RUNTIME_SYMBOL_VISIBILITY_OPTION) $(CCFLAGS)  -DNDEBUG -D_UNICODE $(CCDEFS)
+CCUDEB = $(CC)  $(SYMBIAN_UDEB_CCFLAGS) $(RUNTIME_SYMBOL_VISIBILITY_OPTION) $(CCFLAGS)  -D_DEBUG -D_UNICODE $(CCDEFS)
+
+
+UREL : \
+	$(EPOCTRGUREL)\Install_200107b2.exe
+
+UDEB : \
+	$(EPOCTRGUDEB)\Install_200107b2.exe
+
+
+RESOURCEUREL : MAKEWORKUREL
+RESOURCEUDEB : MAKEWORKUDEB
+
+LIBRARY : MAKEWORKLIBRARY
+
+ : 
+	perl -S emkdir.pl $@
+
+
+FREEZE : 
+
+CLEANLIBRARY :
+
+
+GENERIC_RESOURCE : GENERIC_MAKEWORK
+
+# REAL TARGET - BUILD VARIANT UREL
+
+WHATUREL : WHATGENERIC
+
+CLEANUREL : CLEANBUILDUREL CLEANRELEASEUREL
+
+CLEANBUILDUREL : 
+	@perl -S ermdir.pl "$(EPOCBLDUREL)"
+
+CLEANRELEASEUREL : CLEANGENERIC
+
+
+UREL_RELEASEABLES1= \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL\Install_200107b2.exe \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL\Install_200107b2.exe.map
+
+WHATUREL:
+	@echo $(UREL_RELEASEABLES1)
+
+CLEANRELEASEUREL:
+	-$(ERASE) $(UREL_RELEASEABLES1)
+
+LISTINGUREL : MAKEWORKUREL \
+	LISTINGURELInstaller \
+	LISTINGURELInstall
+
+LIBSUREL= \
+	$(EPOCLIB)\LIB\flogger.dso \
+	$(EPOCLIB)\LIB\estor.dso \
+	$(EPOCLIB)\LIB\bafl.dso \
+	$(EPOCLIB)\LIB\efsrv.dso \
+	$(EPOCLIB)\LIB\msgs.dso \
+	$(EPOCLIB)\LIB\euser.dso \
+	$(EPOCSTATLINKUREL)\usrt2_2.lib \
+	$(EPOCLIB)\LIB\dfpaeabi.dso \
+	$(EPOCLIB)\LIB\dfprvct2_2.dso \
+	$(EPOCLIB)\LIB\drtaeabi.dso \
+	$(EPOCLIB)\LIB\scppnwdl.dso \
+	$(EPOCLIB)\LIB\drtrvct2_2.dso \
+	$(STATIC_LIBS_LIST)
+
+VTBLEXPORTSUREL=
+
+OBJECTSUREL= \
+	$(EPOCBLDUREL)\Installer.o \
+	$(EPOCBLDUREL)\Install.o
+
+$(EPOCTRGUREL)\Install_200107b2.exe : $(OBJECTSUREL)
+	-$(ERASE) "$(EPOCTRGUREL)\Install_200107b2.exe.map" 
+	$(LD) $(STATIC_LIBS) $(SYMBIAN_UREL_LINK_FLAGS) $(SHARED_OBJECT_OPTION) $(CODE_SEGMENT_START) $(DATA_SEGMENT_START) 0x400000 $(SYMVER_OPTION) $(SO_NAME_OPTION) Install_200107b2{000a0000}[200107b2].exe $(LINKER_ENTRY_OPTION) _E32Startup  $(UNDEFINED_SYMBOL_REF_OPTION) _E32Startup  $(EPOCSTATLINKUREL)\EEXE.LIB$(EEXE_OBJECT) \
+		$(OUTPUT_OPTION) "$(EPOCBLDUREL)\Install_200107b2.exe" \
+		$(LINKER_SYMBOLS_MAP_OPTION) $(UREL_MAP_FILE) \
+		$(OBJECTSUREL) \
+		$(LIBSUREL) \
+		$(VTBLEXPORTSUREL) $(USERLDFLAGS) 
+	elf2e32 --sid=0x200107b2 \
+		 --uid1=0x1000007a --uid2=0x00000000 --uid3=0x200107b2 --vid=0x00000000\
+		 --capability=ReadUserData --fpu=softvfp --targettype=EXE --output="$@" --elfinput="$(EPOCBLDUREL)\Install_200107b2.exe" --linkas=Install_200107b2{000a0000}[200107b2].exe --libpath="$(EPOCLIB)\LIB"
+
+
+# REAL TARGET - BUILD VARIANT UDEB
+
+WHATUDEB : WHATGENERIC
+
+CLEANUDEB : CLEANBUILDUDEB CLEANRELEASEUDEB
+
+CLEANBUILDUDEB : 
+	@perl -S ermdir.pl "$(EPOCBLDUDEB)"
+
+CLEANRELEASEUDEB : CLEANGENERIC
+
+
+UDEB_RELEASEABLES1= \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB\Install_200107b2.exe \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB\Install_200107b2.exe.map
+
+WHATUDEB:
+	@echo $(UDEB_RELEASEABLES1)
+
+CLEANRELEASEUDEB:
+	-$(ERASE) $(UDEB_RELEASEABLES1)
+
+LISTINGUDEB : MAKEWORKUDEB \
+	LISTINGUDEBInstaller \
+	LISTINGUDEBInstall
+
+LIBSUDEB= \
+	$(EPOCLIB)\LIB\flogger.dso \
+	$(EPOCLIB)\LIB\estor.dso \
+	$(EPOCLIB)\LIB\bafl.dso \
+	$(EPOCLIB)\LIB\efsrv.dso \
+	$(EPOCLIB)\LIB\msgs.dso \
+	$(EPOCLIB)\LIB\euser.dso \
+	$(EPOCSTATLINKUDEB)\usrt2_2.lib \
+	$(EPOCLIB)\LIB\dfpaeabi.dso \
+	$(EPOCLIB)\LIB\dfprvct2_2.dso \
+	$(EPOCLIB)\LIB\drtaeabi.dso \
+	$(EPOCLIB)\LIB\scppnwdl.dso \
+	$(EPOCLIB)\LIB\drtrvct2_2.dso \
+	$(STATIC_LIBS_LIST)
+
+VTBLEXPORTSUDEB=
+
+OBJECTSUDEB= \
+	$(EPOCBLDUDEB)\Installer.o \
+	$(EPOCBLDUDEB)\Install.o
+
+$(EPOCTRGUDEB)\Install_200107b2.exe : $(OBJECTSUDEB)
+	-$(ERASE) "$(EPOCTRGUDEB)\Install_200107b2.exe.map" 
+	$(LD) $(STATIC_LIBS) $(SYMBIAN_UDEB_LINK_FLAGS) $(SHARED_OBJECT_OPTION) $(CODE_SEGMENT_START) $(DATA_SEGMENT_START) 0x400000 $(SYMVER_OPTION) $(SO_NAME_OPTION) Install_200107b2{000a0000}[200107b2].exe $(LINKER_ENTRY_OPTION) _E32Startup  $(UNDEFINED_SYMBOL_REF_OPTION) _E32Startup  $(EPOCSTATLINKUDEB)\EEXE.LIB$(EEXE_OBJECT) \
+		$(OUTPUT_OPTION) "$(EPOCBLDUDEB)\Install_200107b2.exe" \
+		$(LINKER_SYMBOLS_MAP_OPTION) $(UDEB_MAP_FILE) \
+		$(OBJECTSUDEB) \
+		$(LIBSUDEB) \
+		$(VTBLEXPORTSUDEB) $(USERLDFLAGS) 
+	copy "$(EPOCBLDUDEB)\Install_200107b2.exe" "$(EPOCTRGUDEB)\Install_200107b2.sym"
+	elf2e32 --sid=0x200107b2 \
+		 --uid1=0x1000007a --uid2=0x00000000 --uid3=0x200107b2 --vid=0x00000000\
+		 --capability=ReadUserData --fpu=softvfp --targettype=EXE --output="$@" --elfinput="$(EPOCBLDUDEB)\Install_200107b2.exe" --linkas=Install_200107b2{000a0000}[200107b2].exe --libpath="$(EPOCLIB)\LIB"
+
+
+# SOURCES
+
+# Source Installer.cpp
+
+$(EPOCBLDUREL)\Installer.lis $(EPOCBLDUREL)\Installer.o \
+$(EPOCBLDUDEB)\Installer.lis $(EPOCBLDUDEB)\Installer.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\MMsvAttachmentManager.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\MSVAPI.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\SENDUICONSTS.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\TSendingCapabilities.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\TSendingCapabilities.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\TXTRICH.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\badesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bamdesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\btmsgtypeuid.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cmsvattachment.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\cmsvrecipientlist.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\csendasaccounts.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\csendasmessagetypes.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32debug.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32event.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32hal.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32keys.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ktran.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ldr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32lmsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32notif.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32svr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\fldbase.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\fldbltin.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\fldinfo.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\fldset.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gdi.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\gdi.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\irmsgtypeuid.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logging.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\mclient.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\medobsrv.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\mmsvstoremanager.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\mparser.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvapi.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvapi.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvarray.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvids.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvipc.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvipc.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvreg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvreg.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.hrh \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstore.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvuids.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\partitions.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\rsendas.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\rsendasmessage.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32buf.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32buf.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32page.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32page.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32share.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32share.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32stor.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32stor.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\sendas2.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\sendui.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\tsendingcapabilities.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtetext.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtetext.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtfmlyr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtfmlyr.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtfmstm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtfrmat.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtfrmat.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtglobl.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtglobl.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtlaydc.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtmfmtx.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtrich.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtstyle.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\txtstyle.inl \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Install\inc\Installer.h
+
+$(EPOCBLDUREL)\Installer.o : \online\Guardian3rd\Install\src\Installer.cpp
+	@echo Installer.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Installer.cpp
+
+LISTINGURELInstaller : $(EPOCBLDUREL)\Installer.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Install\src\Installer.ARMV5.lst
+
+$(EPOCBLDUREL)\Installer.lis : \online\Guardian3rd\Install\src\Installer.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Installer.cpp 
+
+$(EPOCBLDUDEB)\Installer.o : \online\Guardian3rd\Install\src\Installer.cpp
+	@echo Installer.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Installer.cpp
+
+LISTINGUDEBInstaller : $(EPOCBLDUDEB)\Installer.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Install\src\Installer.ARMV5.lst
+
+$(EPOCBLDUDEB)\Installer.lis : \online\Guardian3rd\Install\src\Installer.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Installer.cpp 
+
+
+
+# Source Install.cpp
+
+$(EPOCBLDUREL)\Install.lis $(EPOCBLDUREL)\Install.o \
+$(EPOCBLDUDEB)\Install.lis $(EPOCBLDUDEB)\Install.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\BAUTILS.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\MSVAPI.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\S32FILE.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\badesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bamdesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\barsread.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cons.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32debug.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32event.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32hal.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32keys.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ktran.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ldr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32lmsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32notif.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32svr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\mclient.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\mmsvstoremanager.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvapi.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvarray.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvipc.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvipc.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvreg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvreg.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\msvstore.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\partitions.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32buf.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32buf.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32page.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32page.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32share.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32share.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32stor.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32stor.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\s32strm.inl \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Install\inc\Install.h \
+	\online\Guardian3rd\Install\inc\Installer.h
+
+$(EPOCBLDUREL)\Install.o : \online\Guardian3rd\Install\src\Install.cpp
+	@echo Install.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Install.cpp
+
+LISTINGURELInstall : $(EPOCBLDUREL)\Install.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Install\src\Install.ARMV5.lst
+
+$(EPOCBLDUREL)\Install.lis : \online\Guardian3rd\Install\src\Install.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Install.cpp 
+
+$(EPOCBLDUDEB)\Install.o : \online\Guardian3rd\Install\src\Install.cpp
+	@echo Install.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Install.cpp
+
+LISTINGUDEBInstall : $(EPOCBLDUDEB)\Install.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Install\src\Install.ARMV5.lst
+
+$(EPOCBLDUDEB)\Install.lis : \online\Guardian3rd\Install\src\Install.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Install.cpp 
+
+
+
+ROMFILE:
+	@echo file=\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\##MAIN##\##BUILD##\Install_200107b2.exe sys\bin\Install_200107b2.exe 
+
+
+WHATGENERIC CLEANGENERIC :
+	@rem none
+
+# Rules to create all necessary directories
+
+GENERIC_MAKEWORK : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Install\group\Install\GCCE
+MAKEWORKLIBRARY : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB
+MAKEWORKUDEB : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Install\group\Install\GCCE\UDEB \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB
+MAKEWORKUREL : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Install\group\Install\GCCE\UREL \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL
+
+\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Install\group\Install\GCCE \
+\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Install\group\Install\GCCE\UDEB \
+\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Install\group\Install\GCCE\UREL \
+\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB \
+\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB \
+\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL \
+:
+	perl -S emkdir.pl $@
+

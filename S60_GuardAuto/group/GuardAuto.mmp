@@ -1,0 +1,45 @@
+ /*
+============================================================================
+ Name        : Guardian.mmp
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice  
+ Description : This is the project specification file for Guardian.
+============================================================================
+*/
+TARGET                                  GuardAuto_200107AD.exe 
+TARGETTYPE                              exe 
+UID                                     0 0x200107AD 
+VENDORID                                0 
+
+EPOCSTACKSIZE	0x5000
+EPOCHEAPSIZE	0x1000 0x400000
+
+USERINCLUDE                             ..\inc 
+//USERINCLUDE                             ..\..\Server\inc 
+SYSTEMINCLUDE                           \epoc32\include 
+DOCUMENT                                bld.inf 
+SOURCEPATH                              ..\src 
+SOURCE                                  GuardAuto.cpp 
+
+LIBRARY                       estor.lib 
+LIBRARY                                 apparc.lib 
+LIBRARY                                 CONE.LIB 
+LIBRARY                                 eiksrv.lib 
+LIBRARY                                 apgrfx.lib 
+LIBRARY                                 ws32.lib 
+LIBRARY                                 GuardCli_200107AC.lib 
+LIBRARY                                 flogger.lib 
+LIBRARY                                 euser.lib 
+LIBRARY                                 efsrv.lib 
+LIBRARY                       bafl.lib hal.lib
+// capability                              ReadDeviceData ProtServ 
+// capability                              PowerMgmt
+
+//macro                                   _LOGGING 
+CAPABILITY PowerMgmt
+
+LIBRARY ezip.lib charconv.lib msgs.lib apmime.lib 
+STATICLIBRARY commonlib.lib
+
+APP_LAYER_SYSTEMINCLUDE

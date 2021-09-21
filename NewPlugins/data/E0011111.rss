@@ -1,0 +1,41 @@
+
+
+#include "RegistryInfo.rh"
+
+// Declares info for two implementations
+RESOURCE REGISTRY_INFO theInfo
+	{
+	// UID for the DLL
+	dll_uid = 0xE0011111;
+	// Declare array of interface info
+	interfaces = 
+		{
+		INTERFACE_INFO
+			{
+			// UID of interface for Guardian Plugins
+			interface_uid = 0x200107AF;
+			implementations = 
+				{
+
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0xE0021111;
+					version_no = 1;
+					display_name = "Empty1";
+					default_data = "EMPTY1"; 
+					opaque_data = "";
+					},
+
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0xE0021112;
+					version_no = 1;
+					display_name = "Empty2";
+					default_data = "EMPTY2";
+					opaque_data = "";
+					}
+				};
+			}
+		};
+	}
+

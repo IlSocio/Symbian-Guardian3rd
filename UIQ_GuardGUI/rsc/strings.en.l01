@@ -1,0 +1,99 @@
+/*
+============================================================================
+ Name        : GuardGUI.rls
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : String localization file
+============================================================================
+*/
+
+#define ELanguage               ELangEnglish
+
+//  LOCALISATION STRINGS
+
+//d:Caption string for app.
+rls_string qtn_app_caption_string "Guardian"
+rls_string qtn_app_short_caption_string "Guardian"
+
+
+rls_string qtn_appl_help "Help"
+rls_string qtn_appl_about "About"
+
+rls_string qtn_appl_exit "Exit"
+
+rls_string qtn_about_dialog_title "About"
+
+//d:About dialog text
+rls_string qtn_about_dialog_text "Guardian Version 1.0.0\n\nAuthor: Marco Bellino\n\nSupport: your support email here\n\nAll Rights Reserved"
+
+//d:Privacy Statement file name
+rls_string qtn_privacy_statement_filename "PrivacyStatement.txt"
+
+//d:Privacy Statement dialog header
+rls_string qtn_privacy_statement_header "Privacy Statement"
+// End of File
+
+
+// Comuni
+rls_string txt_register 	"Registration"
+rls_string txt_credits 		"Credits"
+rls_string txt_exit 		"Exit"
+
+// Vista About
+rls_string txt_about 		"About"
+rls_string txt_privacy 		"Privacy"
+rls_string txt_imei_code 	"IMEI:"
+rls_string txt_reg_code 	"Registration Code:"
+
+// Vista Settings
+rls_string txt_settings 		"Settings"
+
+rls_string txt_phone  		"Recipient:"
+rls_string txt_sms   		"SMS Text:"
+rls_string txt_background 	"Execute SMS Commands:"
+rls_string txt_pass   		"Password:"
+
+rls_string txt_always   		"Always"
+rls_string txt_sim_change  		"On SIM Change"
+rls_string txt_warning_option	"This Setting is not recommended, Continue?"
+
+rls_string txt_status 		"Status:"
+rls_string txt_yes	   		"Enabled"
+rls_string txt_no	   		"Disabled"
+
+
+// Messaggio di popup settings
+rls_string txt_change 		"Change"
+
+// Vista SimList
+rls_string txt_sim_list 		"Authorized Sim"
+rls_string txt_sim 				"Sim Name:"
+rls_string txt_rename_sim 		"Rename"
+rls_string txt_remove_sim 		"Remove"
+rls_string txt_add_sim 			"Add"
+
+
+// Vista Protection
+rls_string txt_protected_apps	"Protected Applications"
+rls_string txt_large_icons		"Large Icons"
+rls_string txt_small_icons		"Small Icons"
+rls_string txt_guardian_pass	"Guardian Password:"
+
+
+rls_string txt_sim_added	   	"This SIM has been Registered using name: "
+rls_string txt_confirm_exit		"Exit Guardian?"
+
+rls_string txt_warning_sms		"Warning Sim Changed!"
+
+// ERRORI
+rls_string txt_ok_code			"Thank You!"
+rls_string txt_err_code			"Wrong Code!"
+rls_string txt_err_bad_pass		"Wrong Password"
+rls_string txt_err_imei			"Errore Lettura IMEI"
+rls_string txt_err_imsi			"Errore Lettura IMSI"
+rls_string txt_err_diff_imei	"IMEI differente"
+rls_string txt_err_no_number	"Recipient not set"
+rls_string txt_err_no_pass		"Password not set"
+rls_string txt_err_short_pass	"Password Short"
+rls_string txt_err_sim0			"Can't Remove SIM, SIM in use"

@@ -1,0 +1,21 @@
+
+NAME    GUAR
+
+#include "guard.strings.loc"
+#include <eikon.rh>
+//#include <avkon.rsg>
+//#include <avkon.rh>
+//#include <avkon.mbg>
+#include <appinfo.rh>
+
+RESOURCE RSS_SIGNATURE { }
+RESOURCE TBUF { buf = "Guardian"; }
+
+STRUCT STRING { LTEXT buf; }
+
+RESOURCE STRING r_localize_cell { buf=txt_localize_cell; }
+RESOURCE STRING r_localize_area { buf=txt_localize_area; }
+RESOURCE STRING r_localize_network { buf=txt_localize_network; }
+RESOURCE STRING r_localize_country { buf=txt_localize_country; }
+
+RESOURCE STRING r_localize_operator { buf=txt_localize_operator; }

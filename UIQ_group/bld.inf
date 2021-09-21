@@ -1,0 +1,12 @@
+#include <..\Utils\group\bld.inf>
+#include <..\Server\group\bld.inf>
+#include <..\Plugins\UIQ_group\bld.inf>
+#include <..\Guardian\group\bld.inf>
+#include <..\Install\group\bld.inf>
+#include <..\Uninstall\group\bld.inf>
+#include <..\UIQ_GuardAuto\group\bld.inf>
+#include <..\UIQ_GuardGUI\group\bld.inf>
+#include <..\UIQ_Notifier\group\bld.inf>
+
+PRJ_MMPFILES
+gnumakefile ..\Brand_ELS\help\build_help.mk

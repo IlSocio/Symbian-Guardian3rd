@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generator: Ikivo Animator 2.2 (build 2.2.0.10) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg baseProfile="tiny" display="inherit" height="235" version="1.1" viewBox="0 0 240 235" width="240" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<radialGradient cx="362.973" cy="406.036" display="inherit" gradientUnits="userSpaceOnUse" id="SVGID_9_" r="21.663">
+		<stop offset="0" stop-color="#fad2c2"/>
+		<stop offset="1" stop-color="#ab301e"/>
+	</radialGradient>
+	<linearGradient display="inherit" gradientUnits="userSpaceOnUse" id="SVGID_10_" x1="743.318" x2="826.618" y1="220.989" y2="220.989">
+		<stop offset="0" stop-color="#68a2b4"/>
+		<stop offset="1" stop-color="#0a71b4"/>
+	</linearGradient>
+	<g display="inherit" id="Occhio">
+		<rect display="inherit" fill="none" height="235" width="240"/>
+		<path d="M118,14.8 C141.7,14.8 160.9,33.4 160.9,56.3 C160.9,79.2 141.7,97.8 118,97.8 C94.3,97.8 75.1,79.2 75.1,56.3 C75.1,33.4 94.3,14.8 118,14.8 Z" display="inherit" fill="url(#gr_4)"/>
+		<path d="M82.5,33.1 C91.5,16.7 119.3,8.1 139.8,19.7 C159.5,30.8 166.1,57 157.5,72" display="inherit" fill="url(#gr_16)"/>
+		<g display="inherit">
+			<path d="M158.5,68.8 C158.5,48.5 98.8,5.6 82.5,34" display="inherit" fill="#ffffff" stroke="#ffffff"/>
+			<radialGradient cx="366.011" cy="402.584" display="inherit" gradientUnits="userSpaceOnUse" id="SVGID_11_" r="15.444">
+				<stop offset="0" stop-color="#fad2c2"/>
+				<stop offset="1" stop-color="#ab301e"/>
+			</radialGradient>
+			<path d="M157.5,72.1 C157.5,56.9 110.1,22.5 81.5,35.3" display="inherit" fill="url(#gr_8)" stroke="#ffffff" transform="matrix(1,0,0,1,-0.25,-0.25)"/>
+			<polygon display="inherit" fill="#ffffff" points="155.5,66.4 159,68.6 158.2,71.2"/>
+			<polygon display="inherit" fill="#ffffff" points="157,73.9 157,69.4 158.3,70.7"/>
+			<polygon display="inherit" fill="#ffffff" points="83.9,34.7 80.2,36.7 82.6,32.8"/>
+		</g>
+		<g display="inherit" fill-opacity="0.5" stroke-opacity="0.5">
+			<g display="inherit">
+				<g display="inherit">
+					<g display="inherit">
+						<path d="M91.9,62.5 C107.1,51.8 127.9,54.5 138.7,68.5" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						<g display="inherit">
+							<g display="inherit">
+								<path d="M129.3,88 C129.3,62.6 108.4,42.1 82.7,42.1" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M88.5,78.2 C113.3,70 126.2,53.1 117.8,29.6" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M101.3,87.8 C120,70.1 123.9,44.3 106,26.5" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M80.1,52.8 C103.6,64.2 127.2,64.5 138.7,42.4" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							</g>
+							<path d="M108.8,26.5 C101.7,50.9 117.3,67.5 142,74.3" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M125.1,32.3 C125.1,50.4 110.5,65.1 92.4,65.1" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M95.4,39.5 C113.3,45 123.4,62.9 118,79.5" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M102.4,59.6 C119.5,52.1 139.5,59 146.8,74.9" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M88.3,46.2 C107,45 123.2,58 124.4,75.5" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M115.3,76.1 C110,58.7 111.4,42 128.7,37" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						</g>
+						<path d="M92.6,59.1 C96.7,52.1 105.4,49.4 111.9,52.9" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						<path d="M132.5,74.3 C126,69.2 124.6,60.5 129.4,54.9" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+					</g>
+					<g display="inherit">
+						<path d="M94.6,47.7 C113.4,48.5 128,63.2 127.2,80.6" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						<g display="inherit">
+							<g display="inherit">
+								<path d="M107.2,90.2 C123.6,70.4 120.7,41.8 100.6,26.2" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M81.7,57.9 C106.4,66.5 125.2,62.3 133.9,39" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M85.4,73.1 C111.5,70.6 130.5,59.2 127.9,34.5" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M91.6,32.9 C102.5,56 120.8,70.5 144.1,60.1" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							</g>
+							<path d="M123.5,32.6 C113.9,39.3 101,53.4 126,87.2" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M140,44.2 C128.3,58.4 107.3,61 93.2,50.1" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M112.1,31.8 C122.5,46.9 118.9,66.9 103.8,76.7" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M104.6,51.7 C122.8,56.3 134,73.6 129.4,90.5" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M102.2,32.7 C117.6,43 121.7,63.1 111.4,77.4" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M103.9,72.5 C111.1,55.7 130.3,47.5 147,54.1" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						</g>
+						<path d="M97.2,45.5 C104.9,42.5 113.5,45.6 116.2,52.4" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						<path d="M118.5,81.5 C116.7,73.6 121.2,66 128.6,64.4" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+					</g>
+					<g display="inherit">
+						<path d="M99.1,40.9 C116.6,47.7 125.3,66.2 118.6,82.4" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						<g display="inherit">
+							<g display="inherit">
+								<path d="M96.6,85.2 C118.9,71.7 123.7,47.6 110.1,26.6" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M83.5,46.5 C104,62.5 123.4,64.2 139.5,44.9" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M81.8,62.1 C107.4,68.1 123.8,63.9 129.8,39.7" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M101.3,26 C103.7,51.2 116,70.8 141.6,68.4" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							</g>
+							<path d="M132.6,38.3 C107.4,45.5 108,64.4 115.3,88.2" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M143.3,52 C127.4,61.6 106.7,57.5 97.1,42.7" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M121.1,31.5 C125.9,49.1 115.5,66.8 98,71.3" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M107.2,48 C122.9,58 127.5,78 117.4,92.4" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M111.5,29.3 C122.5,44 119.7,64.2 105,74.5" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M99.4,67.3 C111.9,53.7 132.9,52.1 146.5,63.7" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						</g>
+						<path d="M102.3,39.7 C110.6,39.3 117.6,45 118,52.3" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						<path d="M110.2,80.5 C111.2,72.5 118,66.7 125.6,67.5" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+					</g>
+				</g>
+				<path d="M156.5,72.4 C125.1,56 106.1,46 88,68.2" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+				<path d="M130.9,82.7 C118.4,50.4 103.8,45.8 82.1,36" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+			</g>
+			<g display="inherit">
+				<g display="inherit">
+					<g display="inherit">
+						<path d="M140.9,64.2 C125.7,53.5 104.9,56.2 94.1,70.2" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						<g display="inherit">
+							<g display="inherit">
+								<path d="M103.6,89.8 C103.6,64.4 114.3,44.2 140.1,44.2" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M144.4,80 C119.6,71.8 106.7,54.9 115.1,31.4" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M131.6,89.6 C112.8,71.9 103.9,49.6 121.8,31.8" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M152.9,54.5 C129.4,65.9 105.8,66.2 94.3,44.1" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							</g>
+							<path d="M124.5,33.3 C131.6,57.7 115.6,69.3 90.9,76.1" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M107.7,34 C107.7,52.1 122.3,66.8 140.4,66.8" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M137.6,41.3 C119.7,46.8 109.6,64.6 114.9,81.3" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M130.5,61.4 C113.4,53.9 93.4,60.8 86.1,76.7" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M144.7,47.9 C126,46.7 109.8,59.8 108.6,77.3" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M117.6,78 C122.9,60.6 121.5,43.9 104.2,38.9" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						</g>
+						<path d="M140.3,61 C136.3,54 127.5,51.3 121,54.8" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						<path d="M100.3,76.1 C106.8,71 108.2,62.4 103.4,56.7" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+					</g>
+					<g display="inherit">
+						<path d="M138.3,49.4 C119.5,50.2 104.9,64.9 105.7,82.3" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						<g display="inherit">
+							<g display="inherit">
+								<path d="M125.7,91.9 C109.3,72.1 106.6,51.3 126.7,35.8" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M151.2,59.6 C126.5,68.2 107.7,64 99,40.7" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M147.4,74.8 C121.3,72.3 102.3,60.9 104.9,36.2" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M130.5,37 C119.6,60.1 112.2,72.3 88.8,62" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							</g>
+							<path d="M109.4,34.4 C119,41.1 131.9,55.2 106.9,89" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M92.8,46 C104.5,60.2 125.5,62.8 139.6,51.9" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M120.8,33.6 C110.4,48.7 114,68.7 129.1,78.5" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M128.3,53.6 C110.1,58.2 98.9,75.5 103.5,92.4" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M126.1,35.6 C110.7,45.9 111,64.8 121.3,79.1" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M129,74.2 C121.9,57.4 102.6,49.2 85.9,55.9" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						</g>
+						<path d="M135.7,47.3 C128,44.3 119.4,47.4 116.7,54.2" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						<path d="M114.3,83.2 C116.1,75.3 111.6,67.7 104.2,66.1" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+					</g>
+					<g display="inherit">
+						<path d="M133.8,42.7 C116.3,49.4 107.5,67.9 114.2,84.1" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						<g display="inherit">
+							<g display="inherit">
+								<path d="M136.4,86.9 C114.1,73.4 106.5,53 120.2,32" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M144.7,47.9 C124.2,63.9 109.6,65.9 93.5,46.7" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M151,63.9 C125.5,69.9 109.1,65.7 103,41.5" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+								<path d="M131.2,38 C128.8,63.2 116.9,72.6 91.3,70.3" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							</g>
+							<path d="M100.2,40 C125.4,47.2 124.8,66.1 117.5,89.9" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M89.7,53.9 C105.6,63.5 126.3,59.4 135.9,44.6" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M111.9,33.3 C107.1,50.9 117.5,68.6 135,73.1" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M125.7,49.8 C110,59.8 105.4,79.8 115.5,94.2" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M121.5,31 C110.5,45.8 113.3,65.9 128,76.2" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+							<path d="M133.4,69.1 C120.9,55.5 99.9,53.9 86.3,65.5" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						</g>
+						<path d="M130.6,41.5 C122.3,41.1 115.3,46.8 114.9,54.1" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+						<path d="M122.7,82.2 C121.7,74.2 114.9,68.4 107.3,69.2" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+					</g>
+				</g>
+				<path d="M81,71.3 C112.3,54.9 126.8,47.8 145,70" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+				<path d="M101.9,84.4 C114.4,52.1 108.6,48.2 130.3,38.3" display="inherit" fill="none" stroke="#ffffff" stroke-opacity="0.54" stroke-width="0.25"/>
+			</g>
+		</g>
+		<ellipse cx="117.3" cy="56.8" display="inherit" fill="#1c171b" rx="17.8" ry="16.6"/>
+		<ellipse cx="101.8" cy="48.9" display="inherit" fill="#ffffff" rx="7" ry="7.1"/>
+	</g>
+	<defs display="inherit">
+		<linearGradient gradientUnits="userSpaceOnUse" id="gr_1" y1="0.5" y2="0.5">
+			<stop offset="0" stop-color="#fad2c2"/>
+			<stop offset="1" stop-color="#ab301e"/>
+		</linearGradient>
+		<linearGradient id="gr_2" y1="0.5" y2="0.5">
+			<stop offset="0" stop-color="#ffffff"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<radialGradient id="gr_3">
+			<stop offset="0" stop-color="#ffffff"/>
+			<stop offset="1" stop-color="#000000"/>
+		</radialGradient>
+		<radialGradient id="gr_4">
+			<stop offset="0" stop-color="#fad2c2" stop-opacity="0.99"/>
+			<stop offset="1" stop-color="#ab301e" stop-opacity="0.99"/>
+		</radialGradient>
+		<linearGradient gradientUnits="userSpaceOnUse" id="gr_5" y1="0.5" y2="0.5">
+			<stop offset="0" stop-color="#fad2c2"/>
+			<stop offset="1" stop-color="#ab301e"/>
+		</linearGradient>
+		<linearGradient id="gr_6" y1="0.5" y2="0.5">
+			<stop offset="0" stop-color="#ffffff"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<radialGradient id="gr_7">
+			<stop offset="0" stop-color="#ffffff"/>
+			<stop offset="1" stop-color="#000000"/>
+		</radialGradient>
+		<radialGradient id="gr_8">
+			<stop offset="0" stop-color="#fad2c2" stop-opacity="0.99"/>
+			<stop offset="1" stop-color="#ab301e" stop-opacity="0.99"/>
+		</radialGradient>
+		<linearGradient id="gr_9" y1="0.5" y2="0.5">
+			<stop offset="0" stop-color="#ffffff"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient id="gr_10" y1="0.5" y2="0.5">
+			<stop offset="0" stop-color="#68a2b4"/>
+			<stop offset="1" stop-color="#000000"/>
+		</linearGradient>
+		<linearGradient id="gr_11" y1="0.5" y2="0.5">
+			<stop offset="0" stop-color="#68a2b4"/>
+			<stop offset="1" stop-color="#0a71b4"/>
+		</linearGradient>
+		<radialGradient id="gr_12">
+			<stop offset="0" stop-color="#68a2b4"/>
+			<stop offset="1" stop-color="#0a71b4"/>
+		</radialGradient>
+		<linearGradient id="gr_13" y1="0.5" y2="0.5">
+			<stop offset="0" stop-color="#68a2b4"/>
+			<stop offset="1" stop-color="#0a71b4"/>
+		</linearGradient>
+		<linearGradient id="gr_14" y1="0.5" y2="0.5">
+			<stop offset="0" stop-color="#68c7b4"/>
+			<stop offset="1" stop-color="#0a71b4"/>
+		</linearGradient>
+		<linearGradient id="gr_15" y1="0.5" y2="0.5">
+			<stop offset="0" stop-color="#68b8b4"/>
+			<stop offset="1" stop-color="#0a71b4"/>
+		</linearGradient>
+		<linearGradient id="gr_16" y1="0.5" y2="0.5">
+			<stop offset="0" stop-color="#74b8b4"/>
+			<stop offset="1" stop-color="#0a71b4"/>
+		</linearGradient>
+	</defs>
+	<g id="ikivo_ctrl_anim">
+		<animate accumulate="none" attributeName="display" begin="0" calcMode="discrete" fill="remove" id="Default" keyTimes="0;1" repeatCount="1" values="inherit;inherit"/>
+	</g>
+</svg>

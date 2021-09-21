@@ -1,0 +1,11 @@
+#ifndef SIMVIEW_HRH
+#define SIMVIEW_HRH
+
+enum TSimViewControls
+    {
+    ESimViewListBox,
+    ESimViewSimName
+    };
+
+    	
+#endif

@@ -1,0 +1,4 @@
+﻿OBAVEŠTENJE
+Kako biste imali bolju zaštitu, Guardian će samostalno da se instalira na memoriju telefona.
+
+Možete da prekinete instalaciju pritiskom na dugme „Obustavi“ prilikom prikaza sledećeg ekrana.

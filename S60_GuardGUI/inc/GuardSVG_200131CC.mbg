@@ -1,0 +1,22 @@
+ 
+/* This file has been generated, DO NOT MODIFY. */
+enum TMifGuardsvg_200131cc
+	{
+	EMbmGuardsvg_200131ccSplash = 16384,
+	EMbmGuardsvg_200131ccSplash_mask = 16385,
+	EMbmGuardsvg_200131ccInternofree = 16386,
+	EMbmGuardsvg_200131ccInternofree_mask = 16387,
+	EMbmGuardsvg_200131ccInternogold = 16388,
+	EMbmGuardsvg_200131ccInternogold_mask = 16389,
+	EMbmGuardsvg_200131ccInternoplatinum = 16390,
+	EMbmGuardsvg_200131ccInternoplatinum_mask = 16391,
+	EMbmGuardsvg_200131ccSplashfull = 16392,
+	EMbmGuardsvg_200131ccAbout = 16394,
+	EMbmGuardsvg_200131ccSettings = 16396,
+	EMbmGuardsvg_200131ccSim = 16398,
+	EMbmGuardsvg_200131ccProt = 16400,
+	EMbmGuardsvg_200131ccEmpty = 16402,
+	EMbmGuardsvg_200131ccInternoiridium = 16404,
+	EMbmGuardsvg_200131ccInternoiridium_mask = 16405,
+	EMbmGuardsvg_200131ccLastElement
+	};

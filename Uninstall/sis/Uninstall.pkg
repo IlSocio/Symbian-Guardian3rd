@@ -1,0 +1,18 @@
+;This is Carbide VS 3.0 generated package file.
+;You can modify this as you wish. You may comment out updater added lines.
+;You can disable/enable updater from Carbide Properties.
+
+;Languages
+&EN
+
+;Header
+#{"Uninstall"},(0x200107b4), 1, 0, 0
+
+;Localized vendor
+%{"vendor"}
+
+;Non-localized vendor
+:"Unique Vendor Name"
+
+"C:\Symbian\9.1\S60_3rd_MR\epoc32\release\gcce\UREL\Uninstall.exe" - "!:\sys\bin\Uninstall.exe"
+"C:\Symbian\9.1\S60_3rd_MR\epoc32\release\gcce\UREL\Uninstall_200107b4.exe" - "!:\sys\bin\Uninstall_200107b4.exe"

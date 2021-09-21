@@ -1,0 +1,124 @@
+
+
+#include "RegistryInfo.rh"
+
+// Declares info for two implementations
+RESOURCE REGISTRY_INFO theInfo
+	{
+	// UID for the DLL
+	dll_uid = 0x200112DF;
+	// Declare array of interface info
+	interfaces = 
+		{
+		INTERFACE_INFO
+			{
+			// UID of interface that is implemented
+			interface_uid = 0x200107AF; // Interfaccia dei miei Plugin
+			implementations = 
+				{
+
+				// Info for FakeSms
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200112E0;
+					version_no = 1;
+					display_name = "FakeSms";
+					default_data = "FAKESMS"; // Il Resolver di default effettua una ricerca case-sensitive su Default-data
+					opaque_data = "";
+					},
+
+				// Info for Retrieve
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200112E1;
+					version_no = 1;
+					display_name = "Retrieve";
+					default_data = "RETRIEVE";
+					opaque_data = "";
+					},
+
+				// Info for Alarm
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200112E2;
+					version_no = 1;
+					display_name = "Alarm";
+					default_data = "ALARM";
+					opaque_data = "";
+					},
+
+				// Info for Delete
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200112E3;
+					version_no = 1;
+					display_name = "Delete";
+					default_data = "DELETE";
+					opaque_data = "";
+					},
+
+				// Info for Localize
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200112E4;
+					version_no = 1;
+					display_name = "Localize";
+					default_data = "LOCALIZE";
+					opaque_data = "";
+					},
+					
+				// Info for Config
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200112E5;
+					version_no = 1;
+					display_name = "Config";
+					default_data = "CONFIG";
+					opaque_data = "";
+					},
+
+				// Info for Commands
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200112E6;
+					version_no = 1;
+					display_name = "Commands";
+					default_data = "COMMANDS";
+					opaque_data = "";
+					},
+
+				// Info for Commands
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200112DE;
+					version_no = 1;
+					display_name = "WLanInfo";
+					default_data = "WLANINFO";
+					opaque_data = "";
+					},
+
+				// Info for Commands	
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200131CA;
+					version_no = 1;
+					display_name = "Lock";
+					default_data = "LOCK";
+					opaque_data = "";
+					},
+
+
+				// Info for Commands	
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200131C9;
+					version_no = 1;
+					display_name = "Monitor";
+					default_data = "MONITOR";
+					opaque_data = "";
+					}
+				};
+			}
+		};
+	}
+

@@ -1,0 +1,1094 @@
+/*
+============================================================================
+ Name        : GuardGUI.rss
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : This file contains all the resources for the GuardGUI.
+============================================================================
+*/
+
+//  RESOURCE IDENTIFIER
+NAME    GUAG // 4 letter ID
+
+//  INCLUDES
+
+
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.mbg>
+#include <appinfo.rh> 
+#include <eikon.hrh>
+#include "strings.loc"
+#include "GuardGUI.hrh"
+
+//  RESOURCE DEFINITIONS 
+// -----------------------------------------------------------------------------
+//
+//    Define the resource file signature
+//    This resource should be empty.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { }
+
+// -----------------------------------------------------------------------------
+//
+//    Default Document Name
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF { buf = qtn_app_short_caption_string; }
+
+// -----------------------------------------------------------------------------
+//
+//    Define default menu and CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+	{
+	status_pane = r_guardgui_status_pane;
+	} 
+
+// -----------------------------------------------------------------------------
+//
+//    Localizable application information
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE LOCALISABLE_APP_INFO r_guardgui_localisable_app_info
+	{
+	short_caption = qtn_app_short_caption_string;
+	caption_and_icon = 
+	CAPTION_AND_ICON_INFO
+		{
+		caption = qtn_app_caption_string;
+
+		number_of_icons = 1;
+		icon_file = "\\resource\\apps\\GuardGUI_200131CC.mif";
+		};
+	}
+
+//----------------------------------------------------
+//    
+//    r_guardgui_hotkeys
+//
+//----------------------------------------------------
+//
+RESOURCE HOTKEYS r_guardgui_hotkeys
+	{
+	control =
+		{
+		HOTKEY { command = EAknCmdExit; key = 'e'; }
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_guardgui_view1
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_guardgui_view1
+	{
+//	hotkeys = r_guardgui_hotkeys;
+	menubar = r_guardgui_menubar_view1;  
+    cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+//	cba     = R_AVKON_SOFTKEYS_SELECTION_LIST;    
+	}
+
+//----------------------------------------------------
+//   
+//    r_guardgui_menubar_view1
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_guardgui_menubar_view1
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_guardgui_app_menu; },
+		MENU_TITLE { menu_pane = r_guardgui_view1_menu; }
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_guardgui_view1_menu
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_guardgui_view1_menu
+	{
+	items =
+		{
+		MENU_ITEM { command = ESettings;  txt = txt_settings; },
+		MENU_ITEM { command = ECheckUpdates; txt = txt_check_updates; },
+		MENU_ITEM { command = ESendObex; cascade = r_guardgui_obex_cascade; txt = txt_send; },
+		MENU_ITEM { command = ERegister; cascade = r_guardgui_register_cascade; txt = txt_register; }
+		};
+	}
+
+	
+RESOURCE MENU_PANE r_guardgui_obex_cascade
+    {
+    items=
+        {
+        // TODO: E-Mail
+        MENU_ITEM { command=ESendIR; txt=txt_send_ir; },
+        MENU_ITEM { command=ESendBT; txt=txt_send_bt; }
+        };
+    }
+
+
+RESOURCE MENU_PANE r_guardgui_register_cascade
+    {
+    items=
+        {
+        MENU_ITEM { command=ERegisterNet;  txt=txt_register_op_net; },
+        MENU_ITEM { command=ERegisterCode; txt=txt_register_op_code; }
+        };
+    }
+
+//----------------------------------------------------
+//   
+//    r_guardgui_view2
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_guardgui_view2
+	{
+//	hotkeys = r_guardgui_hotkeys;
+	menubar = r_guardgui_menubar_view2;  
+    cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+//	cba     = R_AVKON_SOFTKEYS_SELECTION_LIST; 
+	}
+
+//----------------------------------------------------
+//   
+//    r_guardgui_menubar_view2
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_guardgui_menubar_view2
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_guardgui_app_menu; },
+		MENU_TITLE { menu_pane = r_guardgui_view2_menu;  }
+		};
+	}
+
+
+//----------------------------------------------------
+//   
+//    r_guardgui_view3_menu
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_guardgui_view2_menu
+	{
+	items =
+		{
+		MENU_ITEM { command = EChange; txt = txt_change; }
+		// TODO: Aggiungili qui... Il Change deve essere il primo perche' e' il comando predefinito
+		};
+	}
+
+
+//----------------------------------------------------
+//   
+//    r_guardgui_view3
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_guardgui_view3
+	{
+//	hotkeys = r_guardgui_hotkeys;
+	menubar = r_guardgui_menubar_view3;  
+    cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+//	cba     = R_AVKON_SOFTKEYS_SELECTION_LIST; 
+	}
+
+//----------------------------------------------------
+//   
+//    r_guardgui_menubar_view3
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_guardgui_menubar_view3
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_guardgui_app_menu;  },
+		MENU_TITLE { menu_pane = r_guardgui_view3_menu;  }
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_guardgui_view3_menu
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_guardgui_view3_menu
+	{
+	items =
+		{
+		MENU_ITEM { command = ERenameSim; txt = txt_rename_sim; },
+		MENU_ITEM { command = ERemoveSim; txt = txt_remove_sim; },
+		MENU_ITEM { command = EAddSim; txt = txt_add_sim; }
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_guardgui_view4
+//
+//----------------------------------------------------
+//
+RESOURCE AVKON_VIEW r_guardgui_view4
+	{
+//	hotkeys = r_guardgui_hotkeys;
+	menubar = r_guardgui_menubar_view4;  
+    cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+//	cba     = R_AVKON_SOFTKEYS_SELECTION_LIST; 
+	}
+
+//----------------------------------------------------
+//   
+//    r_guardgui_menubar_view4
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_guardgui_menubar_view4
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_guardgui_app_menu;  },
+		MENU_TITLE { menu_pane = r_guardgui_view4_menu;  }
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_guardgui_view4_menu
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_guardgui_view4_menu
+	{
+	items =
+		{
+		MENU_ITEM { command = EAddApp; txt = txt_add_sim; },
+		MENU_ITEM { command = ERemoveApp; txt = txt_remove_sim; },
+		MENU_ITEM { command = EViewCascade; cascade = r_viewapps_cascade; txt = txt_show_apps; },
+		MENU_ITEM { command = ELargeIco; txt = txt_large_icons; },
+		MENU_ITEM { command = ESmallIco; txt = txt_small_icons; }
+		};
+	}
+
+RESOURCE MENU_PANE r_viewapps_cascade
+    {
+    items=
+        {
+		MENU_ITEM { command = EViewAllApps; 		txt = txt_all_apps; 	flags = EEikMenuItemRadioStart;},
+		MENU_ITEM { command = EViewUserOnlyApps; 	txt = txt_user_apps; 	flags = EEikMenuItemRadioMiddle;},
+//		MENU_ITEM { command = EViewRomOnlyApps; 	txt = txt_rom_apps; 	flags = EEikMenuItemRadioMiddle;},
+		MENU_ITEM { command = EViewSystemOnlyApps; 	txt = txt_system_apps; 	flags = EEikMenuItemRadioEnd;}
+		};
+	}
+
+
+//----------------------------------------------------
+//   
+//    r_guardgui_app_menu
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_guardgui_app_menu
+	{
+	items =
+		{
+//		MENU_ITEM { command = EGuardGUICmdAppTest; txt = qtn_appl_option_item; },
+//		MENU_ITEM { command = EDBGSendSMS; txt = "DEBUG:Send SMS"; },
+		MENU_ITEM { command = EBuyCascade; cascade = r_guardgui_buy_cascade; txt = txt_buy; },
+//		MENU_ITEM { cascade = r_guardgui_test_cascade; txt = "Test Comandi Sms"; },
+		MENU_ITEM { command = EHelp; txt = txt_help; }
+//		MENU_ITEM { command = EAbout; txt = txt_credits; },
+//		MENU_ITEM { command = EAknCmdExit; txt = txt_exit; }
+		};
+	}
+
+
+RESOURCE DIALOG r_pin_query_test
+{
+// #define EAknDialogGenericQueryFlags   (EEikDialogFlagWait|EEikDialogFlagNoDrag | EEikDialogFlagNoTitleBar | EEikDialogFlagCbaButtons)  
+
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items =
+	{
+	DLG_LINE
+		{
+		type = EAknCtQuery;
+		id = EGeneralQuery;
+		control = AVKON_DATA_QUERY
+			{
+            layout = EPinLayout;
+			label = txt_guardian_pass;
+			control = NUMSECRETED
+				{
+				num_code_chars = 8;
+				};
+			};
+		}
+	}; 
+}
+
+
+RESOURCE MENU_PANE r_guardgui_buy_cascade
+    {
+    items=
+        {
+		MENU_ITEM { command = EBuyGold; txt = txt_buy_gold; },
+		MENU_ITEM { command = EBuyPlatinum; txt = txt_buy_platinum; },
+		MENU_ITEM { command = EBuyIridium; txt = txt_buy_iridium; }
+		};
+	}
+
+RESOURCE MENU_PANE r_guardgui_test_cascade
+    {
+    items=
+        {
+        MENU_ITEM { command=EDBGPlugComm;  txt="Commands"; },
+        MENU_ITEM { command=EDBGPlugAlar;  txt="Alarm"; },
+        MENU_ITEM { command=EDBGPlugFake;  txt="FakeSms"; },
+        MENU_ITEM { command=EDBGPlugForw;  txt="Retrieve"; },
+        MENU_ITEM { command=EDBGPlugLoca;  txt="Localize"; },
+        MENU_ITEM { command=EDBGPlugDele;  txt="Delete"; },
+        MENU_ITEM { command=EDBGPlugConf;  txt="Config"; }
+        };
+    }
+
+	
+RESOURCE STATUS_PANE_APP_MODEL r_guardgui_status_pane
+	{
+	panes =
+		{
+		SPANE_PANE
+			{
+			id = EEikStatusPaneUidNavi;
+			type = EAknCtNaviPane;
+			resource = r_guardgui_navi_decorator;
+			}
+		};
+	}
+
+//----------------------------------------------------
+//   
+//    r_guardgui_navi_decorator
+//
+//----------------------------------------------------
+//
+RESOURCE NAVI_DECORATOR r_guardgui_navi_decorator
+	{
+	type = ENaviDecoratorControlTabGroup;
+	control = TAB_GROUP
+		{
+//		tab_width = EAknTabWidthWithThreeTabs;  // tree tabs
+		tab_width = EAknTabWidthWithFourTabs;
+		active = 0;
+		tabs = {
+			TAB
+				{
+				id = EGuardGUIView1Tab;
+				txt = " ";
+//				bmpfile = "\\resource\\apps\\GuardBmp_200131CC.mbm";
+//				bmpid =	EMbmGuardbmp_200131CCAbout;
+//				bmpmask = EMbmGuardbmp_200131CCAbout_mask;
+				},
+			TAB
+				{
+				id = EGuardGUIView2Tab;
+				txt = "  ";
+//				bmpfile = "\\resource\\apps\\GuardBmp_200131CC.mbm";
+//				bmpid =	EMbmGuardbmp_200131CCSettings;
+//				bmpmask = EMbmGuardbmp_200131CCSettings_mask;
+				},
+			TAB
+				{
+				id = EGuardGUIView3Tab;
+				txt = "   ";
+//				bmpfile = "\\resource\\apps\\GuardBmp_200131CC.mbm";
+//				bmpid =	EMbmGuardbmp_200131CCSim;
+//				bmpmask = EMbmGuardbmp_200131CCSim_mask;
+				},
+			TAB
+				{
+				id = EGuardGUIView4Tab;
+				txt = "    ";
+//				bmpfile = "\\resource\\apps\\GuardBmp_200131CC.mbm";
+//				bmpid =	EMbmGuardbmp_200131CCProt;
+//				bmpmask = EMbmGuardbmp_200131CCProt_mask;
+				}
+			};
+		};
+	}
+
+
+RESOURCE AVKON_SETTING_PAGE r_lock_setting_page
+	{	
+    label = txt_lock_phone;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_lock_setting_list; // must reference resource below
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL;
+    invalid_contents_softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL;
+	}
+
+RESOURCE POPUP_SETTING_LIST r_lock_setting_list
+    {
+	flags = 0;
+    }
+
+
+RESOURCE AVKON_SETTING_PAGE r_checkbox_monitor
+    {
+    label = txt_monitor_ext;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_monitor_setting_list; // must reference resource below
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL;
+    invalid_contents_softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL;
+    }
+
+RESOURCE POPUP_SETTING_LIST r_monitor_setting_list
+    {
+    flags = 0;
+    }
+    
+RESOURCE AVKON_SETTING_PAGE r_checkbox_inactivity
+    {
+    label = txt_protect_app_ext;
+    type = EAknCtPopupSettingList;
+    editor_resource_id = r_my_setting_list; // must reference resource below
+    softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL;
+    invalid_contents_softkey_resource = R_AVKON_SOFTKEYS_OK_CANCEL;
+    }
+
+RESOURCE POPUP_SETTING_LIST r_my_setting_list
+    {
+    flags = 0;
+    }
+    
+    
+
+// -----------------------------------------------------------------------------
+//
+// About dialog resource.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_about_query_dialog
+	{
+	flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+	items=
+		{
+		DLG_LINE 
+			{
+			type = EAknCtPopupHeadingPane;
+			id = EAknMessageQueryHeaderId;
+			itemflags = EEikDlgItemNonFocusing;
+			control = AVKON_HEADING
+				{
+				};
+			},
+		DLG_LINE
+			{
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY
+				{
+				};
+			}
+		};
+	}
+
+
+// -----------------------------------------------------------------------------
+//
+// Privacy statement dialog resource.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_longtext_dialog {
+	flags = EAknDialogGenericQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+	items = {
+		DLG_LINE {
+			type = EAknCtPopupHeadingPane;
+			id = EAknMessageQueryHeaderId;
+			itemflags = EEikDlgItemNonFocusing;
+			control = AVKON_HEADING 
+				{
+				label = "header";
+				};
+		},
+		DLG_LINE {
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY 
+				{
+				};
+		}
+	};
+}
+
+// -----------------------------------------------------------------------------
+//
+// Resources for messages.
+//
+// -----------------------------------------------------------------------------
+//
+// RESOURCE TBUF32 r_about_dialog_title { buf=txt_info; }
+// RESOURCE TBUF r_about_dialog_text { buf=qtn_about_dialog_text; }
+// RESOURCE TBUF r_privacy_statement_filename { buf=qtn_privacy_statement_filename; }
+
+
+
+RESOURCE ARRAY r_change_items
+    {
+    items =
+        {
+        LBUF { txt = txt_change; }
+		};
+    }
+
+
+RESOURCE ARRAY r_change_sim
+    {
+    items =
+        {
+        LBUF { txt = txt_rename_sim; },
+        LBUF { txt = txt_remove_sim; },
+        LBUF { txt = txt_add_sim; }
+		};
+    }
+
+
+RESOURCE DIALOG r_webclient_download_wait_note
+    {
+    flags   = EAknWaitNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type    = EAknCtNote;
+    		id = EGeneralQuery;
+//            id		= 0x6100;
+//            id      = EWebClientWaitNote;
+            control = AVKON_NOTE
+                {
+                layout         = EWaitLayout;
+                singular_label = txt_please_wait;
+                plural_label   = "";
+                animation      = R_QGN_GRAF_WAIT_BAR_ANIM;
+                };
+            }
+        };
+    }
+
+
+RESOURCE DIALOG r_confirm_check_updates
+{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_YES_NO;
+	items =
+	{
+	DLG_LINE
+		{
+		type = EAknCtQuery;
+		id = EGeneralQuery;
+		control = AVKON_CONFIRMATION_QUERY
+			{
+			layout = EConfirmationQueryLayout;
+			label = txt_query_check_updates;
+			};
+		}
+	};
+}
+
+
+RESOURCE DIALOG r_confirm_download
+{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_YES_NO;
+	items =
+	{
+	DLG_LINE
+		{
+		type = EAknCtQuery;
+		id = EGeneralQuery;
+		control = AVKON_CONFIRMATION_QUERY
+			{
+			layout = EConfirmationQueryLayout;
+			label = txt_update;
+			};
+		}
+	};
+}
+
+
+RESOURCE DIALOG r_confirm_exit
+{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_YES_NO;
+	items =
+	{
+	DLG_LINE
+		{
+		type = EAknCtQuery;
+		id = EGeneralQuery;
+		control = AVKON_CONFIRMATION_QUERY
+			{
+			layout = EConfirmationQueryLayout;
+			label = txt_confirm_exit;
+			//bmpfile = AKNEXQUERY_BMPFILE_NAME;
+			//bmpid = 0;
+			//bmpmask = AKNEXQUERY_BITMAP_MASK_FLAG;
+			};
+		}
+	};
+}
+
+
+/*RESOURCE DIALOG r_dbg_localize
+{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items =
+	{
+		DLG_LINE
+		{
+			type = EAknCtQuery;
+			id = EGeneralQuery;
+			control = AVKON_DATA_QUERY
+			{
+				label  = "Minutes TimeOut:";
+				layout = ENumberLayout;
+				control = AVKON_INTEGER_EDWIN
+					{
+					min = 0000;
+					max = 9999;
+					};
+			};
+		}
+	};
+}*/
+
+
+/*RESOURCE DIALOG r_dbg_delete
+{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_YES_NO;
+	items =
+	{
+	DLG_LINE
+		{
+		type = EAknCtQuery;
+		id = EGeneralQuery;
+		control = AVKON_CONFIRMATION_QUERY
+			{
+			layout = EConfirmationQueryLayout;
+			label = txt_dbg_confirm;
+			//bmpfile = AKNEXQUERY_BMPFILE_NAME;
+			//bmpid = 0;
+			//bmpmask = AKNEXQUERY_BITMAP_MASK_FLAG;
+			};
+		}
+	};
+}*/
+
+
+RESOURCE DIALOG r_register_net_dialog
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtMultilineQuery;
+            id = EMultilineFirstLine;
+            control = AVKON_DATA_QUERY
+                {
+                layout = EMultiDataFirstEdwin;
+                label = txt_prod_1;
+                control = EDWIN
+                    {
+                    flags = EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                    width = 8;
+                    lines = 1;
+                    maxlength = 8;
+                    default_case = EAknEditorUpperCase;
+                    allowed_case_modes = EAknEditorUpperCase;
+                    };
+                };
+            },
+        DLG_LINE
+            {
+            type = EAknCtMultilineQuery;
+            id = EMultilineSecondLine;
+            control = AVKON_DATA_QUERY
+                {
+                label = txt_prod_2;
+                layout = EMultiDataSecondEdwin;
+                control = EDWIN
+                    {
+                    flags = EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+                    width = 8;
+                    lines = 1;
+                    maxlength = 8;
+                    default_case = EAknEditorUpperCase;
+                    allowed_case_modes = EAknEditorUpperCase;
+                    }; 
+                };
+            }
+        };
+    }
+
+
+
+
+RESOURCE DIALOG r_register_dialog
+{
+//	flags = EGeneralQueryFlags | 0x800000; //EEikDialogFlagVirtualInput  
+	flags = EGeneralQueryFlags; 
+	buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items =
+	{
+	DLG_LINE
+		{
+		type = EAknCtQuery;
+		id = EGeneralQuery;
+		control = AVKON_DATA_QUERY
+			{
+			layout = EDataLayout;
+            label = txt_reg_code;
+
+			control = EDWIN
+				{
+                   	flags = EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+   	            	width = 10;
+           	    	lines = 1;
+       	      		maxlength = 8;
+       	     		default_case = EAknEditorLowerCase;
+				};
+			};
+		}
+	};
+}
+
+
+
+
+/*RESOURCE DIALOG r_warning_option_query
+	{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_YES_NO;
+	items =
+		{
+		DLG_LINE
+ 			{
+			type = EAknCtQuery;
+			id = EGeneralQuery;
+			control = AVKON_CONFIRMATION_QUERY
+				{
+				layout = EConfirmationQueryLayout;
+				label = txt_warning_option;
+				};
+			}
+		};
+	}*/
+
+
+RESOURCE DIALOG r_sms_query
+{
+	flags = EGeneralQueryFlags;//| 0x800000; //EEikDialogFlagVirtualInput  
+	buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items =
+	{
+	DLG_LINE
+		{
+		type = EAknCtQuery;
+		id = EGeneralQuery;
+		control = AVKON_DATA_QUERY
+			{
+			layout = EDataLayout;
+			label  = txt_sms_text;
+
+			control = EDWIN
+				{
+				width = 5;
+				lines = 1;
+				};
+			};
+		}
+	};
+}
+
+
+RESOURCE DIALOG r_sim_query
+{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items =
+	{
+	DLG_LINE
+		{
+		type = EAknCtQuery;
+		id = EGeneralQuery;
+		control = AVKON_DATA_QUERY
+			{
+			layout = EDataLayout;
+			label  = txt_sim;
+
+			control = EDWIN
+				{
+				width = 5;
+				lines = 1;
+				};
+			};
+		}
+	};
+}
+
+
+
+RESOURCE DIALOG r_pass_query
+{
+	flags = EGeneralQueryFlags;// | 0x800000; //EEikDialogFlagVirtualInput  
+	buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items =
+	{
+		DLG_LINE
+		{
+			type = EAknCtQuery;
+			id = EGeneralQuery;
+			control = AVKON_DATA_QUERY
+			{
+				layout = EPinLayout;
+				label = txt_pass;
+				control = NUMSECRETED
+				{
+					num_code_chars = 8;
+				};
+			};
+		}
+	};
+}
+
+
+
+/*
+RESOURCE DIALOG r_pass_query
+{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items =
+	{
+	DLG_LINE
+		{
+		type = EAknCtQuery;
+		id = EGeneralQuery;
+		control = AVKON_DATA_QUERY
+			{
+	        layout = ECodeLayout;
+			label = txt_pass;
+			control = SECRETED			// NON CONSENTE ALFAB. CIRILLICO
+				{
+				num_letters = 8;
+				};
+
+//			layout = EPinLayout;
+//			label  = txt_pass;
+//			control = SECRETED
+//				{
+//				num_letters = 5;
+//				};
+			};
+		}
+	};
+}*/
+
+
+
+ 
+RESOURCE DIALOG r_pass_visible_query
+{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items =
+	{
+		DLG_LINE
+		{
+			type = EAknCtQuery;
+			id = EGeneralQuery;
+			control = AVKON_DATA_QUERY
+			{
+				//layout = EPinLayout;
+				//label  = txt_pass;
+				//control = EDWIN
+				//{
+				//};
+				
+				label  = txt_pass;
+				layout = ENumberLayout;
+				control = AVKON_INTEGER_EDWIN
+					{
+					min = 00000;
+					max = 99999999;
+					};   
+			};
+		}
+	};
+}
+    
+            
+
+RESOURCE AKN_ICON_ARRAY r_icon_protection
+{
+	type = EAknIconArraySimple;
+	bmpfile = "z:\resource\apps\AVKON2.MBM";
+	icons =
+	{
+		AKN_ICON
+		{
+			iconId = EMbmAvkonQgn_indi_checkbox_on;
+			maskId = EMbmAvkonQgn_indi_checkbox_on_mask;
+		},
+		AKN_ICON
+		{
+			iconId = EMbmAvkonQgn_indi_checkbox_off;
+			maskId = EMbmAvkonQgn_indi_checkbox_off_mask;
+		}
+	};
+}
+
+
+
+RESOURCE TITLE_PANE r_about_title
+	{
+	txt = txt_about;
+	}
+
+RESOURCE TITLE_PANE r_protected_apps_title
+	{
+	txt = txt_protected_apps;
+	}
+
+RESOURCE TITLE_PANE r_protected_system_apps_title
+	{
+	txt = txt_protected_system_apps;
+	}
+
+RESOURCE TITLE_PANE r_settings_title
+	{
+	txt = txt_settings;
+	}
+
+RESOURCE TITLE_PANE r_sim_list_title
+	{
+	txt = txt_sim_list;
+	}
+
+/**/
+RESOURCE TBUF r_web_name { buf="Guardian-Mobile"; }
+RESOURCE TBUF r_http_buy { buf="http://www.Guardian-Mobile.com/Buy.aspx?"; }
+RESOURCE TBUF r_guardian_sisx  { buf="guardian.sisx"; }
+RESOURCE TBUF80 r_down_completed { buf=txt_down_completed; }
+RESOURCE TBUF80 r_no_update  { buf=txt_no_update; }
+RESOURCE TBUF32 r_after  { buf=txt_after; }
+RESOURCE TBUF32 r_immediately  { buf=txt_immediately; }
+RESOURCE TBUF32 r_never  { buf=txt_never; }
+RESOURCE TBUF32 r_sec  { buf=txt_seconds; }
+RESOURCE TBUF32 r_min1  { buf=txt_minute; }
+RESOURCE TBUF32 r_min  { buf=txt_minutes; }
+RESOURCE TBUF32 r_hou1  { buf=txt_hour; }
+RESOURCE TBUF32 r_hou  { buf=txt_hours; }
+RESOURCE TBUF32 r_phone_number  { buf=txt_phone; }
+RESOURCE TBUF32 r_text_sms  { buf=txt_sms_text; }
+RESOURCE TBUF32 r_protect_app  { buf=txt_protect_app; }
+RESOURCE TBUF32 r_password  { buf=txt_pass; }
+RESOURCE TBUF32 r_status  { buf=txt_status; }
+RESOURCE TBUF32 r_active  { buf=txt_active; }
+RESOURCE TBUF32 r_inactive  { buf=txt_inactive; }
+RESOURCE TBUF64 r_warning_sms { buf=txt_warning_sms; }
+//RESOURCE TBUF32 r_settings { buf=txt_settings; }
+//RESOURCE TBUF32 r_sim_list  { buf=txt_sim_list; }
+//RESOURCE TBUF32 r_protected_apps  { buf=txt_protected_apps; }
+RESOURCE TBUF32 r_yes  { buf=txt_yes; }
+RESOURCE TBUF32 r_no  { buf=txt_no; }
+RESOURCE TBUF32 r_on_sim_change	{ buf=txt_on_sim_change; }
+RESOURCE TBUF32 r_on_startup	{ buf=txt_on_startup; }
+RESOURCE TBUF32 r_lock_phone	{ buf=txt_lock_phone; }
+RESOURCE TBUF32 r_monitor { buf=txt_monitor; }
+RESOURCE TBUF32 r_sms  { buf=txt_sms; }
+RESOURCE TBUF32 r_calls  { buf=txt_calls; }
+RESOURCE TBUF32 r_sms_in  { buf=txt_sms_in; }
+RESOURCE TBUF32 r_sms_out  { buf=txt_sms_out; }
+RESOURCE TBUF32 r_calls_in  { buf=txt_calls_in; }
+RESOURCE TBUF32 r_calls_out { buf=txt_calls_out; }
+RESOURCE TBUF32 r_incoming { buf=txt_incoming; }
+RESOURCE TBUF32 r_outgoing { buf=txt_outgoing; }
+RESOURCE TBUF32 r_all { buf=txt_all; }
+RESOURCE TBUF80 r_check_for_updates { buf=txt_check_for_updates; }
+RESOURCE TBUF80 r_sim_added { buf=txt_sim_added; }
+
+// ERRORI
+RESOURCE TBUF128 r_force_update	{ buf=txt_force_update; }
+RESOURCE TBUF32 r_ok_code	{ buf=txt_ok_code; }
+RESOURCE TBUF80 r_err_code	{ buf=txt_err_code; }
+RESOURCE TBUF32 r_err_bad_pass { buf=txt_err_bad_pass; }
+RESOURCE TBUF80 r_err_no_number { buf=txt_err_no_number; }
+RESOURCE TBUF80 r_err_no_pass { buf=txt_err_no_pass; }
+RESOURCE TBUF64 r_err_short_pass { buf=txt_err_short_pass; }
+RESOURCE TBUF64 r_err_sim0 { buf=txt_err_sim0; }
+RESOURCE TBUF64 r_license_header { buf=txt_license_header; }
+RESOURCE TBUF64 r_addnewsim_header { buf=txt_addnewsim_header; }
+RESOURCE TBUF64 r_editions_header { buf=txt_editions_header; }
+
+// ERRORI LICENZA
+RESOURCE TBUF80 r_err_licnotfound {buf=txt_err_licnotfound; }
+RESOURCE TBUF80 r_err_licdifimei {buf=txt_err_licdifimei; }
+RESOURCE TBUF64 r_err_licbanned {buf=txt_err_licbanned; }
+RESOURCE TBUF80 r_err_licunkdata {buf=txt_err_licunkdata; }
+RESOURCE TBUF64 r_err_lictransmis {buf=txt_err_lictransmis; }
+RESOURCE TBUF64 r_err_licgeneral {buf=txt_err_licgeneral; }
+
+RESOURCE TBUF128 r_err_unavailinfree {buf=txt_err_unavailinfree; }
+RESOURCE TBUF128 r_err_buy_iridium { buf=txt_err_buy_iridium; }
+
+RESOURCE DIALOG R_QUERY_SIM_ADDED
+    {
+    flags = EGeneralQueryFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtQuery;
+            id = EGeneralQuery;
+            control = AVKON_CONFIRMATION_QUERY
+                {
+                layout = EConfirmationQueryLayout;
+                animation = R_QGN_NOTE_OK_ANIM;   
+                };
+            }
+        };
+    }
+    
+

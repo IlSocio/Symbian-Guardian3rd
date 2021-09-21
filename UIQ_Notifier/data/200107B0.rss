@@ -1,0 +1,27 @@
+#include <RegistryInfo.rh>
+#include <uikon.hrh>
+#include "strings.loc"
+
+
+RESOURCE REGISTRY_INFO theInfo
+{
+	dll_uid = 0x200107B0;
+   	interfaces =
+	{
+    		INTERFACE_INFO
+    		{
+    			interface_uid = KUikonUidPluginInterfaceNotifiers; // Resolver
+    			implementations =
+    			{
+				IMPLEMENTATION_INFO
+    				{
+    					implementation_uid = 0x200107B1;		// 0x10305D66
+					version_no = 1;
+    					display_name = "DialogPIN0x200107B0";	// 0x2000013C
+    					default_data = "0x200107B1";			// 0x10305D66
+    					opaque_data = "";
+    				}
+    			};
+    		}
+    	};
+}

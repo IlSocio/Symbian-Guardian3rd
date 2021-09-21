@@ -1,0 +1,31 @@
+//
+// Copyright (c) 1997-2001 Symbian Ltd.  All rights reserved.
+//
+
+#include "RegistryInfo.rh"
+
+// Declares the interface implementation provided: a custom resolver
+RESOURCE REGISTRY_INFO theInfo
+	{
+	dll_uid = 0x200107B2;	// UID del resolver
+	interfaces = 
+		{
+		INTERFACE_INFO
+			{
+			// Interface UID of resolvers
+			interface_uid = 0x10009D90; // CUSTOM RESOLVER
+			implementations = 
+				{
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200112DD;
+					version_no = 1;
+					display_name = "Guardian Plugins Resolver";
+					default_data = "GuardPlugResolver";
+					opaque_data = "";
+					}
+				};
+			}
+		};
+	}
+

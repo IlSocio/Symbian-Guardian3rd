@@ -1,0 +1,147 @@
+﻿/*
+============================================================================
+ Naziv          : GuardGUI.rls
+ Autor          : Marko Belino
+ Izdanje        :
+ Autorska prava : Sva prava zadržana
+ Opis           : Datoteka lokalizacije
+============================================================================
+*/
+
+#define ELanguage               ELangSerbian
+
+//  LOCALISATION STRINGS
+
+//d:Caption string for app.
+rls_string qtn_app_caption_string 	"Guardian"
+rls_string qtn_app_short_caption_string "Guardian"
+
+
+rls_string txt_help "Help"
+
+rls_string txt_license_header 		"Ugovor o korišćenju"
+
+rls_string txt_register_op_net 		"Korišćenjem ID licence"
+rls_string txt_register_op_code 	"Koristeći kôd"
+rls_string txt_prod_1			"1. deo licencnog ID-a"
+rls_string txt_prod_2			"2. deo licencnog ID-a"
+
+
+rls_string txt_protect_app_ext 	   	"Zaštiti aplikacije:"
+rls_string txt_protect_app 	   	"Zaštiti aplikacije:"
+rls_string txt_after 		   	"Nakon"
+
+rls_string txt_immediately		"Odmah"
+rls_string txt_never			"Nikada"
+rls_string txt_second			"sekund"
+rls_string txt_seconds			"sekundi"
+rls_string txt_minute			"minut"
+rls_string txt_minutes			"minuta"
+rls_string txt_hour			"čas"
+rls_string txt_hours			"časa"
+
+
+// Comuni
+rls_string txt_register 		"Registracija"
+rls_string txt_exit 			"Izlaz"
+
+// Vista About
+rls_string txt_check_for_updates       	"Provjerite online ažuriranu verziju?"
+rls_string txt_check_updates 		"Provera ažuriranja"
+rls_string txt_send 			"Pošalji Guardian"
+rls_string txt_send_ir 			"Koristeći Infrared"
+rls_string txt_send_bt 			"Koristeći Bluetooth"
+rls_string txt_about 			"O programu"
+rls_string txt_license 			"Licenca"
+rls_string txt_imei_code 		"IMEI:"
+rls_string txt_reg_code 		"Registracioni kôd:"
+
+// Vista Settings
+rls_string txt_settings 		"Podešavanja"
+
+rls_string txt_phone  			"Primalac:"
+rls_string txt_sms_text			"SMS tekst:"
+rls_string txt_pass   			"Tajni kôd:"
+rls_string txt_lock_phone		"Zaključavanja Telefona:"
+rls_string txt_on_sim_change		"Na Sim Promjene"
+rls_string txt_on_startup		"Prilikom Pokretanja"
+
+rls_string txt_status 			"Stanje:"
+rls_string txt_active	   		"Omogućeno"
+rls_string txt_inactive	   		"Onemogućeno"
+rls_string txt_yes			"Da"
+rls_string txt_no			"Ne"
+rls_string txt_monitor			"Monitor:"
+rls_string txt_sms			"Sms:"
+rls_string txt_calls			"Pozivi:"
+rls_string txt_sms_in			"Dolazni Sms"
+rls_string txt_sms_out			"Odlazni Sms"
+rls_string txt_calls_in			"Dolazni Pozivi"
+rls_string txt_calls_out		"Odlazni Pozivi"
+rls_string txt_all			"Sve"
+rls_string txt_incoming			"Dolazni"
+rls_string txt_outgoing			"Odlazni"
+rls_string txt_monitor_ext		"Monitor Sms i Pozivi:"
+
+
+rls_string txt_please_wait		"Prenos je u toku...\nMolimo sačekajte."
+rls_string txt_change 			"Izmeni"
+
+// Vista SimList
+rls_string txt_sim_list 		"Ovlašćeni SIM-ovi"
+rls_string txt_sim 			"Naziv SIM-a:"
+rls_string txt_rename_sim 		"Preimenuj"
+rls_string txt_remove_sim 		"Ukloni"
+rls_string txt_add_sim 			"Dodaj"
+rls_string txt_addnewsim_header 	"Dodaj novi SIM"
+
+
+// Vista Protection
+rls_string txt_protected_apps		"Zaštićene aplikacije"
+rls_string txt_large_icons		"Velike ikone"
+rls_string txt_small_icons		"Male ikone"
+rls_string txt_guardian_pass		"Tajni kôd:"
+
+rls_string txt_show_apps		"Pokazuju Apps"
+rls_string txt_all_apps			"Sve"
+rls_string txt_user_apps		"Korisnik Apps"
+rls_string txt_rom_apps			"ROM Apps"
+rls_string txt_system_apps		"Sustav Apps"
+
+
+rls_string txt_sim_added	   	"Ovaj SIM je registrovan pod nazivom: "
+rls_string txt_confirm_exit		"Izlaz iz Guardiana?"
+
+rls_string txt_warning_sms		"Pažnja! SIM je promenjen."
+
+rls_string txt_buy			"Kupi"
+rls_string txt_buy_gold			"Gold izdanje"
+rls_string txt_buy_platinum		"Platinum izdanje"
+rls_string txt_buy_iridium		"Iridium izdanje"
+
+// ERRORI
+rls_string txt_down_completed		"Ažuriranje je sačuvano u fascikli primljenih poruka."
+rls_string txt_no_update		"Guardian je ažuran sa poslednjim dostupnim izdanjem."
+rls_string txt_update			"Novo izdanje je dostupno.\nŽelite li da preuzmete ažuriranje?"
+rls_string txt_ok_code			"Registracija je završena!"
+rls_string txt_err_code			"Pogrešan registarski kôd!\nUnesite ispravni registarski kôd."
+rls_string txt_err_bad_pass		"Tajni kôd je pogrešan!"
+rls_string txt_err_no_number		"Nije određen primalac.\nIzaberite primaoca za nastavak."
+rls_string txt_err_no_pass		"Tajni kôd nije postavljen.\nUnesite tajni kôd za nastavak."
+rls_string txt_err_short_pass		"Tajni kôd je previše kratak"
+rls_string txt_err_sim0			"Nije moguće ukloniti, to je jedini dostupni SIM!"
+
+rls_string txt_err_licnotfound		"Neispravna je licenca.\nUnesite ispravan ID licence."
+rls_string txt_err_licdifimei		"ID licence već je registrovan.\nMolimo vas da kupite novi ID licence."
+rls_string txt_err_licbanned		"Previše zahteva.\nMolimo, pokušajte kasnije."
+rls_string txt_err_licunkdata		"Problem sa odgovorom sa servera.\nMolimo, pokuajte kasnije."
+rls_string txt_err_lictransmis		"Problem prenosa.\nMolimo, pokušajte ponovo."
+rls_string txt_err_licgeneral		"Opšti problem.\nMolimo, pokušajte ponovo."
+
+rls_string txt_err_unavailinfree 	"Ova mogućnost nije dostupna u besplatnom izdanju.\nKupite Gold, Platinum ili Iridium."
+rls_string txt_err_buy_iridium		"Ova značajka nije dostupna u tom izdanju.\nKupite Iridium."
+
+rls_string txt_force_update		"Besplatno izdanje trebalo bi da se ažurira svakih 15 dana.\nAžurirajte ili kupite Gold, Platinum ili Iridium."
+rls_string txt_query_check_updates	"Želite li da proverite ažuriranja odmah?"
+
+rls_string txt_editions_header  "Gold, Platinum, Iridium"

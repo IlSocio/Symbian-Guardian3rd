@@ -1,0 +1,171 @@
+CHARACTER_SET UTF8
+
+// Localisation
+
+				// English
+#ifdef LANGUAGE_01
+#include "guard.strings.en.l01"
+#endif
+
+
+// French 
+#ifdef LANGUAGE_02
+#include "guard.strings.fr.l02"
+#endif
+
+
+// German
+#ifdef LANGUAGE_03
+#include "guard.strings.de.l03"
+#endif
+
+
+				// Spanish - ES
+#ifdef LANGUAGE_04
+#include "guard.strings.es.l04"
+#endif
+
+
+				// Italian
+#ifdef LANGUAGE_05
+#include "guard.strings.it.l05"
+#endif
+
+
+// Swedish
+#ifdef LANGUAGE_06
+#include "strings.l06"
+#endif
+
+
+// Finnish
+#ifdef LANGUAGE_09
+#include "strings.l09"
+#endif
+
+
+// American
+#ifdef LANGUAGE_10
+#include "strings.l10"
+#endif
+
+
+// Portuguese
+#ifdef LANGUAGE_13
+#include "strings.l13"
+#endif
+
+
+				// Turkish
+#ifdef LANGUAGE_14
+#include "strings.l14"
+#endif
+
+
+				// Russian - RU
+#ifdef LANGUAGE_16
+#include "strings.ru.l16"
+#endif
+
+
+				// Dutch - NL
+#ifdef LANGUAGE_18
+#include "strings.nl.l18"
+#endif
+
+
+				// Czech - CS
+#ifdef LANGUAGE_25
+#include "strings.cs.l25"
+#endif
+
+
+				// Slovenian - SL
+#ifdef LANGUAGE_28
+#include "strings.sl.l28"
+#endif
+
+
+				// Chinese - TC HK ZH
+#ifdef LANGUAGE_31
+#include "strings.zh.l31"
+#endif
+
+
+				// Arabic - AR
+#ifdef LANGUAGE_37
+#include "strings.ar.l37"
+#endif
+
+
+// Tagalog
+#ifdef LANGUAGE_39
+#include "strings.l39"
+#endif
+
+
+// Bulgarian
+#ifdef LANGUAGE_42
+#include "strings.l42"
+#endif
+
+
+// Croatian
+#ifdef LANGUAGE_45
+#include "strings.l45"
+#endif
+
+
+				// Farsi
+#ifdef LANGUAGE_50
+#include "strings.fa.l50"
+#endif
+
+
+// Greek
+#ifdef LANGUAGE_54
+#include "strings.l54"
+#endif
+
+
+// Hebrew
+#ifdef LANGUAGE_57
+#include "strings.l57"
+#endif
+
+
+// Khmer
+#ifdef LANGUAGE_64
+#include "strings.l64"
+#endif
+
+
+// Malese
+#ifdef LANGUAGE_70
+#include "strings.l70"
+#endif
+
+
+// BrazilianPortuguese
+#ifdef LANGUAGE_76
+#include "strings.l76"
+#endif
+
+
+// Serbian
+#ifdef LANGUAGE_79
+#include "guard.strings.sr.l79"
+#endif
+
+
+				// CyprusTurkish
+#ifdef LANGUAGE_91
+#include "strings.l91"
+#endif
+
+
+				// ELangUkrainian
+#ifdef LANGUAGE_93
+#include "strings.uk.l93"
+#endif
+

@@ -1,0 +1,4 @@
+Para añadir una nueva SIM:
+-1 Deshabilite temporalmente Guardian y cierre la aplicación.
+-2 Reemplace la SIM.
+-3 Finalmente, entrando otra vez en Guardian, la nueva SIM será añadida automáticamente a la lista de SIMs autorizadas.

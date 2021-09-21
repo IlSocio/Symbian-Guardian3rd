@@ -1,0 +1,48 @@
+
+NAME    PIND
+
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.mbg>
+#include <appinfo.rh>
+#include "DialogPIN.hrh"
+#include "strings.loc"
+
+RESOURCE RSS_SIGNATURE { }
+RESOURCE TBUF { buf = "DialogPIN"; }
+
+
+RESOURCE DIALOG r_pin_query
+{
+	flags = EGeneralQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items =
+	{
+	DLG_LINE
+		{
+		type = EAknCtQuery;
+		id = EPinID;
+		control = AVKON_DATA_QUERY
+			{
+	        layout = EPinLayout;
+			label = txt_guardian_pass;
+			control = NUMSECRETED
+				{
+				num_code_chars = 8;
+				};
+				
+//			layout = ENumberLayout;
+//			label  = "Guardian Password:";
+//			control = NUMBER_EDITOR
+//				{
+//				min = 00000;
+//				max = 99999999;
+//				}; 
+			};
+		}
+	};
+}
+
+
+RESOURCE TBUF64 r_wrong_pass { buf=txt_err_bad_pass; }

@@ -1,0 +1,126 @@
+// prova10.rls
+
+// rls_string STRING_r_prova10_dialog "splashscreen"
+
+rls_string txt_fuzzy "A FuzzyByte Product:"
+rls_string txt_email "info@fuzzy-byte.com"
+rls_string txt_web "http://www.fuzzy-byte.com/"
+rls_string txt_reserved "All rights reserved 2008"
+rls_string txt_guardian "Guardian GOLD Edition"
+rls_string txt_version "Version 1.0"
+
+rls_string STRING_r_prova10tabCommand1 "Settings"
+rls_string STRING_r_prova10tabCommand2 "Privacy"
+rls_string STRING_r_prova10tabCommand3 "Esci"
+rls_string STRING_r_prova10tabCommand4 "Cambia"
+rls_string STRING_r_prova10tabCommand5 "Rinomina"
+rls_string STRING_r_prova10tabCommand6 "Aggiungi"
+
+rls_string txt_mia_sim "Mia SIM"
+
+rls_string txt_stato "Status:"
+rls_string txt_destin "Recipient:"
+rls_string txt_message "Message:"
+rls_string txt_password "Code:"
+
+rls_string txt_enabled "Enabled"
+rls_string txt_disabled "Disabled"
+rls_string txt_sim_cambiata "Warning Sim Changed!"
+
+
+// The text showed in the exit dialog
+rls_string STRING_r_exit_dialog_title "Esci"
+rls_string STRING_r_exit_dialog_text "Vuoi uscire da guardian?"
+rls_string STRING_r_exit_dialog_yes "Si"
+rls_string STRING_r_exit_dialog_no "No"
+
+
+// The text showed in the exit dialog
+rls_string STRING_r_text_dialog_title "Testo Lungo"
+rls_string STRING_r_text_dialog_text "Mille caratteriMille caratteriMille caratteriMille caratteriMille caratteriMille caratteriMille caratteriMille caratteriMille caratteriMille caratteriMille caratteriMille caratteriMille "
+rls_string STRING_r_text_dialog_yes "Si"
+rls_string STRING_r_text_dialog_no "No"
+
+rls_string STRING_r_notifier_message_text "Messaggio Informativo"
+rls_string STRING_r_notifier_warning_text "Messaggio di Warning"
+rls_string STRING_r_notifier_error_text "Messaggio di Error"
+
+rls_string STRING_r_info_dialog_text "testo Informazione"
+rls_string STRING_r_info_dialog_title "titolo Informazione"
+
+
+rls_string STRING_r_prova10_list_text "Scelta della lista"
+rls_string STRING_r_prova10list_cmd_close "cmlist!"
+rls_string STRING_r_prova10list_element "elemento lista"
+
+rls_string STRING_r_viewcontext_string1 "tab1"
+rls_string STRING_r_viewcontext_string2 "tab2"
+rls_string STRING_r_viewcontext_string3 "tab3"
+
+rls_string STRING_r_secret_text "Code: "
+
+
+//************************************************************************
+
+// Comuni
+rls_string txt_register 	"Registration"
+rls_string txt_credits 		"Credits"
+rls_string txt_exit 		"Exit"
+
+// Vista About
+rls_string txt_about 		"About"
+rls_string txt_privacy 		"Privacy"
+rls_string txt_imei_code 	"IMEI:"
+rls_string txt_reg_code 	"Registration Code:"
+
+// Vista Settings
+rls_string txt_settings 		"Settings"
+
+rls_string txt_phone  		"Recipient:"
+rls_string txt_sms   		"SMS Text:"
+rls_string txt_background 	"Execute SMS Commands:"
+rls_string txt_pass   		"Code:"
+
+rls_string txt_always   		"Always"
+rls_string txt_sim_change  		"On SIM Change"
+rls_string txt_warning_option	"This Setting is not recommended, Continue?"
+
+rls_string txt_status 		"Status:"
+rls_string txt_yes	   		"Enabled"
+rls_string txt_no	   		"Disabled"
+
+
+// Messaggio di popup settings
+rls_string txt_change 		"Change"
+
+// Vista SimList
+rls_string txt_sim_list 		"Authorized Sim"
+rls_string txt_sim 				"Sim Name:"
+rls_string txt_rename_sim 		"Rename"
+rls_string txt_remove_sim 		"Remove"
+rls_string txt_add_sim 			"Add"
+
+
+// Vista Protection
+rls_string txt_protected_apps	"Protected Applications"
+rls_string txt_large_icons		"Large Icons"
+rls_string txt_small_icons		"Small Icons"
+rls_string txt_guardian_pass	"Guardian Code:"
+
+
+rls_string txt_sim_added	   	"This SIM has been Registered using name: "
+rls_string txt_confirm_exit		"Exit Guardian?"
+
+rls_string txt_warning_sms		"Warning Sim Changed!"
+
+// ERRORI
+rls_string txt_ok_code			"Thank You!"
+rls_string txt_err_code			"Wrong Code!"
+rls_string txt_err_bad_pass		"Wrong Code"
+rls_string txt_err_imei			"Errore Lettura IMEI"
+rls_string txt_err_imsi			"Errore Lettura IMSI"
+rls_string txt_err_diff_imei	"IMEI differente"
+rls_string txt_err_no_number	"Recipient not set"
+rls_string txt_err_no_pass		"Code not set"
+rls_string txt_err_short_pass	"Code Short"
+rls_string txt_err_sim0			"Can't Remove SIM, SIM in use"

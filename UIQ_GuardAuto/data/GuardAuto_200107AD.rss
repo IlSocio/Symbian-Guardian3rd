@@ -1,0 +1,26 @@
+
+
+#include <RegistryInfo.rh>
+
+RESOURCE REGISTRY_INFO r_registry
+	{
+	dll_uid = 0x200107AD; // should match name of this file
+	interfaces =
+		{
+		INTERFACE_INFO
+			{
+			interface_uid = 0x101F7D87;  // DATA RECOGNIZER
+			implementations =
+				{
+				IMPLEMENTATION_INFO
+					{
+					implementation_uid = 0x200107B3;
+					version_no = 1;
+					display_name = "GuardAuto";
+					default_data = "";
+					opaque_data = "";
+					}
+				};
+			}
+		};
+	}

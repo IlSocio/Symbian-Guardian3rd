@@ -1,0 +1,413 @@
+
+include \Symbian\9.1\S60_3rd_MR\epoc32\tools\compilation_config\\GCCE.mk
+
+
+# CWD \online\Guardian3rd\Uninstall\group\
+# MMPFile \online\Guardian3rd\Uninstall\group\Uninstall.MMP
+# Target Uninstall_200107b4.exe
+# TargetType EXE
+# BasicTargetType EXE
+# MakefileType GNU
+
+ERASE = @erase 2>>nul
+
+# EPOC DEFINITIONS
+
+EPOCBLD = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Uninstall\group\Uninstall\GCCE
+EPOCTRG = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE
+EPOCLIB = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5
+EPOCLINK = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5
+EPOCSTATLINK = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5
+EPOCASSPLINK = ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\MARM
+EPOCDATA = \Symbian\9.1\S60_3rd_MR\EPOC32\DATA
+EPOCINC = \Symbian\9.1\S60_3rd_MR\EPOC32\INCLUDE
+TRGDIR = 
+DATADIR = Z\System\Data
+
+EPOCBLDUREL = $(EPOCBLD)\UREL
+EPOCTRGUREL = $(EPOCTRG)\UREL
+EPOCLIBUREL = $(EPOCLIB)\UREL
+EPOCLINKUREL = $(EPOCLINK)\UREL
+EPOCSTATLINKUREL = $(EPOCSTATLINK)\UREL
+EPOCASSPLINKUREL = $(EPOCASSPLINK)\UREL
+
+EPOCBLDUDEB = $(EPOCBLD)\UDEB
+EPOCTRGUDEB = $(EPOCTRG)\UDEB
+EPOCLIBUDEB = $(EPOCLIB)\UREL
+EPOCLINKUDEB = $(EPOCLINK)\UREL
+EPOCSTATLINKUDEB = $(EPOCSTATLINK)\UDEB
+EPOCASSPLINKUDEB = $(EPOCASSPLINK)\UREL
+
+# EPOC PSEUDOTARGETS
+
+UREL : MAKEWORKUREL RESOURCEUREL
+
+UDEB : MAKEWORKUDEB RESOURCEUDEB
+
+ALL : UREL UDEB
+
+CLEAN CLEANALL : CLEANBUILD CLEANRELEASE CLEANLIBRARY
+
+
+
+WHAT WHATALL : WHATUREL WHATUDEB
+
+RESOURCE RESOURCEALL : RESOURCEUREL RESOURCEUDEB
+
+CLEANBUILD CLEANBUILDALL : CLEANBUILDUREL CLEANBUILDUDEB
+
+CLEANRELEASE CLEANRELEASEALL : CLEANRELEASEUREL CLEANRELEASEUDEB
+
+MAKEWORK MAKEWORKALL : MAKEWORKUREL MAKEWORKUDEB
+
+LISTING LISTINGALL : LISTINGUREL LISTINGUDEB
+
+MAKEWORK : MAKEWORKLIBRARY
+
+RESOURCEUREL RESOURCEUDEB : GENERIC_RESOURCE
+
+
+# must set both PATH and Path to make it work correctly
+Path:=C:\Symbian\9.1\S60_3rd_MR\EPOC32\gcc\bin;$(Path)
+PATH:=$(Path)
+
+ifndef CC_INSTALL_PATH
+	CC_INSTALL_PATH=C:\Programmi\CSL Arm Toolchain\bin\..
+	STATIC_LIBS = $(STATIC_LIBS_PATH)"$(CC_INSTALL_PATH)\arm-none-symbianelf\lib" $(STATIC_LIBS_PATH)"$(CC_INSTALL_PATH)\lib\gcc\arm-none-symbianelf\3.4.3"
+endif
+ifdef LINKER_SYMBOLS_MAP_OPTION
+	UREL_MAP_FILE="$(EPOCTRGUREL)\Uninstall_200107b4.exe.map"
+	UDEB_MAP_FILE="$(EPOCTRGUDEB)\Uninstall_200107b4.exe.map"
+else
+	UREL_MAP_FILE=
+	UDEB_MAP_FILE=
+endif
+
+
+ifdef CODE_SEGMENT_START
+	CODE_SEGMENT_START += 0x8000 
+endif
+ifdef START_GROUP_SYMBOL
+	EEXE_OBJECT=$(START_GROUP_SYMBOL)UC_EXE_.o$(END_GROUP_SYMBOL)
+	EDLL_OBJECT=$(START_GROUP_SYMBOL)UC_DLL_.o$(END_GROUP_SYMBOL)
+	DENTRY_OBJECT=$(START_GROUP_SYMBOL)D_ENTRY_.o$(END_GROUP_SYMBOL)
+	LENTRY_OBJECT=$(START_GROUP_SYMBOL)L_ENTRY_.o$(END_GROUP_SYMBOL)
+	XENTRY_OBJECT=$(START_GROUP_SYMBOL)X_ENTRY_.o$(END_GROUP_SYMBOL)
+	VENTRY_OBJECT=$(START_GROUP_SYMBOL)V_ENTRY_.o$(END_GROUP_SYMBOL)
+	KENTRY_OBJECT=$(START_GROUP_SYMBOL)K_ENTRY_.o$(END_GROUP_SYMBOL)
+endif
+
+INCDIR =  $(INCLUDE_OPTION) ..\..\Guardian\inc  $(INCLUDE_OPTION) ..\inc  $(INCLUDE_OPTION) ..\..\Server\inc $(INCLUDE_OPTION) ..\..\..\..\Symbian\9.1\S60_3rd_MR\EPOC32\include $(INCLUDE_OPTION) ..\..\..\..\Symbian\9.1\S60_3rd_MR\epoc32\include\variant $(INCLUDE_OPTION) "C:\Programmi\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include"
+
+OTHEROPTIONS= $(THUMB_INSTRUCTION_SET)  $(SOFTVFPMODE_OPTION)  $(COMPILER_THUMB_DEFINES)  $(COMPILER_INTERWORK_DEFINES) 
+CCFLAGS += $(OTHEROPTIONS)
+CCDEFS = $(COMPILER_DEFINES)  -D__SYMBIAN32__ -D__SERIES60_30__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D__EXE__ -D__SUPPORT_CPP_EXCEPTIONS__ $(PLATFORM_DEFINES)  -D__PRODUCT_INCLUDE__=\"/Symbian/9.1/S60_3rd_MR/epoc32/include/variant/Symbian_OS_v9.1.hrh\" $(USERDEFS)
+
+CCUREL = $(CC)  $(SYMBIAN_UREL_CCFLAGS) $(RUNTIME_SYMBOL_VISIBILITY_OPTION) $(CCFLAGS)  -DNDEBUG -D_UNICODE $(CCDEFS)
+CCUDEB = $(CC)  $(SYMBIAN_UDEB_CCFLAGS) $(RUNTIME_SYMBOL_VISIBILITY_OPTION) $(CCFLAGS)  -D_DEBUG -D_UNICODE $(CCDEFS)
+
+
+UREL : \
+	$(EPOCTRGUREL)\Uninstall_200107b4.exe
+
+UDEB : \
+	$(EPOCTRGUDEB)\Uninstall_200107b4.exe
+
+
+RESOURCEUREL : MAKEWORKUREL
+RESOURCEUDEB : MAKEWORKUDEB
+
+LIBRARY : MAKEWORKLIBRARY
+
+ : 
+	perl -S emkdir.pl $@
+
+
+FREEZE : 
+
+CLEANLIBRARY :
+
+
+GENERIC_RESOURCE : GENERIC_MAKEWORK
+
+# REAL TARGET - BUILD VARIANT UREL
+
+WHATUREL : WHATGENERIC
+
+CLEANUREL : CLEANBUILDUREL CLEANRELEASEUREL
+
+CLEANBUILDUREL : 
+	@perl -S ermdir.pl "$(EPOCBLDUREL)"
+
+CLEANRELEASEUREL : CLEANGENERIC
+
+
+UREL_RELEASEABLES1= \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL\Uninstall_200107b4.exe \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL\Uninstall_200107b4.exe.map
+
+WHATUREL:
+	@echo $(UREL_RELEASEABLES1)
+
+CLEANRELEASEUREL:
+	-$(ERASE) $(UREL_RELEASEABLES1)
+
+LISTINGUREL : MAKEWORKUREL \
+	LISTINGURELSecurityCode \
+	LISTINGURELUninstall
+
+LIBSUREL= \
+	$(EPOCLIB)\LIB\efsrv.dso \
+	$(EPOCLIB)\LIB\GuardCli_200107AC.dso \
+	$(EPOCLIB)\LIB\euser.dso \
+	$(EPOCSTATLINKUREL)\usrt2_2.lib \
+	$(EPOCLIB)\LIB\dfpaeabi.dso \
+	$(EPOCLIB)\LIB\dfprvct2_2.dso \
+	$(EPOCLIB)\LIB\drtaeabi.dso \
+	$(EPOCLIB)\LIB\scppnwdl.dso \
+	$(EPOCLIB)\LIB\drtrvct2_2.dso \
+	$(STATIC_LIBS_LIST)
+
+VTBLEXPORTSUREL=
+
+OBJECTSUREL= \
+	$(EPOCBLDUREL)\SecurityCode.o \
+	$(EPOCBLDUREL)\Uninstall.o
+
+$(EPOCTRGUREL)\Uninstall_200107b4.exe : $(OBJECTSUREL)
+	-$(ERASE) "$(EPOCTRGUREL)\Uninstall_200107b4.exe.map" 
+	$(LD) $(STATIC_LIBS) $(SYMBIAN_UREL_LINK_FLAGS) $(SHARED_OBJECT_OPTION) $(CODE_SEGMENT_START) $(DATA_SEGMENT_START) 0x400000 $(SYMVER_OPTION) $(SO_NAME_OPTION) Uninstall_200107b4{000a0000}[200107b4].exe $(LINKER_ENTRY_OPTION) _E32Startup  $(UNDEFINED_SYMBOL_REF_OPTION) _E32Startup  $(EPOCSTATLINKUREL)\EEXE.LIB$(EEXE_OBJECT) \
+		$(OUTPUT_OPTION) "$(EPOCBLDUREL)\Uninstall_200107b4.exe" \
+		$(LINKER_SYMBOLS_MAP_OPTION) $(UREL_MAP_FILE) \
+		$(OBJECTSUREL) \
+		$(LIBSUREL) \
+		$(VTBLEXPORTSUREL) $(USERLDFLAGS) 
+	elf2e32 --sid=0x200107b4 \
+		 --uid1=0x1000007a --uid2=0x00000000 --uid3=0x200107b4 --vid=0x00000000\
+		 --capability=NONE --fpu=softvfp --targettype=EXE --output="$@" --elfinput="$(EPOCBLDUREL)\Uninstall_200107b4.exe" --linkas=Uninstall_200107b4{000a0000}[200107b4].exe --libpath="$(EPOCLIB)\LIB"
+
+
+# REAL TARGET - BUILD VARIANT UDEB
+
+WHATUDEB : WHATGENERIC
+
+CLEANUDEB : CLEANBUILDUDEB CLEANRELEASEUDEB
+
+CLEANBUILDUDEB : 
+	@perl -S ermdir.pl "$(EPOCBLDUDEB)"
+
+CLEANRELEASEUDEB : CLEANGENERIC
+
+
+UDEB_RELEASEABLES1= \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB\Uninstall_200107b4.exe \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB\Uninstall_200107b4.exe.map
+
+WHATUDEB:
+	@echo $(UDEB_RELEASEABLES1)
+
+CLEANRELEASEUDEB:
+	-$(ERASE) $(UDEB_RELEASEABLES1)
+
+LISTINGUDEB : MAKEWORKUDEB \
+	LISTINGUDEBSecurityCode \
+	LISTINGUDEBUninstall
+
+LIBSUDEB= \
+	$(EPOCLIB)\LIB\efsrv.dso \
+	$(EPOCLIB)\LIB\GuardCli_200107AC.dso \
+	$(EPOCLIB)\LIB\euser.dso \
+	$(EPOCSTATLINKUDEB)\usrt2_2.lib \
+	$(EPOCLIB)\LIB\dfpaeabi.dso \
+	$(EPOCLIB)\LIB\dfprvct2_2.dso \
+	$(EPOCLIB)\LIB\drtaeabi.dso \
+	$(EPOCLIB)\LIB\scppnwdl.dso \
+	$(EPOCLIB)\LIB\drtrvct2_2.dso \
+	$(STATIC_LIBS_LIST)
+
+VTBLEXPORTSUDEB=
+
+OBJECTSUDEB= \
+	$(EPOCBLDUDEB)\SecurityCode.o \
+	$(EPOCBLDUDEB)\Uninstall.o
+
+$(EPOCTRGUDEB)\Uninstall_200107b4.exe : $(OBJECTSUDEB)
+	-$(ERASE) "$(EPOCTRGUDEB)\Uninstall_200107b4.exe.map" 
+	$(LD) $(STATIC_LIBS) $(SYMBIAN_UDEB_LINK_FLAGS) $(SHARED_OBJECT_OPTION) $(CODE_SEGMENT_START) $(DATA_SEGMENT_START) 0x400000 $(SYMVER_OPTION) $(SO_NAME_OPTION) Uninstall_200107b4{000a0000}[200107b4].exe $(LINKER_ENTRY_OPTION) _E32Startup  $(UNDEFINED_SYMBOL_REF_OPTION) _E32Startup  $(EPOCSTATLINKUDEB)\EEXE.LIB$(EEXE_OBJECT) \
+		$(OUTPUT_OPTION) "$(EPOCBLDUDEB)\Uninstall_200107b4.exe" \
+		$(LINKER_SYMBOLS_MAP_OPTION) $(UDEB_MAP_FILE) \
+		$(OBJECTSUDEB) \
+		$(LIBSUDEB) \
+		$(VTBLEXPORTSUDEB) $(USERLDFLAGS) 
+	copy "$(EPOCBLDUDEB)\Uninstall_200107b4.exe" "$(EPOCTRGUDEB)\Uninstall_200107b4.sym"
+	elf2e32 --sid=0x200107b4 \
+		 --uid1=0x1000007a --uid2=0x00000000 --uid3=0x200107b4 --vid=0x00000000\
+		 --capability=NONE --fpu=softvfp --targettype=EXE --output="$@" --elfinput="$(EPOCBLDUDEB)\Uninstall_200107b4.exe" --linkas=Uninstall_200107b4{000a0000}[200107b4].exe --libpath="$(EPOCLIB)\LIB"
+
+
+# SOURCES
+
+# Source SecurityCode.cpp
+
+$(EPOCBLDUREL)\SecurityCode.lis $(EPOCBLDUREL)\SecurityCode.o \
+$(EPOCBLDUDEB)\SecurityCode.lis $(EPOCBLDUDEB)\SecurityCode.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32debug.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32event.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32hal.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32keys.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ktran.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ldr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32lmsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32math.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32math.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32notif.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32svr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\etel3rdparty.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logging.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\partitions.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\telephony.inl \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Guardian\inc\SecurityCode.h
+
+$(EPOCBLDUREL)\SecurityCode.o : \online\Guardian3rd\Guardian\src\Securitycode.cpp
+	@echo Securitycode.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\..\Guardian\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\..\Guardian\src\Securitycode.cpp
+
+LISTINGURELSecurityCode : $(EPOCBLDUREL)\SecurityCode.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\SecurityCode.ARMV5.lst
+
+$(EPOCBLDUREL)\SecurityCode.lis : \online\Guardian3rd\Guardian\src\Securitycode.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\..\Guardian\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\..\Guardian\src\Securitycode.cpp 
+
+$(EPOCBLDUDEB)\SecurityCode.o : \online\Guardian3rd\Guardian\src\Securitycode.cpp
+	@echo Securitycode.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\..\Guardian\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\..\Guardian\src\Securitycode.cpp
+
+LISTINGUDEBSecurityCode : $(EPOCBLDUDEB)\SecurityCode.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Guardian\src\SecurityCode.ARMV5.lst
+
+$(EPOCBLDUDEB)\SecurityCode.lis : \online\Guardian3rd\Guardian\src\Securitycode.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\..\Guardian\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\..\Guardian\src\Securitycode.cpp 
+
+
+
+# Source Uninstall.cpp
+
+$(EPOCBLDUREL)\Uninstall.lis $(EPOCBLDUREL)\Uninstall.o \
+$(EPOCBLDUDEB)\Uninstall.lis $(EPOCBLDUDEB)\Uninstall.o \
+: \
+	$(PREFIXFILE) \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\BADESCA.H \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\Etel3rdParty.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\bamdesca.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\d32locd.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32base.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32capability.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cmn.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32cons.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32const.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32debug.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32def.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des16.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32des8.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32err.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32event.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32hal.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32keys.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ktran.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32ldr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32lmsg.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32notif.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32std.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\e32svr.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\etel3rdparty.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\f32file.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\flogger.inl \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\logging.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\partitions.h \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\include\telephony.inl \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\symcpp.h \
+	\Symbian\9.1\S60_3rd_MR\epoc32\include\variant\Symbian_OS_v9.1.hrh \
+	\online\Guardian3rd\Guardian\inc\SecurityCode.h \
+	\online\Guardian3rd\Server\inc\client.h \
+	\online\Guardian3rd\Server\inc\settings_consts.h \
+	\online\Guardian3rd\Uninstall\inc\Uninstall.h
+
+$(EPOCBLDUREL)\Uninstall.o : \online\Guardian3rd\Uninstall\src\Uninstall.cpp
+	@echo Uninstall.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Uninstall.cpp
+
+LISTINGURELUninstall : $(EPOCBLDUREL)\Uninstall.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Uninstall\src\Uninstall.ARMV5.lst
+
+$(EPOCBLDUREL)\Uninstall.lis : \online\Guardian3rd\Uninstall\src\Uninstall.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Uninstall.cpp 
+
+$(EPOCBLDUDEB)\Uninstall.o : \online\Guardian3rd\Uninstall\src\Uninstall.cpp
+	@echo Uninstall.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Uninstall.cpp
+
+LISTINGUDEBUninstall : $(EPOCBLDUDEB)\Uninstall.lis
+	perl -S ecopyfile.pl $? \online\Guardian3rd\Uninstall\src\Uninstall.ARMV5.lst
+
+$(EPOCBLDUDEB)\Uninstall.lis : \online\Guardian3rd\Uninstall\src\Uninstall.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.1/S60_3rd_MR/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) ..\src $(INCDIR) $(OUTPUT_OPTION) $@ ..\src\Uninstall.cpp 
+
+
+
+ROMFILE:
+	@echo file=\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\##MAIN##\##BUILD##\Uninstall_200107b4.exe sys\bin\Uninstall_200107b4.exe 
+
+
+WHATGENERIC CLEANGENERIC :
+	@rem none
+
+# Rules to create all necessary directories
+
+GENERIC_MAKEWORK : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Uninstall\group\Uninstall\GCCE
+MAKEWORKLIBRARY : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB
+MAKEWORKUDEB : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Uninstall\group\Uninstall\GCCE\UDEB \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB
+MAKEWORKUREL : \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Uninstall\group\Uninstall\GCCE\UREL \
+	\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL
+
+\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Uninstall\group\Uninstall\GCCE \
+\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Uninstall\group\Uninstall\GCCE\UDEB \
+\Symbian\9.1\S60_3rd_MR\EPOC32\BUILD\online\Guardian3rd\Uninstall\group\Uninstall\GCCE\UREL \
+\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\ARMV5\LIB \
+\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UDEB \
+\Symbian\9.1\S60_3rd_MR\EPOC32\RELEASE\GCCE\UREL \
+:
+	perl -S emkdir.pl $@
+

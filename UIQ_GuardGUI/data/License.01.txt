@@ -1,0 +1,28 @@
+﻿LICENSE AGREEMENT AND LIMITED WARRANTY
+
+By downloading or installing this software you accept the terms and conditions of this License Agreement and Limited Warranty.
+
+The software product is provided "as is" without any warranty of any kind. To the maximum extent permitted by applicable law, FuzzyByte and its suppliers disclaim all warranties, either express or implied warranties of merchantability and fitness for a particular purpose.
+
+In no event shall FuzzyByte or its suppliers be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or any other pecuniary loss) arising out of the use of or inability to use this FuzzyByte product.
+
+All rights of any kind, which are not expressly granted in this License, are entirely and exclusively reserved to and by FuzzyByte. You may not modify, translate, reverse engineer, decompile, disassemble or create derivative works based on this product.
+
+This License Agreement does not grant you any rights whatsoever connected with intellectual property or trademarks belonging to FuzzyByte.
+
+FOR YOUR INFORMATION 
+
+This software makes use of data, information and services on your device:
+
+- Send SMS
+- Receive SMS
+- Phonebook
+- Reading IMEI
+- Reading IMSI
+- Retrieving GPS Location
+- Retrieving CellId/Area/Country
+
+You can read again this privacy statemenet selecting Option->Privacy in the About screen.
+
+If you have any questions or concerns, please contact us at info@Fuzzy-Byte.com:
+

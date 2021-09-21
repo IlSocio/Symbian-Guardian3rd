@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Guardian", "Guardian.vcproj", "{87286902-F242-4127-8E78-71D152EF146B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Deb_S60_30M_WINSCW = Deb_S60_30M_WINSCW
+		Debug = Debug
+		Rel_S60_30M_GCCE = Rel_S60_30M_GCCE
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{87286902-F242-4127-8E78-71D152EF146B}.Deb_S60_30M_WINSCW.ActiveCfg = Deb_S60_30M_WINSCW|Win32
+		{87286902-F242-4127-8E78-71D152EF146B}.Deb_S60_30M_WINSCW.Build.0 = Deb_S60_30M_WINSCW|Win32
+		{87286902-F242-4127-8E78-71D152EF146B}.Debug.ActiveCfg = Debug|Win32
+		{87286902-F242-4127-8E78-71D152EF146B}.Debug.Build.0 = Debug|Win32
+		{87286902-F242-4127-8E78-71D152EF146B}.Rel_S60_30M_GCCE.ActiveCfg = Rel_S60_30M_GCCE|Win32
+		{87286902-F242-4127-8E78-71D152EF146B}.Rel_S60_30M_GCCE.Build.0 = Rel_S60_30M_GCCE|Win32
+		{87286902-F242-4127-8E78-71D152EF146B}.Release.ActiveCfg = Release|Win32
+		{87286902-F242-4127-8E78-71D152EF146B}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,4 @@
+To add a new Sim:
+-1 Temporary disable Guardian.
+-2 Replace the sim
+-3 Finally, entering again in Guardian, the new sim will be automatically added to the Authorized Sims List.

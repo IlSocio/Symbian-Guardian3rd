@@ -1,0 +1,19 @@
+// t-server.mmp
+target                                  TestCliSrv.exe 
+targettype                              exe 
+uid                                     0 0x20100000 
+VENDORID                                0 
+capability                              NONE 
+SOURCEPATH                              ..\src 
+SOURCE                                  test.cpp SplitManager.cpp Queue.cpp
+
+USERINCLUDE                             ..\inc 
+USERINCLUDE                             ..\..\..\..\Symbian\9.1\S60_3rd_MR\Examples\Basics\CommonFramework 
+USERINCLUDE                             . 
+SYSTEMINCLUDE                           . 
+SYSTEMINCLUDE                           \epoc32\include 
+//LIBRARY                       GuardCli_200107AC.lib 
+LIBRARY                                 bafl.lib 
+LIBRARY                                 etel3rdparty.lib 
+LIBRARY                                 efsrv.lib 
+library                                 euser.lib charconv.lib 

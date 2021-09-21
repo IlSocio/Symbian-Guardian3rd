@@ -1,0 +1,24 @@
+/*
+============================================================================
+ Name        : bld.inf
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : Component definition file
+============================================================================
+*/
+
+PRJ_PLATFORMS
+WINSCW GCCE
+
+PRJ_EXPORTS
+..\inc\GuardGUI.hrh
+
+PRJ_MMPFILES
+
+//gnumakefile ..\help\build_help.mk
+//gnumakefile Icons_scalable.mk
+//gnumakefile bitmaps.mk
+
+GuardGUI.mmp
+

@@ -1,0 +1,15 @@
+﻿/*
+============================================================================
+ Naziv          : GuardGUI.rls
+ Autor          : Marko Belino
+ Izdanje        :
+ Autorska prava : Sva prava zadržana
+ Opis           : Datoteka lokalizacije
+============================================================================
+*/
+
+#define ELanguage               ELangEnglish
+
+rls_string txt_guardian_pass	"Tajni kôd:"
+rls_string txt_err_bad_pass	"Tajni kôd je pogrešan!"
+

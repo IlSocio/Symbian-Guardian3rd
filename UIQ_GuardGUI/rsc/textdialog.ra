@@ -1,0 +1,79 @@
+
+
+RESOURCE QIK_DIALOG r_dialog_message
+  {
+  title = "titolo:";
+       configurations =
+              {
+              QIK_DIALOG_CONFIGURATION
+                     {
+                     ui_config_mode = KQikPenStyleTouchPortrait;
+					 container = r_dialog_text_container;
+				     command_list = r_ok_cancel_commands;
+                     },
+              QIK_DIALOG_CONFIGURATION
+                     {
+                     ui_config_mode = KQikPenStyleTouchLandscape;
+					 container = r_dialog_text_container;
+				     command_list = r_ok_cancel_commands;
+                     },
+              QIK_DIALOG_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStylePortrait;
+					 container = r_dialog_text_container;
+				     command_list = r_ok_cancel_commands;
+                     },
+              QIK_DIALOG_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStyleSmallPortrait;
+					 container = r_dialog_text_container;
+				     command_list = r_ok_cancel_commands;
+                     },
+              QIK_DIALOG_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStyleSmallLandscape;
+					 container = r_dialog_text_container;
+				     command_list = r_ok_cancel_commands;
+                     },
+              QIK_DIALOG_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStyleTouchPortrait;
+					 container = r_dialog_text_container;
+				     command_list = r_ok_cancel_commands;
+                     }
+              };
+  }
+
+   
+    
+// Defines the content of the simple dialog and how they are laid out. 
+// Default layout manager is used for laying out the controls, which is a row 
+// layout.
+RESOURCE QIK_CONTAINER_SETTINGS r_dialog_text_container
+    {
+    layout_manager_type = EQikRowLayoutManager;
+    layout_manager = r_row_layout_default;
+    controls = 
+        {
+		QIK_CONTAINER_ITEM_CI_LI
+			{
+			itemflags = EQikCtrlFlagIsEditInPlace;
+			unique_handle = 1;
+			type = EEikCtEdwin;
+			control = r_text_editor;
+			}
+        };
+    }
+    
+
+//----------------------------------------------------
+//---------------------- LABEL -----------------------
+//----------------------------------------------------
+	
+RESOURCE EDWIN r_text_editor
+    {
+	flags = EEikEdwinResizable;
+    width = 10;
+    lines = 1;
+    maxlength = 20;
+    }

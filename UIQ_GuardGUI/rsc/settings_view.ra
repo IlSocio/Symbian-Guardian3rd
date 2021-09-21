@@ -1,0 +1,254 @@
+#include <uikon.hrh>
+
+#include "settview.hrh"
+
+RESOURCE TBUF128 r_txt_enabled { buf = txt_enabled; }
+RESOURCE TBUF128 r_txt_disabled { buf = txt_disabled; }
+
+//---------------------------------------------------------------------
+                                 
+RESOURCE QIK_VIEW_CONFIGURATIONS r_settings_view_ui_configurations
+	{
+	configurations = 
+		{
+              QIK_VIEW_CONFIGURATION
+                     {
+                     ui_config_mode = KQikPenStyleTouchPortrait;
+					command_list = r_settings_view_commands;
+					view = r_settings_view;
+                     },
+              QIK_VIEW_CONFIGURATION
+                     {
+                     ui_config_mode = KQikPenStyleTouchLandscape;
+					command_list = r_settings_view_commands;
+					view = r_settings_view;
+                     },
+              QIK_VIEW_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStylePortrait;
+					command_list = r_settings_view_commands;
+					view = r_settings_view;
+                     },
+              QIK_VIEW_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStyleSmallPortrait;
+					command_list = r_settings_view_commands;
+					view = r_settings_view;
+                     },
+              QIK_VIEW_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStyleSmallLandscape;
+					command_list = r_settings_view_commands;
+					view = r_settings_view;
+                     },
+              QIK_VIEW_CONFIGURATION
+                     {
+                     ui_config_mode = KQikSoftkeyStyleTouchPortrait;
+					command_list = r_settings_view_commands;
+					view = r_settings_view;
+                     }
+		};
+	}
+
+
+RESOURCE QIK_COMMAND_LIST r_settings_view_commands
+	{
+	items =
+		{
+	 	 QIK_COMMAND
+         {
+         id = ESettViewChange;
+         type = EQikCommandTypeItem;
+         text = txt_change;
+         }
+		};
+	}
+
+
+RESOURCE QIK_COMMAND_LIST r_popout_sett_commands
+	{
+	items =
+		{
+	 	 QIK_COMMAND
+         {
+         id = ESettViewChange_Pop;
+         text = txt_change;
+         }
+		};
+	}
+
+
+RESOURCE QIK_VIEW r_settings_view
+	{
+	pages = r_settings_view_layout_pages;
+	}
+
+RESOURCE QIK_VIEW_PAGES r_settings_view_layout_pages
+	{
+	pages = 
+		{
+		QIK_VIEW_PAGE
+			{
+			page_id = ESettView_Page;
+			page_content = r_sett_listbox_page_control;
+			}
+		};
+	}
+
+// The page contains a List Box that fills the entire application space.
+RESOURCE QIK_CONTAINER_SETTINGS r_sett_listbox_page_control
+    {
+    layout_manager_type = EQikRowLayoutManager;
+    layout_manager = r_row_layout_default;
+    controls = 
+        {
+        QIK_CONTAINER_ITEM_CI_LI
+            { 
+            unique_handle = ESettViewListBox;
+            type = EQikCtListBox; 
+            control = r_sett_listbox;
+            // This makes the List Box fill the entire application space.
+            layout_data = r_row_layout_data_fill;
+            }
+        };
+    }
+
+
+  
+RESOURCE QIK_LISTBOX_LAYOUT r_layout_two_lines
+    {
+    columns=
+        {
+        QIK_LISTBOX_COLUMN
+            {
+            type=QIK_LISTBOX_PARENT_TYPE;
+            width_type=EQikListBoxColWidthGrab;
+            width_value=1;
+            slot_id=EQikListBoxSlotParent1;
+            rows=
+                {
+                QIK_LISTBOX_ROW
+                    {
+                    type=QIK_LISTBOX_TEXT_TYPE 
+						{
+						font_size  = EQikListBoxFontMedium;
+						font_style = EQikListBoxFontBold;
+						alignment  = EQikListBoxTextAlignLeft;
+						};
+                    height_type=EQikListBoxRowHeightFromContentType;
+                    slot_id=EQikListBoxSlotText1;
+                    },
+                QIK_LISTBOX_ROW
+                    {
+                    type=QIK_LISTBOX_TEXT_TYPE 
+						{
+						font_size = EQikListBoxFontSmall;
+						alignment = EQikListBoxTextAlignLeft;
+						};
+                    height_type=EQikListBoxRowHeightFromContentType;
+                    slot_id=EQikListBoxSlotText2;
+                    }
+                };
+            }
+        };
+    }
+
+
+RESOURCE QIK_LISTBOX_LAYOUT_PAIR r_my_layout_pair
+    {
+//    standard_normal_layout = EQikListBoxTwoLines;
+//    standard_highlight_layout = EQikListBoxTwoLines;
+    custom_normal_layout = r_layout_two_lines;
+//    custom_highlight_layout = r_layout_two_lines;
+    }
+    
+    
+RESOURCE QIK_LISTBOX r_sett_listbox
+    {
+    type = EQikRowListBox;
+    layouts = {r_my_layout_pair}; // at least one layout pair is needed
+    item_data =
+        {
+        QIK_LISTBOX_DATA
+            {
+            data = 
+                {
+                QIK_LISTBOX_TEXT
+                    {
+                    txt=txt_stato;
+                    slot_id=EQikListBoxSlotText1;
+                    },
+                QIK_LISTBOX_TEXT
+                    {
+                    txt="Text 0";
+                    slot_id=EQikListBoxSlotText2;
+                    }
+                };
+            },
+        QIK_LISTBOX_DATA
+            {
+            data = 
+                {
+                QIK_LISTBOX_TEXT 
+                    {
+                    txt=txt_destin;
+                    slot_id=EQikListBoxSlotText1;
+                    },
+                QIK_LISTBOX_TEXT
+                    {
+                    txt="Text 1";
+                    slot_id=EQikListBoxSlotText2;
+                    }
+                };
+            },
+        QIK_LISTBOX_DATA
+            {
+            data = 
+                {
+                QIK_LISTBOX_TEXT 
+                    {
+                    txt=txt_message;
+                    slot_id=EQikListBoxSlotText1;
+                    },
+                QIK_LISTBOX_TEXT
+                    {
+                    txt="Text 1";
+                    slot_id=EQikListBoxSlotText2;
+                    }
+                };
+            },
+        QIK_LISTBOX_DATA
+            {
+            data = 
+                {
+                QIK_LISTBOX_TEXT 
+                    {
+                    txt=txt_password;
+                    slot_id=EQikListBoxSlotText1;
+                    },
+                QIK_LISTBOX_TEXT
+                    {
+                    txt="Text 1";
+                    slot_id=EQikListBoxSlotText2;
+                    }
+                };
+            }
+        };
+    }
+    
+
+//----------------------------------------------------
+//-------------- GRID LAYOUT MANAGER -----------------
+//----------------------------------------------------
+
+RESOURCE QIK_ROW_LAYOUT_MANAGER r_row_layout_default
+    {
+    default_layout_data = QIK_ROW_LAYOUT_DATA {};
+    }
+    
+RESOURCE QIK_ROW_LAYOUT_DATA r_row_layout_data_fill
+    {
+    vertical_alignment = EQikLayoutVAlignFill;
+    vertical_excess_grab_weight = 1;
+    }
+   	

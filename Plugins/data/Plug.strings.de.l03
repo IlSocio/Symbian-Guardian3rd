@@ -1,0 +1,82 @@
+﻿/*
+============================================================================
+ Name        : GuardGUI.rls
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : String localization file
+============================================================================
+*/
+
+//  LOCALISATION STRINGS
+
+rls_string txt_lock_on 			"Lock Befehl: Ok - Telefon ist gesperrt!"
+rls_string txt_lock_off 		"Lock Befehl: Ok - Telefon ist freigeschaltet!"
+
+ rls_string txt_monitor_ok 		"Monitor Befehl: Ok - "
+ rls_string txt_monitor_ko 		"Monitor Befehl: Fehler - Nichts zu tun!"
+
+rls_string txt_fake_ok 			"FakeSMS Befehl: Ok - Empfangen!"
+rls_string txt_fake_ko 			"FakeSMS Befehl: Fehler - Begrenzer ';' fehlt"
+
+rls_string txt_null_delim 		"Guardian: Fehler - Begrenzer '*' fehlt"
+rls_string txt_null_length 		"Guardian: Fehler - unbekannter Befehl"
+rls_string txt_null_notfound 		"Guardian: Fehler - Befehl existiert nicht: "
+rls_string txt_null_unkn 		"Guardian: Fehler - Allgemein"
+
+rls_string txt_alarm_ok 		"Alarm Befehl: Ok - Der Alarm läuft..."
+		
+rls_string txt_commands_ok 		"Fernsteuerungsbefehle:\n\n"
+
+rls_string txt_config_ok 		"Config Befehl: Ok - "
+rls_string txt_config_ko 		"Config Befehl: Fehler - Nichts zu tun!"
+rls_string txt_config_disabled 		"Guardian deaktiviert! "
+rls_string txt_config_lock_on_startup	"Telefon sperren beim Start Aktiviert! "
+rls_string txt_config_lock_on_sim_change "Telefon sperren auf der SIM-Wechsel Aktiviert! "
+rls_string txt_config_lock_off		"Telefon sperren Deaktiviert! "
+rls_string txt_config_numb_changed 	"Emfänger geändert! "
+rls_string txt_config_numb_unchanged 	"Emfänger NICHT geändert! "
+rls_string txt_config_code_changed 	"Geheimcode geändert! "
+rls_string txt_config_code_unchanged 	"Geheimcode NICHT geändert! "
+
+rls_string txt_delete_ok 		"Delete Befehl: Ok - "
+rls_string txt_delete_ko 		"Delete Befehl: Fehler - Falscher Syntax!"
+rls_string txt_delete_deleted 		"Gelöscht!"
+
+rls_string txt_forward_ko 		"Retrieve Befehl: Fehler - Falscher Syntax!"
+
+rls_string txt_localize_completed 	"Localize Befehl: Abgeschlossen!\n"
+rls_string txt_localize_ok 		"Localize Befehl: Ok -\n"
+rls_string txt_localize_hei 		"Höhe: "
+rls_string txt_localize_met 		" Meter\n"
+rls_string txt_localize_cell 		"Zelle: "
+rls_string txt_localize_area 		"\nBereich: "
+rls_string txt_localize_country 	"\nMCC: "
+rls_string txt_localize_operator 	"\nOperator: "
+rls_string txt_localize_network 	"\nMNC: "
+
+
+rls_string txt_wlan_notsupported 	"WLANInfo Befehl: Fehler - WLAN nicht unterstützt!"
+rls_string txt_wlan_ok 			"WLANInfo Befehl: Ok - "
+rls_string txt_wlan_notfound 		"Kein WLAN-Netzwerk gefunden!"
+rls_string txt_wlan_found 		"Netzwerke gefunden: "
+rls_string txt_wlan_separator 		"*"
+rls_string txt_wlan_bssid 		"BSSID: "
+rls_string txt_wlan_ssid 		"SSID: "
+
+rls_string txt_wlan_security		"Sicherheit: "
+rls_string txt_wlan_sec_open		"Offen"
+rls_string txt_wlan_sec_wep		"WEP"
+rls_string txt_wlan_sec_wpa		"WPA"
+rls_string txt_wlan_sec_wpapsk		"WPA-PSK"
+rls_string txt_wlan_sec_802		"802.1X"
+rls_string txt_wlan_sec_unk		"Unbekannt"
+
+rls_string txt_wlan_mode		"Modus: "
+rls_string txt_wlan_mode_bss		"BSS InfrastruKture"
+rls_string txt_wlan_mode_ibss		"IBSS Ad-Hoc"
+
+rls_string txt_wlan_channel		"Kanal: "
+rls_string txt_wlan_beacon		"Beacon Intervall: "
+rls_string txt_wlan_rxlevel		"Empfangsstärke: "
+

@@ -1,0 +1,16 @@
+﻿CHARACTER_SET UTF8
+
+/*
+============================================================================
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : String localization file
+============================================================================
+*/
+
+//  LOCALISATION STRINGS
+
+rls_string txt_apn "internet.t-mobile"
+rls_string txt_user "internet.t-d1.de"
+rls_string txt_pass "t-mobile"

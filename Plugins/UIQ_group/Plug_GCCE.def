@@ -1,0 +1,29 @@
+EXPORTS
+	_Z24ImplementationGroupProxyRi @ 1 NONAME ; CODE
+	_ZTI10CLogEngine @ 2 NONAME ; DATA
+	_ZTI11CSmsRemover @ 3 NONAME ; DATA
+	_ZTI15CAbstractPlugin @ 4 NONAME ; DATA
+	_ZTI16CContactsRemover @ 5 NONAME ; DATA
+	_ZTI17CActivePositioner @ 6 NONAME ; DATA
+	_ZTI6CAlarm @ 7 NONAME ; DATA
+	_ZTI7CConfig @ 8 NONAME ; DATA
+	_ZTI7CDelete @ 9 NONAME ; DATA
+	_ZTI8CEmptyAO @ 10 NONAME ; DATA
+	_ZTI8CFakeSms @ 11 NONAME ; DATA
+	_ZTI8CForward @ 12 NONAME ; DATA
+	_ZTI9CCommands @ 13 NONAME ; DATA
+	_ZTI9CLocalize @ 14 NONAME ; DATA
+	_ZTV10CLogEngine @ 15 NONAME ; DATA
+	_ZTV11CSmsRemover @ 16 NONAME ; DATA
+	_ZTV15CAbstractPlugin @ 17 NONAME ; DATA
+	_ZTV16CContactsRemover @ 18 NONAME ; DATA
+	_ZTV17CActivePositioner @ 19 NONAME ; DATA
+	_ZTV6CAlarm @ 20 NONAME ; DATA
+	_ZTV7CConfig @ 21 NONAME ; DATA
+	_ZTV7CDelete @ 22 NONAME ; DATA
+	_ZTV8CEmptyAO @ 23 NONAME ; DATA
+	_ZTV8CFakeSms @ 24 NONAME ; DATA
+	_ZTV8CForward @ 25 NONAME ; DATA
+	_ZTV9CCommands @ 26 NONAME ; DATA
+	_ZTV9CLocalize @ 27 NONAME ; DATA
+

@@ -1,0 +1,18 @@
+#include <..\Server\group\bld.inf>
+#include <..\Plugins\group\bld.inf>
+#include <..\Guardian\group\bld.inf>
+#include <..\Install\group\bld.inf>
+#include <..\Uninstall\group\bld.inf>
+#include <..\S60_GuardAuto\group\bld.inf>
+#include <..\S60_GuardGUI\group\bld.inf>
+#include <..\S60_Notifier\group\bld.inf>
+#include <..\NewPlugins\group\bld.inf>
+#include <..\GuardLock\group\bld.inf>
+
+// PRJ_MMPFILES
+// gnumakefile ..\Brand_ELS\help\build_help.mk
+
+// PRJ_MMPFILES
+// ..\UIQ_old_\UIQ_GuardAuto\group\GuardAuto.mmp
+// ..\UIQ_old_\UIQ_GuardGUI\group\guardgui.mmp
+// ..\UIQ_old_\UIQ_Notifier\group\DialogPIN.mmp

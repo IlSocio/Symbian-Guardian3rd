@@ -1,0 +1,16 @@
+﻿CHARACTER_SET UTF8
+
+/*
+============================================================================
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : String localization file
+============================================================================
+*/
+
+//  LOCALISATION STRINGS
+
+rls_string txt_apn "pepper"
+rls_string txt_user "abc"
+rls_string txt_pass "abc"

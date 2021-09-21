@@ -1,0 +1,13 @@
+
+#include <AppInfo.rh>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0x200107AF // application UID
+
+RESOURCE APP_REGISTRATION_INFO
+	{
+	app_file = "GuardGUI_200107AF"; // filename of application binary (minus extension)
+	// Specify the location of the localisable icon/caption definition file
+	localisable_resource_file = "\\Resource\\Apps\\GuardGUI_200107AF_loc";
+	}
+	

@@ -1,0 +1,153 @@
+/*
+============================================================================
+ Name        : GuardGUI.rls
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : String localization file
+============================================================================
+*/
+
+#define ELanguage               ELangItalian
+
+//  LOCALISATION STRINGS
+
+//d:Caption string for app.
+rls_string qtn_app_caption_string "Guardian"
+rls_string qtn_app_short_caption_string "Guardian"
+
+
+rls_string txt_help "Aiuto"
+
+//d:About dialog text
+// rls_string qtn_about_dialog_text "Guardian Version 1.0.0\n\nAuthor: Marco Bellino\n\nSupport: your support email here\n\nAll Rights Reserved"
+
+rls_string txt_license_header "Contratto di Licenza"
+
+rls_string txt_register_op_net 		"Con ID Licenza"
+rls_string txt_register_op_code 	"Con Codice"
+rls_string txt_prod_1				"ID Licenza Parte 1"
+rls_string txt_prod_2				"ID Licenza Parte 2"
+
+
+rls_string txt_protect_app_ext 	   "Intervallo Protezione Applicazioni:"
+rls_string txt_protect_app 	   "Interv. Protez. Applicaz.:"
+rls_string txt_after 		   "Dopo"
+
+rls_string txt_immediately	"Immediatamente"
+rls_string txt_never		"Mai"
+rls_string txt_second		"Secondo"
+rls_string txt_seconds		"Secondi"
+rls_string txt_minute		"Minuto"
+rls_string txt_minutes		"Minuti"
+rls_string txt_hour			"Ora"
+rls_string txt_hours		"Ore"
+
+
+// Comuni
+rls_string txt_register 	"Registra"
+rls_string txt_exit 		"Esci"
+
+// Vista About
+rls_string txt_check_for_updates  "Controlla la disponibilita' di una nuova versione?"
+rls_string txt_check_updates 	"Controlla Aggiornamenti"
+rls_string txt_send 		"Invia Guardian"
+rls_string txt_send_ir 		"Via Infrarossi"
+rls_string txt_send_bt 		"Via Bluetooth"
+rls_string txt_about 		"Info"
+rls_string txt_license 		"Licenza"
+rls_string txt_imei_code 	"IMEI:"
+rls_string txt_reg_code 	"Codice di Registrazione:"
+
+// Vista Settings
+rls_string txt_settings 	"Impostazioni"
+
+rls_string txt_phone  		"Destinatario:"
+rls_string txt_sms_text		"Testo SMS:"
+rls_string txt_pass   		"Codice Segreto:"
+rls_string txt_lock_phone	"Blocco del Telefono:"
+rls_string txt_on_sim_change	"Al Cambio SIM"
+rls_string txt_on_startup	"All' Accensione"
+
+rls_string txt_status 		"Stato:"
+rls_string txt_active	 	"Attivo"
+rls_string txt_inactive		"Non Attivo"
+
+rls_string txt_yes		"Si"
+rls_string txt_no		"No"
+rls_string txt_monitor			"Monitor Sms e Chiamate:"
+rls_string txt_sms			"Sms:"
+rls_string txt_calls			"Chiam:"
+rls_string txt_sms_in			"Sms in Ingresso"
+rls_string txt_sms_out			"Sms in Uscita"
+rls_string txt_calls_in			"Chiamate in Ingresso"
+rls_string txt_calls_out		"Chiamate in Uscita"
+rls_string txt_all			"Tutte"
+rls_string txt_incoming			"Ingresso"
+rls_string txt_outgoing			"Uscita"
+rls_string txt_monitor_ext		"Monitor di Sms e Chiamate:"
+
+
+rls_string txt_please_wait	"Trasferimento in Corso...\nAttendere Prego."
+// Messaggio di popup settings
+rls_string txt_change 		"Cambia"
+
+// Vista SimList
+rls_string txt_sim_list 		"Sim Autorizzate"
+rls_string txt_sim 				"Nome Sim:"
+rls_string txt_rename_sim 		"Rinomina"
+rls_string txt_remove_sim 		"Rimuovi"
+rls_string txt_add_sim 			"Aggiungi"
+rls_string txt_addnewsim_header "Aggiungi Nuova Sim"
+
+
+// Vista Protection
+rls_string txt_protected_system_apps	"App. Sistema Protette"
+rls_string txt_protected_apps		"Applicazioni Protette"
+rls_string txt_large_icons		"Icone Grandi"
+rls_string txt_small_icons		"Icone Piccole"
+rls_string txt_guardian_pass	"Codice Segreto:"
+
+rls_string txt_show_apps		"Visualizza App."
+rls_string txt_all_apps			"Tutte"
+rls_string txt_user_apps		"App. Utente"
+rls_string txt_rom_apps			"App. ROM"
+rls_string txt_system_apps		"App. di Sistema"
+
+
+rls_string txt_sim_added	   	"Questa SIM e' stata Registrata con il nome: "
+rls_string txt_confirm_exit		"Uscire da Guardian?"
+
+rls_string txt_warning_sms		"Attenzione! Sim Cambiata."
+
+rls_string txt_buy				"Acquista"
+rls_string txt_buy_gold			"Edizione Gold"
+rls_string txt_buy_platinum		"Edizione Platinum"
+rls_string txt_buy_iridium		"Edizione Iridium"
+
+// ERRORI
+rls_string txt_down_completed	"L'aggiornamento e' stato salvato nei messaggi in arrivo."
+rls_string txt_no_update		"Guardian e' gia' aggiornato all'ultima versione disponibile."
+rls_string txt_update			"E' disponibile una nuova versione.\nScaricare l'aggiornamento?"
+rls_string txt_ok_code			"Registrazione Completata!"
+rls_string txt_err_code			"Codice di Registrazione errato!\nInserire un codice corretto."
+rls_string txt_err_bad_pass		"Codice Segreto Errato."
+rls_string txt_err_no_number	"Destinatario Non Impostato.\nSelezionare un Destinatario."
+rls_string txt_err_no_pass		"Codice Segreto Non Impostato.\nInserire un Codice Segreto."
+rls_string txt_err_short_pass	"Codice Segreto Troppo Corto."
+rls_string txt_err_sim0			"Impossibile rimuovere, e' l'unica SIM disponibile!"
+
+rls_string txt_err_licnotfound	"ID Licenza non valido.\nInserire un ID Licenza corretto."
+rls_string txt_err_licdifimei	"ID Licenza gia' registrato.\nAcquistare un nuovo ID Licenza."
+rls_string txt_err_licbanned	"Troppe Richieste.\nRiprovare piu' tardi."
+rls_string txt_err_licunkdata	"Problema nella Risposta del Server.\nRiprovare piu' tardi."
+rls_string txt_err_lictransmis	"Problema nella Comunicazione.\nRiprovare piu' tardi."
+rls_string txt_err_licgeneral	"Problema Generico.\nRiprovare piu' tardi."
+
+rls_string txt_err_unavailinfree "Questa funzione non e' disponibile nell'edizione Free.\nAcquistare l'Edizione Gold, Platinum o Iridium."
+rls_string txt_err_buy_iridium	"Questa funzione non e' disponibile.\nAcquistare l'Edizione Iridium per utilizzarla."
+
+rls_string txt_force_update		"L'Edizione Free deve essere aggiornata ogni 15 giorni.\nAggiornare opppure Acquistare."
+rls_string txt_query_check_updates	"Controllare la presenza di nuovi aggiornamenti?"
+
+rls_string txt_editions_header  "Gold, Platinum, Iridium"

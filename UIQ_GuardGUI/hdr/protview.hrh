@@ -1,0 +1,17 @@
+#ifndef PROTVIEW_HRH
+#define PROTVIEW_HRH
+
+
+enum TProtViewControls
+    {
+    EProtViewListBox,
+    ELabelCtrl3,
+    ELabelCtrl4,
+    ELabelCtrl5,
+    ELabelCtrl6,
+    ELabelCtrl7,
+    ELabelCtrl8,
+    EProtViewNumberOfControls
+    };
+    	
+#endif

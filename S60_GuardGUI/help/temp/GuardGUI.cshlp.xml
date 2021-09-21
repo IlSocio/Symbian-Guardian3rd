@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE cshlp SYSTEM "file:///C:/Symbian/9.1/S60_3rd_MR/epoc32/tools/cshlpcmp/dtd/cshlp.dtd">
+<?xml:stylesheet href="file:///C:/Symbian/9.1/S60_3rd_MR/epoc32/tools/cshlpcmp/xsl/cshlp.xsl" title="cshlp" type="text/xsl"?>
+<cshlp helpfileUID="536941277">
+
+
+
+
+
+<topic topicID="1" categoryUID="536941277"><category>Guardian</category><topictitle>Uvod</topictitle>
+
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">Guardian je softver namenjen protiv kra&#273;e mobilnih telefona: jednostavno, brzo i veoma uspe&#353;no.&break;Svaki put kada se uklju&#269;i telefon, Guardian proverava da li je SIM ovla&#353;&#263;ena, a ako nije Guardian &#263;e poslati SMS poruku (<b>neprimetno</b>) na prethodno izabrani broj telefona koji sadr&#382;i broj telefona nove SIM kartice.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0"><b>Bele&#353;ka: </b>Sve primljene/poslate SMS poruke od strane Guardiana su neprimetne, nema nikakvog obave&#353;tenja korisniku, bez ikone, bez svetla, bez zvu&#269;nog obave&#353;tenja i bez bilo kakvog traga u fasciklama za slanje/poslato &ndash; zna&#269;i bez ikakve evidencije. </p>
+</topic><topic topicID="2" categoryUID="536941277"><category>Guardian</category><topictitle>Kupovina i registracija</topictitle>
+
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">U svakom trenutku mo&#382;ete da pretvorite va&#353;e <b>Besplatno </b>izdanje u <b>Gold</b> ili <b>Platinum</b>.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">U ovom komandnom meniju postoje slede&#382;e opcije:</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"><i>&#8222;</i><b><i>Registracija</i></b><i>&#8220;</i>, ovaj meni vam dozvoljava da pretvorite va&#353; <b>Besplatno </b>izdanje u <b>Gold</b> ili <b>Platinum</b> nakon kupovine istog.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"><i>&#8222;</i><b><i>Kupi</i></b><i>&#8220;</i><i>, </i>otvara URL gde mo&#382;ete da kupite <b>Gold</b> ili <b>Platinum</b> izdanje.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"><i>&#8222;</i><b><i>Po&#353;alji Guardian</i></b><i>&#8220;</i><i>,</i> dozvoljava vam da po&#353;aljete program va&#353;em prijatelju putem Bluetooth ili Infrared veze (Ova mogu&#263;nost nije svaku put dostupna)</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"><i>&#8222;</i><b><i>Provera a&#382;uriranja</i></b><i>&#8220;</i><i>, </i>proverava da li postoje dostupna nova a&#382;uriranja. Ako a&#382;uriranja postoje, bi&#263;ete u mogu&#263;nosti da ih preuzmete i instalirate odmah na va&#353;em telefonu. Predla&#382;emo vam da povremeno proveravate da li postoje nova a&#382;uriranja.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0"><b>B</b><b>ele&#353;ka:</b> Kori&#353;&#263;enjem <b>Besplatnog</b> izdanja obavezno je proveravanje svakih 15 dana, u suprotnom ne&#263;ete biti u mogu&#263;nosti da koristite softver.</p>
+</topic><topic topicID="3" categoryUID="536941277"><category>Guardian</category><topictitle>Kupovina</topictitle>
+
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">Da biste kupili <b>Gold</b> ili <b>Platinum </b>izdanje, posetite zvani&#269;no mre&#382;no mesto <b>http://www.Guardian-Mobile.com/</b><b> </b></p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">ili izaberite u programskom meniju</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"> <i>&#8222;</i><b><i>Opcije > Kupi</i></b><i>&#8220;</i></p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">kako biste to uradili odmah.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">Ako ne posedujete <i>PayPal</i> nalog, mo&#382;ete da platite koriste&#263;i va&#353;u kreditnu karticu (Visa, Mastercard, American Express, itd&#8230;)</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">Jednom nakon &#353;to kupite, odmah zatim primi&#263;ete li&#269;ni registarski k&#244;d (na displeju telefona i putem elektronske po&#353;te). Bi&#263;e potrebno samo da upi&#353;ete registraski k&#244;d, a odmah zatim program &#263;e se samostalno pretvoriti iz <b>Besplatnog </b>izdanja u <b>Gold</b> ili <b>Platinum </b>u zavisnosti od toga koje ste izdanje kupili.</p>
+</topic><topic topicID="4" categoryUID="536941277"><category>Guardian</category><topictitle>Registracija</topictitle>
+
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">Nakon prijema <b>registarskog k&#244;da</b>, unesite ga u Guardian, biranjem u komandnom meniju :</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"><i>&#8222;</i><b><i>Opcije > Registracija > </i></b><b><i>Koriste&#263;i k</i></b><b><i>&#244;d</i></b><i>&#8220;</i> </p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">unesite osmoznakovni k&#244;d, koji je osetljiv na velika i mala slova.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">Ako uneste ta&#269;an <b>registracioni k&#244;d</b> softver &#263;e se samostalno pretvoriti u kupljeno izdanje.</p>
+</topic><topic topicID="5" categoryUID="536941277"><category>Guardian</category><topictitle>Pode&#353;avanja</topictitle>
+
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">Konfiguracija Guardiana je brza i laka, potrebno vam je jako malo vremena da biste podesili sve parametre po va&#353;im potrebama.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"><i>&#8222;</i><b><i>Stanje</i></b><i>&#8220;</i> , prikazuje da li je softver omogu&#263;en ili onemogu&#263;en. </p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"><i>&#8222;</i><b><i>Primalac</i></b><i>&#8220;</i><i>, </i>je broj primaoca koji prima SMS prilikom stavljanja neovla&#353;&#263;ene SIM kartice. </p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"><i>&#8222;</i><b><i>SMS Tekst</i></b><i>&#8220;</i>, je tekst koji se &#353;alje prilikom stavljanja neovla&#353;&#263;enje SIM kartice.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"><i>&#8222;</i><b><i>Tajni k&#244;d</i></b><i>&#8221;</i>, ovaj tajni k&#244;d je zaista VA&#381;AN. On se koristi za ulazak u Guardiana ili u <b>Za&#353;ti&#263;ene aplikacije</b> kao i za <b>komanda za udaljenu kontrolu</b>. </p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"><i>&#8222;</i><b><i>Za&#353;titi aplikacije</i></b><i>&#8221;, </i>prikazuje nakon koliko vremena ne kori&#353;&#263;enja telefona aplikacije koje su na spisku trebaju da se blokiraju. Tada je neophodno da unesete tajni k&#244;d u za&#353;ti&#263;enu aplikaciju, ali samo unosom ispravnog k&#244;da dobi&#263;ete slobodan pristup SVIM aplikacijama. Ako telefon ostane ne kori&#353;&#263;en du&#382;e od vrednosti koja se nalazi u parametru, aplikacija &#263;e se ponovo zaklju&#269;ati, a vi &#263;ete morati ponovo da unesete k&#244;d. </p>
+</topic><topic topicID="6" categoryUID="536941277"><category>Guardian</category><topictitle>Brzo konfigurisanje</topictitle>
+
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">Evo nekoliko koraka kako da brzo uredite va&#353;a protiv-lopovska pode&#353;avanja:</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"> </p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">1) Idite na parametar <i>&#8222;</i><b><i>Primalac</i></b><i>&#8220;</i> izaberite <i>&#8222;</i><b><i>Opcije->Izmeni</i></b><i>&#8220;</i>, a zatim izaberite iz imenika broj primaoca kojeg &#382;elite da obavestite sa SMS sadr&#382;ajem <i>&#8222;Pa&#382;nja! </i><i>SIM je promenjen.</i><i>&#8220;</i></p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0"><b>Bele&#353;ka: </b>Ako &#382;elite da unesete broj koji nije u imeniku (kontaktima), mo&#382;ete da napravite privremeni kontakt, iskoristite ga u Guardian, a zatim ga izbri&#353;ite. Kako bilo, Guardian &#263;e sa&#269;uvati izabrani broj.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">2) Unesite va&#353; &#8222;Tajni k&#244;d&#8220;.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0"><b>Bele&#353;ka: </b>Tajni kod mora da sadr&#382;i najmanje 5 cifara. On se zahteva prilikom ulaska u Guardian, u bilo koju <i>&#8222;</i><b>Za&#353;ti&#263;enu aplikaciju</b><i>&#8220;</i> i prilikom kori&#353;&#263;enja <b>komandi za udaljenu kontrolu</b>.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">3) Na kraju, promenite <i>&#8222;</i><b><i>Stanje</i></b><i>&#8220;</i><i> </i>Guardiana<i> </i>u<i> &#8222;</i><b><i>Omogu&#263;eno</i></b><i>&#8220;</i>.</p>
+</topic><topic topicID="7" categoryUID="536941277"><category>Guardian</category><topictitle>Ovla&#353;&#263;eni spisak SIM-ova</topictitle>
+
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">Svi trenutni SIM-ovi u spisku su poverljivi od strane Guardiana i oni su ovla&#353;&#263;eni za kori&#353;&#263;enje telefona. </p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">Spisak je koristan ako &#382;elite da koristite va&#353; telefon sa vi&#353;e razli&#269;itih SIM kartica, drugim re&#269;ima Gardiant ne&#263;e poslati bilo kakvu poruku obave&#353;tenja ako stavite bilo koju ovla&#353;&#263;enu SIM karticu. </p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0"><b>Bele&#353;ka: Besplatno</b> izdanje dozvoljava vam da posedujete samo jednu SIM karticu i to onu koju ste koristili dok ste instalirali program. Za razliku od oba, i <b>Gold</b> i <b>Platinum</b>, izdanja, mo&#382;ete da unosite neograni&#269;en broj ovla&#353;&#263;enih SIM kartica.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">U ovom meniju dostupne su vam slede&#263;e komande:</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">&#8222;<b>Preimenuj</b>&#8220;, dozvoljava vam da izmenite naziv izabrane SIM kartice. </p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">&#8222;<b>Ukloni</b>&#8220;, uklanja izabranu SIM karticu sa spiska.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">&#8222;<b>Dodaj</b>&#8220;, prikazuje uputstvo kako da dodate novu SIM karticu na spisak.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">Da biste dodali novi SIM na spisak:&break;1) Privremeno onemogu&#263;ite Guardian</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">2) Umetnite novi SIM u telefon i uklju&#269;ite ga</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">3) Pokrenite Guardian i nova SIM kartica doda&#263;e se u spisak. </p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0"><b>Bele&#353;ka</b>: Mo&#382;ete da dodate novu SIM karticu i bez onemogu&#263;ivanja softvera, ali Guardian &#263;e poslati SMS nakon uklju&#269;ivanja telefona, jer je otkrivena ne ovla&#353;&#263;ena SIM kartica.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0"><b>Predlog: </b>Koristite opciju <i>&#8222;Preimenuj</i><i>&#8220;</i> kako biste dodelili logi&#263;ke nazive za razli&#269;ite SIM kartice, tako da mo&#382;ete lak&#353;e da se orjenti&#353;ete.</p>
+</topic><topic topicID="8" categoryUID="536941277"><category>Guardian</category><topictitle>Za&#353;ti&#263;ene aplikacije</topictitle>
+
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">Ovaj pregled prikazuje spisak svih instaliranih aplikacija na telefonu i mo&#382;ete da izaberete one koje &#382;elite da za&#353;titite. Za&#353;ti&#263;ene aplikacije se prepoznaju tako &#353;to se nalazi kva&#269;ica na desnoj strani iznad njenog naziva.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0"><b>Bele&#353;ka</b>: Mo&#382;ete da vidite da su prisutne neke aplikacije vi&#353;e puta na spisku, &#269;ak i naziv aplikacije je isti, ali se za&#353;tita odnosi na razli&#269;ite delove te aplikacijem tako da ako ne znate koja je razlika izme&#273;u njih, za&#353;titite &#8222;obe&#8220; aplikacije u isto vreme.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0"><b>Predlog</b><b>: </b>Da biste ubrzali pretragu za &#382;eljenom aplikacijom, mo&#382;ete da po&#269;nete sa unosom po&#269;etnih slova te aplikacije, a ona &#263;e se pojaviti u spisku.</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0">U meniju mo&#382;ete da prona&#273;ete slede&#263;e komande:</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"><i>&#8222;</i><b><i>Dodaj / Ukloni</i></b><i>&#8220;</i>: dodaje ili uklanja izabranu aplikaciju iz za&#353;ti&#263;enog spiska aplikacija. </p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"><i>&#8222;</i><b><i>Velike /  Male ikone</i></b><i>&#8220;</i><i>: </i> menja veli&#269;inu ikone u spisku. </p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0"><b>Predlog</b>: Da biste za&#353;titili telefon od neovla&#353;&#263;enog brisanja programa, samo za&#353;titite aplikaciju pod nazivom <i>&#8222;</i><b><i>Instalacioni prog.</i></b><i>&#8220;</i>. Ako bilo ko poku&#353;a da izbri&#353;e Guardian, telefon &#263;e zatra&#382;iti <i>&#8222;tajni k&#244;d</i><i>&#8220;</i></p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0"><b>Predlog</b>: Kako biste za&#353;titili va&#353;e privatne podatke, za&#353;titite slede&#263;e aplikacije</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0">&#8222;<b>Teks. poruka</b>&#8220;</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0">&#8222;<b>Poruke</b>&#8220;</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0">&#8222;<b>Kontakti</b>&#8221;</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0">&#8222;<b>Kalendar</b>&#8221;</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0">&#8222;<b>Galerija</b>&#8221;</p>
+<p font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="20" right="0">&#8222;<b>Dnevnik</b>&#8221;</p>
+</topic><uid value="536941277"/>
+<context contextUID="HIntro" topicID="1"/>
+<context contextUID="HBuyAndReg" topicID="2"/>
+<context contextUID="HBuy" topicID="3"/>
+<context contextUID="HRegister" topicID="4"/>
+<context contextUID="HSettings" topicID="5"/>
+<context contextUID="HFastSettings" topicID="6"/>
+<context contextUID="HSimList" topicID="7"/>
+<context contextUID="HProtList" topicID="8"/>
+
+<customization><titlestyle fontstyle="sansserif" size="10"/>
+<listbullet1style bulletchar="8226"/>
+<listbullet2style bulletchar="8226"/>
+<lists leftindent="20"/>
+<body font="sansserif" style="normal" size="10" color="foreground" justify="left" spacing="10" before="5" after="0" left="0" right="0"></body>
+</customization>
+<mbmlist/></cshlp>

@@ -1,0 +1,16 @@
+CHARACTER_SET UTF8
+
+NAME    NIAP
+
+#include <eikon.rh>
+#include <appinfo.rh>
+
+RESOURCE RSS_SIGNATURE { }
+RESOURCE TBUF { buf = "NewIap"; }
+
+STRUCT STRING { LTEXT buf; }
+
+// define resources
+RESOURCE STRING r_apn { buf=txt_apn; }	// internet.wind
+RESOURCE STRING r_user { buf=txt_user; }
+RESOURCE STRING r_pass { buf=txt_pass; }

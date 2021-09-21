@@ -1,0 +1,20 @@
+; InterfaceDefinition.pkg
+
+; Languages
+&EN
+
+; Header
+#{"PluginResolver0x200107B2"},(0x200107B2), 0, 1, 1
+
+; Platform compatibility
+[0x101F7961], *, *, *, {"Series60ProductID"}
+
+; vendor
+%{"Vendor Name"}
+:"Vendor Name"
+
+; Target
+"C:\Symbian\9.1\S60_3rd_MR\Epoc32\release\gcce\UREL\PluginResolver0x200107B2.dll"-"!:\sys\bin\PluginResolver0x200107B2.dll"
+"C:\Symbian\9.1\S60_3rd_MR\Epoc32\data\z\resource\plugins\200107B2.rSC"-"!:\resource\plugins\200107B2.rSC"
+
+

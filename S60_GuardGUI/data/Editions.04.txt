@@ -1,0 +1,34 @@
+﻿Inserte el Código de Registro para actualizar a la versión Gold, Plantinum o Iridium.
+
+Comprando la versión "Gold" usted puede:
++ Proteger por contraseña SMS / Agenda / Agenda de teléfonos.
++ Proteger por contraseña las aplicaciones instaladas.
++ Proteger Guardian de una desinstalación no deseada.
++ Recibir la célula de localización del teléfono / Área / País.
++ Añadir un número ilimitado de SIMs a la lista de SIMs autorizadas.
++ Obtener soporte técnico del software.
+
+Comprando la versión "Platinum" usted puede:
++ Utilizar todas las funciones de la versión "Gold".
++ Localizar exactamente el teléfono perdido obteniendo la latitud y longitud del GPS.
++ Bloquear el teléfono.
++ Recuperar todos los SMS enviados y recibidos del teléfono perdido.
++ Recuperar todo el registro de llamadas enviadas y recibidas del teléfono perdido.
++ Recuperar los contactos de la agenda de teléfonos del teléfono perdido.
++ Eliminar del teléfono perdido todos los SMS, contactos, imágenes y vídeos.
++ Y mucho más...
+
+Comprando la versión "Iridinum" usted puede:
++ Utilizar todas las funciones de la versión "Gold" y "Platinum".
++ Recibe en tiempo real de copia de los mensajes de texto entrantes y salientes.
++ Recibe en tiempo real los registros de las llamadas entrantes y salientes.
+
+Visite el sitio web oficial para obtener una descripción más detallada de las características.
+
+Usted puede comprar el software desde el sitio web oficial, o directamente a través del teléfono:
+1) Seleccione Opciones > Comprar y escoja la versión deseada.
+2) Inserte los datos de su tarjeta de crédito y confirme el pago.
+3) Una vez confirmado el pago le aparecerá su Código de Registro. También lo recibirá por e-mail.
+4) Utilice su Código de Registro en Opciones > Registrar.
+
+Después de introducir su Código de Registro, la versión Free se convertirá automáticamente en la versión adquirida.

@@ -1,0 +1,16 @@
+﻿CHARACTER_SET UTF8
+
+/*
+============================================================================
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : String localization file
+============================================================================
+*/
+
+//  LOCALISATION STRINGS
+
+rls_string txt_apn "isp.vodafone.ie"
+rls_string txt_user "vodafone"
+rls_string txt_pass "vodafone"

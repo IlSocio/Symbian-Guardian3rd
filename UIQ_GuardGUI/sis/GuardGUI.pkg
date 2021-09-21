@@ -1,0 +1,28 @@
+%{"FuzzyByte"}
+:"FuzzyByte"
+
+#{"Guardian GOLD Edition"},(0x200107AF),1,0,0
+[0x10009D8D], 1, 0, 0, {"UIQ30ProductID"}
+
+
+;Files to install
+;"C:\Symbian\UIQ3SDK\epoc32\release\gcce\urel\GuardGUI_2000BD8C.exe"					- "!:\sys\bin\GuardGUI_2000BD8C.exe"
+;"C:\Symbian\UIQ3SDK\epoc32\data\z\resource\apps\GuardGUI_2000BD8C.mif"               - "!:\resource\apps\GuardGUI_2000BD8C.mif"
+;"C:\Symbian\UIQ3SDK\epoc32\data\z\resource\apps\GuardRes_2000BD8C.mif"               - "!:\resource\apps\GuardRES_2000BD8C.mif"
+;"C:\Symbian\UIQ3SDK\epoc32\data\z\resource\apps\GuardRes_2000BD8C.mbm"               - "!:\resource\apps\GuardRES_2000BD8C.mbm"
+"C:\Symbian\UIQ3SDK\epoc32\release\gcce\UREL\GuardSrv_2000BD89.exe"-"!:\sys\bin\GuardSrv_2000BD89.exe"
+"C:\Symbian\UIQ3SDK\epoc32\release\gcce\UREL\GuardCli_2000BD8A.dll"-"!:\sys\bin\GuardCli_2000BD8A.dll"
+"C:\Symbian\UIQ3SDK\epoc32\release\gcce\UREL\Guardian_200107AE.exe"-"!:\sys\bin\Guardian_200107AE.exe"
+
+"C:\Symbian\UIQ3SDK\epoc32\release\gcce\urel\QGuardAuto_200107AD.dll" - "!:\sys\bin\QGuardAuto_200107AD.dll"
+"C:\Symbian\UIQ3SDK\epoc32\data\z\resource\Plugins\QGuardAuto_200107AD.rsc" - "!:\resource\plugins\QGuardAuto_200107AD.rsc"
+
+;Required for application to be covered by backup/restore facility 
+;"backup_registration.xml"     -"!:\private\2000BD8C\backup_registration.xml"
+
+; RISORSE DA LOCALIZZARE NELLE VARIE LINGUE
+;"C:\Symbian\UIQ3SDK\epoc32\data\z\resource\apps\GuardGUI_2000BD8C.r05"               - "!:\resource\apps\GuardGUI_2000BD8C.rsc"
+;"C:\Symbian\UIQ3SDK\epoc32\data\z\private\10003a3f\apps\GuardGUI_2000BD8C_reg.r05"	- "!:\private\10003a3f\import\apps\GuardGUI_2000BD8C_reg.rsc"
+;"C:\Symbian\UIQ3SDK\Epoc32\data\z\private\101f875a\import[2000BD8C].R05"				- "!:\private\101f875a\import\[2000BD8C].rsc"
+;"..\help\GuardGUI_0x2000bd8c.hlp"															- "!:\resource\help\GuardGUI_0x2000bd8c.hlp"
+;"..\group\PrivacyStatement.txt"																- "!:\private\2000BD8C\PrivacyStatement.txt"

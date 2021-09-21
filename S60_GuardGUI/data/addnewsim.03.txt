@@ -1,0 +1,5 @@
+Eine neue SIM hinzufügen: 
+1 Deaktivieren Sie Guardian temporär.
+2 Ersetzen Sie die SIM-Karte.
+3 Beim nächsten Start von Guardian wird die neue SIM automatisch zu der Liste der autoristierten SIM-Karten hizugefügt.
+

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<?xml:stylesheet href="file:///C:/Symbian/9.1/S60_3rd_MR/epoc32/tools/cshlpcmp/xsl/ptml.xsl" title="PTML" type="text/xsl"?>
+<!DOCTYPE ptml SYSTEM "file:///C:/Symbian/9.1/S60_3rd_MR/epoc32/tools/cshlpcmp/dtd/ptml.dtd">
+<ptml>
+<p style="comment">Data: 15-FEB-07</p>
+<p style="comment">Versione: Draft 6</p>
+<p style="heading 1">Guardian</p>
+<p style="category uid">0x200112DD</p>
+<p style="heading 2">Einleitung</p>
+<p style="context">HIntro</p>
+<p>Guardian ist eine Antidiebstahlsoftware f&#252;r Mobiltelefone: einfach, effizient und sehr effektiv.  &break;Bei jedem Einschalten pr&#252;ft Guardian, ob die eingelegte Simkarte autorisiert ist. Ist sie es nicht, dann sendet Guardian eine Benachrichtigung (<b>unsichtbar</b>) an eine vorher festgelegte Nummer mit der Nummer der gerade eingelegten Simkarte.</p>
+<p style="note"><b>Beachte: </b>Alle gesendeten/empfangenen SMS von Guardian unsichtbar, es gibt keine Benachrichtigung f&#252;r den Benutzer, kein Symbol, kein Licht, kein Alarm, keine Vibration, weder eine Spur bei den Nachrichten im Eingangs-/Ausgangsordner noch im Protokoll.</p>
+<p style="heading 2">Kauf und Registrierung</p>
+<p style="context">HBuyAndReg</p>
+<p>Jederzeit k&#246;nnen Sie die kostenlose <b>Free</b> edtion zur <b>Gold</b> oder <b>Platinum</b> edtion upgraden.</p>
+<p>Im Men&#252; gibt es folgende Optionen:</p>
+<p><i>&#8220;</i><b><i>Registrieren</i></b><i>&#8221;</i>, dieses Men&#252; erlaubt Ihnen die <b>Free</b> edition nach dem Kauf in <b>Gold</b> oder <b>Platinum</b> zu konvertieren.</p>
+<p><i>&#8220;</i><b><i>Kaufen</i></b><i>&#8221;, </i>&#246;ffnet die Internetseite auf der Sie die <b>Gold</b> oder <b>Platinum</b> edition kaufen k&#246;nnen.</p>
+<p><i>&#8220;</i><b><i>Guardian senden</i></b><i>&#8221;,</i> erlaubt Ihnen das Programm &#252;ber Bluetooth oder Infrarot an Ihre Freunde zu senden. (Diese Option ist nicht immer verf&#252;gbar)</p>
+<p>&#8220;<b><i>Auf Updates &#252;berpr&#252;fen</i></b><i>&#8221;, </i>&#252;berpr&#252;ft, ob neue Updates verf&#252;gbar sind. Wenn dies der Fall ist, werden die Updates heruntergeladen und installiert. Wir empfehlen Ihnen regelm&#228;&#223;ig auf neue Updates zu pr&#252;fen.</p>
+<p style="note"><b>Beachte:</b> Wenn Sie die <b>Free</b> edition verwenden, m&#252;ssen sie alle 15 Tage nach Updates suchen, sonst k&#246;nnen Sie das Programm nicht weiter verwenden.</p>
+<p style="heading 2">Kauf</p>
+<p style="context">HBuy</p>
+<p>Um die <b>Gold</b> oder <b>Platinum </b>Edition zu kaufen, besuchen sie bitte die offizielle Internetseite <b>http://www.Guardian-Mobile.com/</b><b> </b></p>
+<p>oder w&#228;hlen</p>
+<p> &#8220;<b><i>Optionen &gt; Kaufen</i></b>&#8221; </p>
+<p>im Programmmen&#252; ihres Mobiltelefons.</p>
+<p>Wenn Sie keinen PayPal Account besitzen, k&#246;nnen sie auch mit ihrer Kreditkarte bezahlen(Visa, Mastercard, American Express, etc.&#8230;).</p>
+<p> </p>
+<p>Unmittelbar nach der Kaufabwicklung erhalten Sie ihren pers&#246;nlichen Registrierungscode (auf dem Handydisplay und per Email). Danach m&#252;ssen Sie nur noch den Registrierungscode im Programm eingeben um die <b>Free </b>Edition<b> </b>zur <b>Gold</b> oder <b>Platinum </b>zu konvertieren.</p>
+<p style="heading 2">Registrierung</p>
+<p style="context">HRegister</p>
+<p>Nachdem Sie ihren <b>Registrierungscode</b> erhalten haben, m&#252;ssen Sie diesen nur noch in Guardian eingeben, w&#228;hlen sie dazu im Men&#252;</p>
+<p>&#8220;<b><i>Optionen &gt; Registrieren &gt; Code benutzten</i></b>&#8221; </p>
+<p>geben Sie dann den 8-stelligen Code ein und achten Sie dabei auf die Klein- und Gro&#223;schreibung.</p>
+<p>Wenn Sie den richtigen <b>R</b><b>egistrierungscode </b>eingeben, wird das Programm automatisch in die gekaufte Version konvertiert.</p>
+<p style="heading 2">Einstellungen</p>
+<p style="context">HSettings</p>
+<p>Die Konfiguration von Guardian ist sehr einfach. Nach wenigen Minuten haben Sie schon alle Einstellungen gesetzt, die vom Programm ben&#246;tigt werden.</p>
+<p><i>&#8220;</i><b><i>Status</i></b><i>&#8221;</i>, zeigt an, ob das Programm aktiviert oder deaktiviert ist. </p>
+<p><i>&#8220;</i><b><i>Empf&#228;nger</i></b><i>&#8221;, </i>ist die Nummer des Mobiltelefons, das eine SMS erhalten soll, wenn eine unautorisierte SIM eingelegt wird.</p>
+<p><i>&#8220;</i><b><i>SMS Text</i></b><i>&#8221;</i>, ist der Text, der gesendet wird, wenn eine unautorisierte SIM eingelegt wird. </p>
+<p><i>&#8220;</i><b><i>Geheimcode</i></b><i>&#8221;</i>, dieser Geheimcode ist wirklich WICHTIG. Er wird ben&#246;tigt, um Guardian oder ein <b>gesch&#252;tzte Anwendung</b> zu &#246;ffnen und um das Handy fernzusteuern.</p>
+<p>&#8220;<b><i>Anwendung sch&#252;tzen nach...</i></b><i>&#8221;, </i>gibt an nach welcher Inaktivit&#228;tszeit, die gesch&#252;tzten Anwendungen wieder gesperrt werden. Danach muss erst der Geheimcode eingegeben werden um wieder auf die Anwendung zugreifen zu k&#246;nnen. Um Anwendung zu sperren m&#252;ssen sie der Liste der gesch&#252;tzten Anwendungen hinzugef&#252;gt werden. </p>
+<p style="heading 2">Schnellkonfiguration</p>
+<p style="context">HFastSettings</p>
+<p>Um Ihre Antidiebstahlsicherung schnell einzustellen sollten Sie folgende Schritte befolgen:</p>
+<p> </p>
+<p>1) Gehen Sie zur Einstellung &#8220;<b><i>Empf&#228;nger</i></b>&#8221; und w&#228;hlen "<b><i>Optionen-&gt;&#196;ndern</i></b>&#8221;, danach suchen Sie die Nummer des Handys aus, das die Benachrichtigung &#252;ber die ge&#228;nderte SIM-Karte erhalten soll.</p>
+<p style="note"><b>Beachte: </b>Wenn Sie eine Nummer angeben wollen, die nicht im Telefonbuch vorhanden ist, m&#252;ssen Sie erst einen Telefonbucheintrag mit dieser Nummer erstellen. Nachdem Sie diese Nummer bei Guardian eingef&#252;gt haben, k&#246;nnen Sie den Kontakt auch wieder aus dem Telefonbuch l&#246;schen. Guardian beh&#228;lt die Nummer trotzdem.</p>
+<p>2) Geben Sie Ihren &#8222;Geheimcode&#8220; ein:</p>
+<p style="note"><b>Beachte: </b>der Geheimcode muss aus mindestens 5 Ziffern bestehen. Dieser wird ben&#246;tigt, um Guardian und alle <b>gesch&#252;tzte Anwendungen</b> zu &#246;ffnen oder <b>Fernsteuerungsbefehle</b> zu senden. </p>
+<p>3) Letztendlich m&#252;ssen Sie nur noch den <i>&#8220;</i><b><i>Status</i></b><i>&#8221; </i>von Guardian<i> </i>auf<i> &#8220;</i><b><i>Aktiv</i></b><i>&#8221; &#228;ndern</i>.</p>
+<p style="heading 2">Autorisierte SIM-Karten Liste</p>
+<p style="context">HSimList</p>
+<p>Alle SIM Karten in dieser Liste werden von Guardian als autorisiert anerkannt und k&#246;nnen mit dem Handy benutzt werden. </p>
+<p>Diese Liste ist dann sinnvoll, wenn Sie Ihr Mobiltelefon mit verschiedenen SIM Karten benutzen wollen. Bei einem Wechsel zu einer autorisierten SIM wird keine Benachrichtigungs-SMS &#252;ber eine gewechselte SIM gesendet.</p>
+<p style="note"><b>Beachte: </b>in der <b>Free</b> edition k&#246;nnen Sie nur eine SIM dieser Liste hinzuf&#252;gen. Jedoch k&#246;nnen Sie in der  <b>Gold</b> und <b>Platinum </b>edition unendlich viele SIM Karten autorisieren.  </p>
+<p>In diesem Men&#252; haben Sie folgende Optionen:</p>
+<p>&#8220;<b>Umbenennen</b>&#8221;, &#228;ndert den Namen der ausgew&#228;hlten SIM </p>
+<p>&#8220;<b>Entfernen</b>&#8221;, entfernt die ausgew&#228;hlte SIM aus der Liste.</p>
+<p>&#8220;<b>Hinzuf&#252;gen</b>&#8221;, zeigt die Anweisungen, um eine neue SIM der Liste hinzuzuf&#252;gen.  </p>
+<p>Um eine neue SIM hinzuzuf&#252;gen, m&#252;ssen Sie:&break;1) Guardian vor&#252;bergehend deaktivieren&break;2) die neue SIM Karte einlegen und das Handy einschalten</p>
+<p>3) beim Starten von Guardian wird die SIM automatisch der Liste hinzugef&#252;gt</p>
+<p style="note"><b>Beachte</b>: Sie k&#246;nnen auch neue SIM Karten autorisieren ohne Guardian zu deaktivieren, dann wird jedoch eine Benachrichtigungs-SMS gesendet, da die SIM als unautorisiert erkannt wird.</p>
+<p style="note"><b>Tipp: </b>Benutzen Sie die Funktion &#8220;Umbenennen&#8221; und weisen Sie den SIMs sinnvolle Namen zu, um sie auseinander zu halten. </p>
+<p style="heading 2">Gesch&#252;tzte Anwendungen</p>
+<p style="context">HProtList</p>
+<p>Diese Liste zeigt alle installierten Anwendungen des Mobiltelefons. Sie m&#252;ssen nur die, die Sie sch&#252;tzen wollen ausw&#228;hlen. Die gesperrten Anwendungen haben ein H&#228;kchen rechts neben dem Namen.</p>
+<p style="note"><b>Beachte</b>: Manchmal sind einige Programme mehrmals in der Liste vorhanden, obwohl der Name gleich ist, haben diese verschiedene Funktionen. Wenn Sie nicht wissen, was der Unterschied ist, sperren Sie einfach alle Anwendungen mit gleichen Namen.</p>
+<p style="note"><b>Tipp: </b>Um die Suche nach einem Programm zu beschleunigen, k&#246;nnen Sie den Namen eingeben. Guardian sucht dann die Anwendungen, die mit den eingegebenen Buchstaben anfangen.</p>
+<p>In diesem Men&#252; haben sie folgende Optionen:</p>
+<p><i>&#8220;</i><b><i>Hinzuf&#252;gen / Entfernen</i></b><i>&#8221;</i>: f&#252;gen eine Anwendung in die Liste der gesch&#252;tzten Programme ein oder entfernt sie.</p>
+<p><i>&#8220;</i><b><i>Gro&#223;e /  Kleine Symbole</i></b><i>&#8221;: </i> &#228;ndert die Gr&#246;&#223;e der Symbole in der Liste. </p>
+<p style="note"><b>Tipp</b>: Um unautorisierte Installationen zu verhindern, m&#252;ssen Sie nur die Anwendung<i> &#8222;</i><b><i>Installation</i></b><i>&#8221; sperren</i>. Wenn dann jemand versucht Guardian zu deinstallieren, wird er nach dem Geheimcode gefragt.</p>
+<p style="note"><b>Tipp</b>: Um Ihre vertraulichen Daten zu sch&#252;tzen sollten Sie folgende Anwendungen sperren:</p>
+<p style="note">&#8220;<b>Kurzmitteilung</b>&#8221;</p>
+<p style="note">&#8220;<b>Mitteilungen</b>&#8221;</p>
+<p style="note">&#8220;<b>Kontakte</b>&#8221;</p>
+<p style="note">&#8220;<b>Kalender</b>&#8221;</p>
+<p style="note">&#8220;<b>Galerie</b>&#8221;</p>
+<p style="note">&#8220;<b>Protokoll</b>&#8221;</p>
+</ptml>

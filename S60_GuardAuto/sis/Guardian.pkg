@@ -1,0 +1,19 @@
+; Guardian.pkg
+
+; Languages
+&EN
+
+; Header
+#{"GuardAuto_200107AD"},(0x200107AD), 0, 1, 1
+
+; Platform compatibility
+[0x101F7961], *, *, *, {"Series60ProductID"}
+
+; vendor
+%{"Vendor Name"}
+:"Vendor Name"
+
+; Target
+"C:\Symbian\9.1\S60_3rd_MR\epoc32\release\gcce\UREL\GuardAuto_200107AD.exe"-"!:\sys\bin\GuardAuto_200107AD.exe"
+
+

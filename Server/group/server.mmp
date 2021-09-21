@@ -1,0 +1,40 @@
+// t-server.mmp
+target                                  GuardSrv_200107AB.exe 
+targettype                              exe 
+uid                                     0 0x200107AB 
+capability                              ReadDeviceData NetworkServices ReadUserData
+
+APP_LAYER_SYSTEMINCLUDE
+
+EPOCSTACKSIZE	0x5000  
+EPOCHEAPSIZE	0x1000 0x400000
+
+USERINCLUDE                             ..\inc 
+USERINCLUDE                             . 
+SYSTEMINCLUDE                           .  
+SYSTEMINCLUDE                           \epoc32\include 
+SOURCEPATH                              ..\src 
+SOURCE                                  Base64.cpp  
+SOURCE                                  Settings.cpp
+SOURCE                                  session.cpp 
+SOURCE                                  server.cpp queue.cpp
+SOURCE                                  SendSmsSocket.cpp SplitManager.cpp 
+
+LIBRARY                                 flogger.lib 
+LIBRARY                                 bafl.lib 
+LIBRARY                                 smsu.lib 
+LIBRARY                                 msgs.lib 
+LIBRARY                                 smcm.lib 
+LIBRARY                                 gsmu.lib 
+LIBRARY                                 etel3rdparty.lib 
+LIBRARY                                 esock.lib 
+LIBRARY                                 estor.lib 
+LIBRARY                                 efsrv.lib 
+library                                 euser.lib  charconv.lib 
+LIBRARY 								cryptography.lib pbe.lib 
+vendorid                                0 
+//MACRO                         _LOGGING 
+
+LIBRARY ezip.lib ws32.lib apgrfx.lib apmime.lib  
+
+STATICLIBRARY commonlib.lib

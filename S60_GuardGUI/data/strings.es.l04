@@ -1,0 +1,147 @@
+﻿/*
+============================================================================
+ Name        : GuardGUI.rls
+ Author      : Marco Bellino
+ Version     :
+ Copyright   : All Rights Reserved
+ Description : String localization file
+============================================================================
+*/
+
+#define ELanguage               ELangSpanish
+
+//  LOCALISATION STRINGS
+
+//d:Caption string for app.
+rls_string qtn_app_caption_string "Guardian"
+rls_string qtn_app_short_caption_string "Guardian"
+
+
+rls_string txt_help "Ayuda"
+
+rls_string txt_license_header 		"Acuerdo de Licencia"
+
+rls_string txt_register_op_net 		"Utilizando ID de Licencia"
+rls_string txt_register_op_code 	"Utilizando Código"
+rls_string txt_prod_1			"ID de Licencia Parte 1"
+rls_string txt_prod_2			"ID de Licencia Parte 2"
+
+
+rls_string txt_protect_app_ext 	   	"Proteger aplicaciones:"
+rls_string txt_protect_app 	   	"Proteger aplicaciones:"
+rls_string txt_after 		   	"Después"
+
+rls_string txt_immediately		"Inmediatamente"
+rls_string txt_never			"Nunca"
+rls_string txt_second			"Segundo"
+rls_string txt_seconds			"Segundos"
+rls_string txt_minute			"Minuto"
+rls_string txt_minutes			"Minutos"
+rls_string txt_hour			"Hora"
+rls_string txt_hours			"Horas"
+
+
+// Comuni
+rls_string txt_register 		"Registrar"
+rls_string txt_exit 			"Salir"
+
+// Vista About
+rls_string txt_check_for_updates       	"Check online for an updated version?"
+rls_string txt_check_updates 		"Comprobar actualizaciones"
+rls_string txt_send 			"Enviar Guardian"
+rls_string txt_send_ir 			"Vía Infrarrojos"
+rls_string txt_send_bt 			"Vía Bluetooth"
+rls_string txt_about 			"Acerca de"
+rls_string txt_license 			"Licencia"
+rls_string txt_imei_code 		"IMEI:"
+rls_string txt_reg_code 		"Código de Registro:"
+
+// Vista Settings
+rls_string txt_settings 		"Configuración"
+
+rls_string txt_phone  			"Destinatario:"
+rls_string txt_sms_text			"Texto del SMS:"
+rls_string txt_pass   			"Clave:"
+rls_string txt_lock_phone		"Bloqueo del Teléfono:"
+rls_string txt_on_sim_change		"Sobre el Cambio de Sim"
+rls_string txt_on_startup		"Al Iniciar"
+
+rls_string txt_status 			"Estado:"
+rls_string txt_active	   		"Habilitado"
+rls_string txt_inactive	   		"Deshabilitado"
+rls_string txt_yes			"Sí"
+rls_string txt_no			"No"
+rls_string txt_monitor			"Monitor:"
+rls_string txt_sms			"Sms:"
+rls_string txt_calls			"Llamadas:"
+rls_string txt_sms_in			"Sms Entrantes"
+rls_string txt_sms_out			"Sms Salientes"
+rls_string txt_calls_in			"Llamadas Entrantes"
+rls_string txt_calls_out		"Llamadas Salientes"
+rls_string txt_all			"Todo"
+rls_string txt_incoming			"Entrantes"
+rls_string txt_outgoing			"Salientes"
+rls_string txt_monitor_ext		"Monitor Sms y Llamadas:"
+
+
+rls_string txt_please_wait		"Transferencia en progreso...\nPor favor, espere."
+rls_string txt_change 			"Cambiar"
+
+// Vista SimList
+rls_string txt_sim_list 		"SIMs autorizadas"
+rls_string txt_sim 			"Nombre de SIM:"
+rls_string txt_rename_sim 		"Renombrar"
+rls_string txt_remove_sim 		"Eliminar"
+rls_string txt_add_sim 			"Añadir"
+rls_string txt_addnewsim_header 	"Añadir nueva SIM"
+
+
+// Vista Protection
+rls_string txt_protected_apps		"Aplicaciones protegidas"
+rls_string txt_large_icons		"Iconos grandes"
+rls_string txt_small_icons		"Iconos pequeños"
+rls_string txt_guardian_pass		"Clave:"
+
+rls_string txt_show_apps		"Muestran App."
+rls_string txt_all_apps			"Todo"
+rls_string txt_user_apps		"App. Usuario"
+rls_string txt_rom_apps			"App. ROM"
+rls_string txt_system_apps		"App. Sistema"
+
+
+rls_string txt_sim_added	   	"Esta SIM ha sido registrada con el nombre: "
+rls_string txt_confirm_exit		"Desea salir de Guardian?"
+
+rls_string txt_warning_sms		"Atención! SIM cambiada"
+
+rls_string txt_buy			"Comprar"
+rls_string txt_buy_gold			"Versión Gold"
+rls_string txt_buy_platinum		"Versión Platinum"
+rls_string txt_buy_iridium		"Versión Iridium"
+
+// ERRORI
+rls_string txt_down_completed		"La actualización ha sido guardada en el directorio de mensajes entrantes."
+rls_string txt_no_update		"Ya dispone de la última versión de Guardian."
+rls_string txt_update			"Existe una nueva actualización.\nDesea descargarla ahora?"
+rls_string txt_ok_code			"Registro completo!"
+rls_string txt_err_code			"Código de Registro incorrecto!\nInserte un Código de Registro correcto."
+rls_string txt_err_bad_pass		"Clave incorrecta!"
+rls_string txt_err_no_number		"Destinatario no asignado.\nEspecifique uno para proceder."
+rls_string txt_err_no_pass		"Clave no asignada.\nEspecifique una clave para proceder."
+rls_string txt_err_short_pass		"Clave demasiado corta."
+rls_string txt_err_sim0			"Imposible eliminar. Es la única SIM disponible!"
+
+rls_string txt_err_licnotfound		"ID de Licencia incorrecto.\nInserte un ID de Licencia correcto."
+rls_string txt_err_licdifimei		"ID de Licencia ya utilizado.\nPor favor, compre un nuevo ID de Licencia."
+rls_string txt_err_licbanned		"Demasiadas peticiones.\nPor favor, inténtelo tarde."
+rls_string txt_err_licunkdata		"Error en el servidor de respuesta.\nPor favor, inténtelo más tarde."
+rls_string txt_err_lictransmis		"Problema de transmisión.\nPor favor, inténtelo más tarde."
+rls_string txt_err_licgeneral		"Problema general.\nPor favor, inténtelo más tarde."
+
+rls_string txt_err_unavailinfree 	"Esta función no está disponible en la versión Free.\nCompre la versión Gold, Platinum o Iridium."
+rls_string txt_err_buy_iridium	 	"Esta función no está disponible en esta versión.\nCompre la versión Iridium."
+
+rls_string txt_force_update		"La versión gratuita debe actualizarse cada 15 días.\nActualizar o comprar."
+rls_string txt_query_check_updates	"Compruebe en línea para una versión actualizada?"
+
+rls_string txt_editions_header  	"Gold, Platinum, Iridium"

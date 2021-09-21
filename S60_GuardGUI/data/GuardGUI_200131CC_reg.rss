@@ -1,0 +1,35 @@
+#include <appinfo.rh>
+#include <uikon.rh>
+#include <GuardGUI_200131CC.rsg>		
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0x200131CC
+
+RESOURCE APP_REGISTRATION_INFO
+	{
+	app_file="GuardGUI_200131CC";
+	localisable_resource_file = "\\resource\\apps\\GuardGUI_200131CC";
+	localisable_resource_id = R_GUARDGUI_LOCALISABLE_APP_INFO;
+	
+	embeddability=KAppNotEmbeddable;
+	newfile=KAppDoesNotSupportNewFile;
+	opaque_data = r_startup_type; 
+	// Quando viene lanciata da menu' viene passato opaque_data
+	// Quando viene lanciata dall'autostart non viene passato opaque_data
+	}
+
+RESOURCE NUMBER_INT8 r_startup_type
+	{
+	value = 1;
+	}
+/**/
+
+/*UID3 0xE132DCB1
+
+RESOURCE APP_REGISTRATION_INFO
+	{
+	app_file="RestCMD";
+	localisable_resource_file = "\\resource\\apps\\RestCMD";
+	localisable_resource_id = 1;
+	}
+/**/
